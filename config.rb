@@ -2,6 +2,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+set :layout, :main
+
 # Per-page layout changes:
 #
 # With no layout

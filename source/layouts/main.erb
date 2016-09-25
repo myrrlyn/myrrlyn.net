@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--  |
+    ——0—— REGISTERED BY C0DA.
+      |   -->
+<html>
+	<head>
+		<title>
+			<% if current_page.data.title %>
+myrrlyn/<%= current_page.data.title.downcase %>
+			<% else %>
+myrrlyn.net ~
+			<% end %>
+		</title>
+		<%= partial "layouts/head" %>
+		<meta http-equiv="X-UA-Compatible"
+		      content="IE=edge">
+
+		<%= stylesheet_link_tag :main %>
+	</head>
+
+	<body class="<%= page_classes %>">
+		<header>
+		</header>
+		<main>
+			<%= yield %>
+		</main>
+		<footer>
+		</footer>
+	</body>
+</html>
