@@ -1,0 +1,24 @@
+@charset "utf-8";
+@import "mixins";
+@import "normalize";
+
+a {
+	color: -webkit-link;
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+//  Email addresses are not stored literally in the text, for obvious reasons.
+//  I mask them by flipping character order and inserting a bogus link in the
+//  middle.
+span.masked-email {
+	unicode-bidi: bidi-override;
+	direction: rtl;
+	@include no-select;
+	@extend a;
+
+	a[href="#nospam"] {
+		display: none;
+	}
+}

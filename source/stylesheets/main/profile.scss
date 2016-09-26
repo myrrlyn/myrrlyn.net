@@ -1,0 +1,26 @@
+$gravatar-size: 192px;
+$gravatar-rim: 8px;
+
+#profile {
+	.logo {
+		margin: {
+			top: 16px;
+			left: auto;
+			right: auto;
+			bottom: 16px;
+		}
+		&.gravatar {
+			width: $gravatar-size + (2 * $gravatar-rim);
+		}
+	}
+}
+
+#gravatar {
+	background: {
+		color: blue;
+	}
+	border: {
+		radius: ($gravatar-size + (2 * $gravatar-rim)) / 2;
+	}
+	padding: $gravatar-rim;
+}

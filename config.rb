@@ -36,6 +36,9 @@ end
 # 	end
 # end
 
+require 'lib/helpers.rb'
+helpers Helpers
+
 # Build-specific configuration
 configure :build do
 	# Minify CSS on build

@@ -1,0 +1,67 @@
+.flex-wrapper {
+	@include flex-wrapper;
+}
+
+.flex-rows {
+	flex: {
+		direction: column;
+		wrap: wrap;
+	}
+}
+
+.flex-cols {
+	flex: {
+		direction: row;
+		wrap: wrap;
+	}
+}
+
+#flex-focus {
+	flex: {
+		grow: 1;
+		shrink: 0;
+		basis: auto;
+	}
+	justify-content: center;
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	max-width: 120em;
+}
+
+.flex-item {
+	flex: {
+		basis: 100%;
+	}
+}
+
+#profile {
+	@media all and (min-width: 600px) {
+		flex: 2 1 0%;
+	}
+	@media all and (min-width: 800px) {
+		order: 1;
+	}
+}
+#nav {
+	@media all and (min-width: 600px) {
+		flex: 1 2 0%;
+	}
+	@media all and (min-width: 800px) {
+		order: 3;
+	}
+}
+
+main.flex-item {
+	@media all and (min-width: 800px) {
+		flex: 3 0 0%;
+		order: 2;
+	}
+}
+
+footer.flex-item {
+	display: inline-flex;
+	justify-content: center;
+}
+

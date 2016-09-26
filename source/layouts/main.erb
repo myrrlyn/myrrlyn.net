@@ -15,16 +15,21 @@ myrrlyn.net ~
 		<meta http-equiv="X-UA-Compatible"
 		      content="IE=edge">
 
+		<%= stylesheet_link_tag :all %>
 		<%= stylesheet_link_tag :main %>
+		<%= javascript_include_tag :all %>
 	</head>
 
-	<body class="<%= page_classes %>">
-		<header>
-		</header>
-		<main>
-			<%= yield %>
-		</main>
-		<footer>
-		</footer>
+	<body class="<%= page_classes %> flex-wrapper flex-rows">
+		<%= partial "layouts/header" %>
+		<div id="flex-focus"
+		     class="flex-wrapper flex-cols">
+			<main class="flex-item">
+				<%= yield %>
+			</main>
+			<%= partial "layouts/profile" %>
+			<%= partial "layouts/nav" %>
+		</div>
+		<%= partial "layouts/footer" %>
 	</body>
 </html>
