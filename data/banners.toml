@@ -1,0 +1,517 @@
+# Schema
+#
+# This file MUST contain a top-level object array called "banners".
+#
+# The "banners" array contains objects representing banner images. The "banner"
+# object spec is as follows:
+# - REQUIRED: "name" (String) basename of the image the object references
+# - RECOMMENDED: "type" (String Array) keywords used for filtering banners
+# - OPTIONAL: "freq" (Number) relative frequency of occurrence for that banner
+# - OPTIONAL: "pos" (String Array) CSS position pair, x then y. Use "" for no
+#   data.
+#
+# Usage of "type" and "freq" data is not documented here.
+
+[[banners]]
+name = "2012-12-29_004.jpg"
+
+[[banners]]
+name = "2013-07-12_002.jpg"
+type = [
+	"sunset",
+	"waterfront",
+]
+
+[[banners]]
+name = "2013-08-04_002.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2014-06-18T21-50-56.jpg"
+type = [
+	"panorama",
+	"waterfront",
+]
+
+[[banners]]
+name = "2014-06-18T21-52-19.jpg"
+type = [
+	"sunset",
+	"waterfront",
+]
+
+[[banners]]
+name = "2014-06-18T21-52-46.jpg"
+type = [
+	"sunset",
+	"waterfront",
+]
+
+[[banners]]
+name = "2014-06-19T20-19-50.jpg"
+type = [
+	"sunset",
+	"waterfront",
+]
+
+[[banners]]
+name = "2014-06-19T20-21-09.jpg"
+type = [
+	"panorama",
+	"waterfront",
+]
+
+[[banners]]
+name = "2014-07-05_004.jpg"
+type = [
+	"dune",
+]
+
+[[banners]]
+name =  "2014-07-05_011.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+
+[[banners]]
+name = "2014-07-05_044.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2014-07-05T12-54-24.jpg"
+freq = 10
+type = [
+	"dune",
+	"sky",
+]
+freq = 10
+
+[[banners]]
+name = "2014-07-05T21-37-04.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2014-07-05T21-37-45.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2014-07-05T21-45-22.jpg"
+type = [
+	"sea",
+]
+
+[[banners]]
+name = "2014-07-06_024.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2014-07-07T21-27-33.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2014-08-04_002.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2015-05-27T16-22-02.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-05-27T17-03-48.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-07-09T19-56-50.jpg"
+type = [
+	"panorama",
+	"waterfront",
+]
+
+[[banners]]
+name = "2015-08-14T20-03-48.jpg"
+type = [
+	"sea",
+	"sky",
+	"storm",
+]
+
+[[banners]]
+name = "2015-08-14T20-04-01.jpg"
+type = [
+	"sea",
+	"sky",
+	"storm",
+]
+
+[[banners]]
+name = "2015-08-16T20-10-17.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2015-08-16T20-10-33.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2015-08-16T20-10-45.jpg"
+type = [
+	"sea",
+	"sky",
+	"sunset",
+]
+
+[[banners]]
+name = "2015-08-17T08-54-17.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-17T08-54-42.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-17T08-55-00.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-17T08-55-07.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-18T17-42-54.jpg"
+type = [
+	"sky",
+	"skyline",
+]
+
+[[banners]]
+name = "2015-08-21T15-13-48.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-21T15-14-30.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2015-08-21T15-14-59.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T11-56-43.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T11-59-09.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T12-16-22.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T12-39-16.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T13-37-11.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T14-46-52.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T15-16-48.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-07-31T15-29-58.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-18-00.jpg"
+type = [
+	"lighthouse",
+	"sea",
+]
+
+[[banners]]
+name = "2016-08-02T19-18-04.jpg"
+type = [
+	"lighthouse",
+	"sea",
+]
+
+[[banners]]
+name = "2016-08-02T19-18-25.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-19-30.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-21-06.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-23-01.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-23-37.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-26-08.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-26-16.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-26-26.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-27-11.jpg"
+type = [
+	"sea",
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-28-04.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-28-20.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-29-12.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-29-57.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-02T19-30-57.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-33-41.jpg"
+type = [
+	"sea",
+]
+
+[[banners]]
+name = "2016-08-02T19-35-06.jpg"
+type = [
+	"sea",
+]
+
+[[banners]]
+name = "2016-08-02T19-37-57.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-38-10.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-02T19-38-13.jpg"
+type = [
+	"lighthouse",
+]
+
+[[banners]]
+name = "2016-08-04T21-02-16.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2016-08-04T21-03-40.jpg"
+type = [
+	"sky",
+]
+
+[[banners]]
+name = "2016-09-04T09-16-38.jpg"
+type = [
+	"sea",
+]
+
+[[banners]]
+name = "2016-09-05T12-40-00.jpg"
+type = [
+	"sea",
+	"waves",
+]
+
+[[banners]]
+name = "2016-09-05T12-41-06.jpg"
+type = [
+	"sea",
+	"waves",
+]
+
+[[banners]]
+name = "2016-09-05T12-41-10.jpg"
+type = [
+	"sea",
+	"waves",
+]
+
+[[banners]]
+name = "2016-09-05T12-41-16.jpg"
+type = [
+	"sea",
+	"waves",
+]
+
+[[banners]]
+name = "2016-09-16T20-16-05.jpg"
+type = [
+	"night",
+	"waterfront",
+]
+
+[[banners]]
+name = "2016-09-16T20-20-39.jpg"
+type = [
+	"night",
+	"waterfront",
+]
+
+[[banners]]
+name = "2016-09-17T17-03-35.jpg"
+type = [
+	"waterfront",
+]
+
+[[banners]]
+name = "2016-09-17T17-04-58.jpg"
+type = [
+	"waterfront",
+]

@@ -10,3 +10,7 @@
 
 # Ignore Gemfile.lock
 Gemfile.lock
+
+# Ignore source/javascripts, since that directory is populated by the TypeScript
+# compiler
+/source/javascripts

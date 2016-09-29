@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "none",
+		"rootDir": "source/typescripts",
+		"outDir": "source/javascripts",
+		"sourceMap": true
+	},
+	"exclude": [
+		"source/javascripts/*.js"
+	],
+	"compileOnSave": true
+}
