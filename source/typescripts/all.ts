@@ -4,7 +4,7 @@ let bannerCookie = new Cookie("banner", {
 });
 
 $(document).ready(function() {
-	setBanner();
+	bannerFetch.done(setBanner);
 });
 
 //  Set the banner, either from a cookie or from a new draw.

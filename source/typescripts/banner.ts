@@ -1,10 +1,16 @@
 class BannerImg {
 	name: string;
 	freq: number = 1;
-	position: [string, string] = ["center", "center"];
-	type: string[];
+	position: {x: string, y: string,} = { x: "center", y: "center", };
+	type: string[] = [];
 
 	/**
+	 * Constructs a new BannerImg from the given name.
+	 *
+	 * Additional properties should be added in their respective methods, not as
+	 * constructor parameters. The setters allow for method chaining, and can be
+	 * called directly on the constructor.
+	 *
 	 * @param name The basename of the image file (i.e. NAME in images/NAME.jpg)
 	 */
 	constructor(name: string) {
@@ -12,27 +18,60 @@ class BannerImg {
 	}
 
 	/**
-	 * Set the relative frequency at which this banner occurs.
-	 * @param {number} weight Any number (defaults to 1). Setting it less than
-	 * 1 makes occur less often than default; setting it greater than one makes
-	 * it occur more often than default.
+	 * Builds a BannerImg object from a JSON serialization
 	 */
-	public setFreq(freq: number): BannerImg {
-		this.freq = freq;
+	public static from_json(json: {
+		name: string,
+		freq?: number,
+		position?: string[],
+		type?: string[],
+	}): BannerImg {
+		let tmp = new BannerImg(json.name);
+		if (json.freq) {
+			tmp.setFreq(json.freq);
+		}
+		if (json.position) {
+			tmp.setPosition({
+				x: json.position[0],
+				y: json.position[1],
+			});
+		}
+		if (json.type) {
+			tmp.setType(json.type);
+		}
+		return tmp;
+	}
+
+	/**
+	 * Set the relative frequency at which this banner occurs.
+	 *
+	 * @param freq Any number (defaults to 1). Setting it less than 1 makes it
+	 * occur less often than default; setting it greater than one makes it occur
+	 * more often than default.
+	 */
+	public setFreq(freq?: number): BannerImg {
+		this.freq = freq || 1;
 		return this;
 	}
 
 	/**
 	 * Set the CSS position information for the banner.
-	 * @param {string} x A CSS horizontal position string ("left", "center", "right")
-	 * @param {string} y A CSS vertical position string ("top", "center", "bottom")
+	 *
+	 * @param pos An object with two key/val pairs. "x" and "y" keys accept
+	 * values that are appropriate CSS position values.
+	 * (top, left, right, bottom, center)
 	 */
-	public setPosition(x?: string, y?: string): BannerImg {
-		if (x !== undefined && x !== "") {
-			this.position[0] = x;
+	public setPosition(pos?: {x: string, y: string}): BannerImg {
+		function exists(obj: Object): boolean {
+			return (obj !== undefined && obj !== null);
 		}
-		if (y !== undefined && y !== "") {
-			this.position[1] = y;
+		if (exists(pos)) {
+			if (exists(pos.x)) {
+				this.position.x = pos.x;
+			}
+			if (exists(pos.y)) {
+				this.position.y = pos.y;
+			}
 		}
 		return this;
 	}
@@ -41,14 +80,16 @@ class BannerImg {
 	 * Get the CSS position string for the banner.
 	 */
 	public getPosition(): string {
-		return `${this.position[0]} ${this.position[1]}`;
+		return `${this.position.x} ${this.position.y}`;
 	}
 
 	/**
-	 * Set the type metadata (used for category filtering)
+	 * Set the type metadata (used for category filtering).
+	 *
+	 * @param {string[]} info Optional list of tags describing the banner.
 	 */
-	public setType(info: string[]) {
-		this.type = info;
+	public setType(info?: string[]) {
+		this.type = this.type.concat(info || []);
 	}
 
 	/**
@@ -61,6 +102,7 @@ class BannerImg {
 	/**
 	 * Calculates the relative frequency of this banner object in a list of
 	 * banner objects.
+	 *
 	 * @param {BannerImg[]} list The list of banner objects for which the
 	 * relative frequency is calculated. This is not an intrinsic property, as
 	 * the actual frequency of a banner's occurrence is dependent on its peers.
@@ -80,22 +122,15 @@ class BannerImg {
 let bannersMain: BannerImg[] = [];
 //  Fetch banner information from server
 //  TypeScript can't help us with this, so BE SURE this matches the JSON file.
-$.getJSON("/javascripts/banners.json", function(bannerJson) {
-	//  Since this is happening asynchronously, we can't use a direct assignment
-	//  to bannersMain via map() to transform the JSON data into BannerImg
-	//  objects.
-	bannerJson.banners.forEach(function(data, _, banners) {
-		let banner = new BannerImg(data.name);
-		if (data.freq !== undefined) {
-			banner.setFreq(data.freq);
-		}
-		if (data.pos !== undefined) {
-			banner.setPosition(data.pos);
-		}
-		if (data.type !== undefined) {
-			banner.setType(data.type);
-		}
-		bannersMain.push(banner);
+//  Exporting the jqxhr object as a global variable allows the banner selection
+//  logic to be attached as a callback.
+let bannerFetch = $.getJSON("/javascripts/banners.json", function(json) {
+	//  Because this is happening asynchronously the mapping has to be done
+	//  inside a callback function. Since we need the data to be available
+	//  in the global scope, bannersMain is declared above and populated
+	//  here.
+	bannersMain = json.banners.map(data => {
+		BannerImg.from_json(data)
 	});
 });
 
@@ -105,12 +140,29 @@ $.getJSON("/javascripts/banners.json", function(bannerJson) {
  * @param {BannerImg[]} list The list of banners being scanned.
  */
 function randomBanner(list: BannerImg[]): BannerImg {
+	//  [0 ... 1.0)
 	let randomThrow = Math.random();
+	//  Start from the right-most banner
 	let banner = list[list.length - 1];
-	list.map(function(banner, _, list) {
+	//  A crawl across a number line is the exact purpose for which reduce was
+	//  originally made; I've been abusing it shamelessly on all the other
+	//  invocations.
+	//  I map the banners array down to only contain the relative frequencies,
+	//  since that's the crawl domain, and then reduce from the right to
+	//  determine when a match has been made.
+	//
+	//  The crawl starts from the right because... just trust me on this.
+	//  [0 ... rand ... [marker 1)) means that the current banner has not yet
+	//  reached the random value, so try the next one.
+	//  [ 0 ... [marker ... rand ... 1)) means that the current banner has
+	//  reached the random value, so stop changing out banners.
+	list.map(function(banner, idx, list) {
 			return banner.getFreq(list);
 	}).reduceRight(function(prev, cur, idx, all) {
+		//  Move the marker down the numberline
 		let next = prev - cur;
+		//  If randomThrow is still farther down than the marker, change banners
+		//  When randomThrow is above the marker, we're set.
 		if (randomThrow < next) {
 			banner = list[idx - 1];
 		}
@@ -127,13 +179,16 @@ function randomBanner(list: BannerImg[]): BannerImg {
  * @param {BannerImg[]} list The list of BannerImgs in which to look
  */
 function deserializeBanner(name: string, list: BannerImg[]): BannerImg {
-	let ret = null;
-	list.forEach(banner => {
-		if (banner.name == name) {
-			ret = banner;
+	//  Folding across the whole array is still pretty quick, so not having an
+	//  early return on match isn't terribly awful.
+	return list.reduce(function(prev, cur, idx, all) {
+		if (cur.name == name) {
+			return cur;
 		}
-	});
-	return ret;
+		else {
+			return prev;
+		}
+	}, null);
 }
 
 /**
@@ -141,13 +196,9 @@ function deserializeBanner(name: string, list: BannerImg[]): BannerImg {
  */
 function deployBanner(banner: BannerImg) {
 	if (banner !== null) {
-		let css = {};
-		//  Construct CSS rules from banner properties
-		$.extend(css, {
+		$("header").css({
 			"background-image": banner.getCssUrl(),
 			"background-position": banner.getPosition(),
 		});
-		//  Deploy to CSS
-		$("header").css(css);
 	}
 }
