@@ -76,7 +76,8 @@ class Cookie implements ICrud{
 				return cur.substring(ckey.length, cur.length);
 			}
 			else {
-				return null;
+				//  Don't clobber previous answer if the current query fails.
+				return prev;
 			}
 		}, null);
 	}

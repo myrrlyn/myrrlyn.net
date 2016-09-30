@@ -5,25 +5,35 @@ let bannerCookie = new Cookie("banner", {
 	path: "/",
 });
 
+/**
+ * List of all banner images available for use.
+ */
+let bannersMain: BannerImg[] = [];
+let bannerFetch = $.getJSON("/javascripts/banners.json");
+
 $(document).ready(function() {
+	//  This should only be called when the DOM is finished, obviously.
 	bannerFetch.done(setBanner);
 	$("#cookie-display").click(cookieDisplay);
 });
 
 //  Set the banner, either from a cookie or from a new draw.
-function setBanner() {
-	//  The browser will automatically destroy expired cookies, so read() will
-	//  return "" for a new visitor or after the expiration time.
+function setBanner(jsonData) {
+	bannersMain = jsonData.banners.map(data => {
+		return BannerImg.from_json(data);
+	});
+	//  This will be null if the cookie does not exist (new visitors or if the
+	//  cookie expired and was destroyed).
 	let bannerStore = bannerCookie.read();
-	//  Deserializing "" will return null, since no banner will match that.
+	//  deserializeBanner safely handles null inputs, so null-checks are not
+	//  required here.
 	let oldBanner = deserializeBanner(bannerStore, bannersMain);
+	//  If the deserializer returns a valid image, we're set.
 	if (oldBanner !== null) {
 		deployBanner(oldBanner);
 	}
+	//  Otherwise, start banner selection from scratch.
 	else {
-		selectBanner();
-	}
-	function selectBanner() {
 		//  TODO: Create other lists and permit choosing among them.
 		let newBanner = randomBanner(bannersMain);
 		//  Use the ever-handy MomentJS library to come up with a timestamp an

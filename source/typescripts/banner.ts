@@ -86,7 +86,7 @@ class BannerImg {
 	/**
 	 * Set the type metadata (used for category filtering).
 	 *
-	 * @param {string[]} info Optional list of tags describing the banner.
+	 * @param info Optional list of tags describing the banner.
 	 */
 	public setType(info?: string[]) {
 		this.type = this.type.concat(info || []);
@@ -103,9 +103,9 @@ class BannerImg {
 	 * Calculates the relative frequency of this banner object in a list of
 	 * banner objects.
 	 *
-	 * @param {BannerImg[]} list The list of banner objects for which the
-	 * relative frequency is calculated. This is not an intrinsic property, as
-	 * the actual frequency of a banner's occurrence is dependent on its peers.
+	 * @param list The list of banner objects for which the relative frequency
+	 * is calculated. This is not an intrinsic property, as the actual frequency
+	 * of a banner's occurrence is dependent on its peers.
 	 */
 	public getFreq(list: BannerImg[]): number {
 		let totalFreqs = 0;
@@ -117,27 +117,10 @@ class BannerImg {
 }
 
 /**
- * List of all banner images available for use.
- */
-let bannersMain: BannerImg[] = [];
-//  Fetch banner information from server
-//  TypeScript can't help us with this, so BE SURE this matches the JSON file.
-//  Exporting the jqxhr object as a global variable allows the banner selection
-//  logic to be attached as a callback.
-let bannerFetch = $.getJSON("/javascripts/banners.json", function(json) {
-	//  Because this is happening asynchronously the mapping has to be done
-	//  inside a callback function. Since we need the data to be available
-	//  in the global scope, bannersMain is declared above and populated
-	//  here.
-	bannersMain = json.banners.map(data => {
-		BannerImg.from_json(data)
-	});
-});
-
-/**
  * Selects a random BannerImg from the list, with respect to each BannerImg's
  * relative probability of occurrence.
- * @param {BannerImg[]} list The list of banners being scanned.
+ *
+ * @param list The list of banners being scanned.
  */
 function randomBanner(list: BannerImg[]): BannerImg {
 	//  [0 ... 1.0)
@@ -175,10 +158,14 @@ function randomBanner(list: BannerImg[]): BannerImg {
  * Looks up a BannerImg from a list, given a search query. Returns null if
  * a matching BannerImg could not be found.
  *
- * @param {string} name The name of the banner to look up
- * @param {BannerImg[]} list The list of BannerImgs in which to look
+ * @param name The name of the banner to look up from the list
+ * @param list The list of BannerImgs in which to look up the name
  */
 function deserializeBanner(name: string, list: BannerImg[]): BannerImg {
+	//  Return null if either parameter fails to exist
+	if (!name || !list) {
+		return null;
+	}
 	//  Folding across the whole array is still pretty quick, so not having an
 	//  early return on match isn't terribly awful.
 	return list.reduce(function(prev, cur, idx, all) {
