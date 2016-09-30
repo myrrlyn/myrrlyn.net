@@ -1,10 +1,13 @@
-//  Grab a Cookie object for working with the banner
+/**
+ * Grab a Cookie object for working with the banner
+ */
 let bannerCookie = new Cookie("banner", {
 	path: "/",
 });
 
 $(document).ready(function() {
 	bannerFetch.done(setBanner);
+	$("#cookie-display").click(cookieDisplay);
 });
 
 //  Set the banner, either from a cookie or from a new draw.
@@ -30,5 +33,22 @@ function setBanner() {
 		bannerCookie.create(newBanner.name).update({expires: newExpiry});
 		//  Set the CSS to actually use the newly chosen banner.
 		deployBanner(newBanner);
+	}
+}
+
+//  Handle displaying cookies upon request, for transparency.
+function cookieDisplay() {
+	let cookieAnchor = $("#cookie-anchor");
+	if (cookieAnchor !== undefined) {
+		let cookies = document.cookie.split("; ");
+		if (cookies.length == 0) {
+			cookieAnchor.html("No cookies");
+		}
+		else {
+			let disp = cookies.reduce(function(prev, cur, idx, all) {
+				return `${prev}${cur}<br />`;
+			}, "");
+			cookieAnchor.html(disp);
+		}
 	}
 }

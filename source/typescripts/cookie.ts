@@ -23,6 +23,11 @@ interface ICrud {
 	destroy(): ICrud;
 }
 
+/**
+ * Manipulator for a specific cookie key.
+ *
+ * Each key in the cookie stash requires a separate object.
+ */
 class Cookie implements ICrud{
 	key: string;
 	value: string = "";
@@ -31,8 +36,8 @@ class Cookie implements ICrud{
 	/**
 	 * Builds a new cookie acting on a specified key.
 	 *
-	 * @param {string} key The key on which this cookie acts.
-	 * @param {Object} opts An optional list of key/value pairs.
+	 * @param key The key on which this cookie acts.
+	 * @param opts An optional list of key/value pairs.
 	 */
 	constructor(key: string, opts?: Object) {
 		//  A key is required for the Cookie to be sensibly used.
@@ -71,15 +76,15 @@ class Cookie implements ICrud{
 				return cur.substring(ckey.length, cur.length);
 			}
 			else {
-				return "";
+				return null;
 			}
-		}, "");
+		}, null);
 	}
 
 	/**
 	 * Store some data at this cookie's key.
 	 *
-	 * @param {string} value Some data to be stored in the cookie.
+	 * @param value Some data to be stored in the cookie.
 	 */
 	public create(value?: string) {
 		if (value !== undefined) {
@@ -95,12 +100,13 @@ class Cookie implements ICrud{
 	 * Read the cookie from browser storage.
 	 *
 	 * Browser storage is a series of key=val; pairs. The Cookie knows its own
-	 * key, so this returns the val stored at that key. A return of "" indicates
-	 * that the key was empty or non-existent.
+	 * key, so this returns the val stored at that key.
+	 *
+	 * Returns "" for a present but empty key (key=).
+	 * Returns null for a key that is not present in the cookie stash.
 	 */
 	public read() {
-		this.value = this.getStorage();
-		return this.value;
+		return this.value = this.getStorage();
 	}
 
 	/**
@@ -110,8 +116,7 @@ class Cookie implements ICrud{
 	 * cookies store data and options separately, the C/U split is on payload
 	 * rather than on action.
 	 *
-	 * @param {Object} opts A list of key/val pairs of options to set on the
-	 * cookie.
+	 * @param opts A list of key/val pairs of options to set on the cookie.
 	 */
 	public update(opts: Object) {
 		$.extend(this.options, opts);
@@ -134,12 +139,19 @@ class Cookie implements ICrud{
 
 	/**
 	 * Serializes the cookie.
+	 *
+	 * Note that this includes the cookie's options, which are not retrievable
+	 * via the document.cookie object. The primary difference between this and
+	 * read() is that read() returns the data in the browser's cookie storage,
+	 * while this serializes the cookie from memory. The data it returns may not
+	 * reflect actual storage.
 	 */
 	public toString() {
 		let str = `${this.key}=${this.value}`;
-		Object.keys(this.options).forEach(key => {
-			str += `;${key}=${this.options[key]}`;
-		});
+		let self = this;
+		str += Object.keys(this.options).reduce(function(prev, cur, idx, all) {
+			return `${prev};${cur}=${self.options[cur]}`;
+		}, "");
 		return str;
 	}
 }
