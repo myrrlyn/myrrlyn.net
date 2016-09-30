@@ -1,7 +1,24 @@
+/**
+ * Represents a banner image and associated metadata.
+ */
 class BannerImg {
+	/**
+	 * The filename of the banner image.
+	 */
 	name: string;
+	/**
+	 * Affects the probability that the banner will be chosen.
+	 */
 	freq: number = 1;
+	/**
+	 * CSS position tuple.
+	 */
 	position: {x: string, y: string,} = { x: "center", y: "center", };
+	/**
+	 * List of keywords describing the image.
+	 *
+	 * May be used for sorting or filtering in the future.
+	 */
 	type: string[] = [];
 
 	/**
@@ -11,7 +28,7 @@ class BannerImg {
 	 * constructor parameters. The setters allow for method chaining, and can be
 	 * called directly on the constructor.
 	 *
-	 * @param name The basename of the image file (i.e. NAME in images/NAME.jpg)
+	 * @param name The name and extension of the image file
 	 */
 	constructor(name: string) {
 		this.name = name;
@@ -19,6 +36,8 @@ class BannerImg {
 
 	/**
 	 * Builds a BannerImg object from a JSON serialization
+	 *
+	 * See data/banners.toml for a description of the spec used.
 	 */
 	public static from_json(json: {
 		name: string,
@@ -180,6 +199,8 @@ function deserializeBanner(name: string, list: BannerImg[]): BannerImg {
 
 /**
  * Deploys a BannerImg to the DOM, by setting <header>'s background-image CSS.
+ *
+ * @param banner Some banner to be deployed
  */
 function deployBanner(banner: BannerImg) {
 	if (banner !== null) {

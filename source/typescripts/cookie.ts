@@ -28,9 +28,19 @@ interface ICrud {
  *
  * Each key in the cookie stash requires a separate object.
  */
-class Cookie implements ICrud{
+class Cookie implements ICrud {
+	/**
+	 * The key on which this cookie operates.
+	 */
 	key: string;
+	/**
+	 * A string value to be stored at this Cookie's key. The empty string is a
+	 * legal value to be stored, and will not cause the key to be removed.
+	 */
 	value: string = "";
+	/**
+	 * Browser options affecting the cookie. See cookie documentation for more.
+	 */
 	options: Object = {};
 
 	/**
@@ -64,6 +74,9 @@ class Cookie implements ICrud{
 
 	/**
 	 * Scans browser storage for this cookie.
+	 *
+	 * Returns null if the key is not in storage, and a string (even an empty
+	 * string) if it is.
 	 */
 	private getStorage() {
 		let ckey = `${this.key}=`;
