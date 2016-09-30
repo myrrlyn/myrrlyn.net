@@ -1,7 +1,7 @@
 class BannerImg {
 	name: string;
-	freq: number;
-	position: [string, string];
+	freq: number = 1;
+	position: [string, string] = ["center", "center"];
 	type: string[];
 
 	/**
@@ -9,8 +9,6 @@ class BannerImg {
 	 */
 	constructor(name: string) {
 		this.name = name;
-		this.freq = 1;
-		this.position = ["center", "center"];
 	}
 
 	/**
@@ -37,6 +35,13 @@ class BannerImg {
 			this.position[1] = y;
 		}
 		return this;
+	}
+
+	/**
+	 * Get the CSS position string for the banner.
+	 */
+	public getPosition(): string {
+		return `${this.position[0]} ${this.position[1]}`;
 	}
 
 	/**
@@ -115,10 +120,34 @@ function randomBanner(list: BannerImg[]): BannerImg {
 }
 
 /**
+ * Looks up a BannerImg from a list, given a search query. Returns null if
+ * a matching BannerImg could not be found.
+ *
+ * @param {string} name The name of the banner to look up
+ * @param {BannerImg[]} list The list of BannerImgs in which to look
+ */
+function deserializeBanner(name: string, list: BannerImg[]): BannerImg {
+	let ret = null;
+	list.forEach(banner => {
+		if (banner.name == name) {
+			ret = banner;
+		}
+	});
+	return ret;
+}
+
+/**
  * Deploys a BannerImg to the DOM, by setting <header>'s background-image CSS.
  */
 function deployBanner(banner: BannerImg) {
-	$("header").css({
-		"background-image": banner.getCssUrl(),
-	});
+	if (banner !== null) {
+		let css = {};
+		//  Construct CSS rules from banner properties
+		$.extend(css, {
+			"background-image": banner.getCssUrl(),
+			"background-position": banner.getPosition(),
+		});
+		//  Deploy to CSS
+		$("header").css(css);
+	}
 }

@@ -10,6 +10,12 @@
 <script type="text/javascript"
         src="https://code.jquery.com/jquery-3.1.1.min.js">
 </script>
+<%# The MomentJS folks don't have HTTPS, and I can't download raw JS from %>
+<%# from GitHub as it's flagged as text/plain, so I have to host it myself. %>
+<%# This isn't /ideal/, but I'm not about to have unsecure traffic mixed in. %>
+<script type="text/javascript"
+        src="/javascripts/moment.min.js">
+</script>
 <%# This depends on jQuery %>
 <%= javascript_include_tag :banner %>
 <%# This depends on jQuery %>
