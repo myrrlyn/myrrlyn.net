@@ -12,6 +12,10 @@ $gravatar-rim: 8px;
 		&.gravatar {
 			width: $gravatar-size + (2 * $gravatar-rim);
 		}
+		&.glider {
+			margin-top: 4em;
+			width: $glider-scale * 3 + 1px;
+		}
 	}
 }
 

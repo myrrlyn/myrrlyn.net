@@ -14,3 +14,4 @@ gem 'middleman-livereload'
 
 # Support Gems
 gem 'tomlrb'
+gem 'builder'
