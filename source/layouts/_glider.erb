@@ -1,0 +1,18 @@
+<%# Make a 3x3 grid with child elements in each cell so CSS can be used to %>
+<%# make a Glider pattern. %>
+<%# I don't believe using a table for this particular use case is unsemantic, %>
+<%# especially since the alternative is to use divs for everything. At least %>
+<%# tables provide semantic row and cell elements. %>
+<table class="glider">
+	<tbody>
+		<% (0...3).each do |row| %>
+			<tr class="r-<%= row %>">
+				<% (0...3).each do |col| %>
+					<td class="c-<%= col %>">
+						<div class="cell <%= "x-#{col} y-#{row}" %>"></div>
+					</td>
+				<% end %>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

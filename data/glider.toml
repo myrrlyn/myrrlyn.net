@@ -1,0 +1,37 @@
+# Enumerates the active cells on the four stages of the Glider pattern
+
+[[glider]]
+cells = [
+	[1, 0,],
+	[2, 1,],
+	[0, 2,],
+	[1, 2,],
+	[2, 2,],
+]
+
+[[glider]]
+cells = [
+	[0, 0,],
+	[2, 0,],
+	[1, 1,],
+	[2, 1,],
+	[1, 2,],
+]
+
+[[glider]]
+cells = [
+	[2, 0,],
+	[0, 1,],
+	[2, 1,],
+	[1, 2,],
+	[2, 2,],
+]
+
+[[glider]]
+cells = [
+	[0, 0,],
+	[1, 1,],
+	[2, 1,],
+	[0, 2,],
+	[1, 2,],
+]

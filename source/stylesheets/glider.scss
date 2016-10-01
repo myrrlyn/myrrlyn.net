@@ -1,45 +1,34 @@
 $glider-scale: 48px;
 $glider-color: gold;
 
-svg#glider {
-	fill: transparent;
-	height: $glider-scale * 3;
-	width: $glider-scale * 3;
-	margin: 2px;
-	rect {
-		fill: transparent;
-		fill-opacity: 0;
-		stroke: black;
-		stroke: {
-			opacity: 1;
-			width: 1;
-		}
+table.glider {
+	border: {
+		collapse: collapse;
+		color: black;
+		style: solid;
+		width: 1px;
+	}
+	td {
+		border: 1px solid black;
 		width: $glider-scale;
 		height: $glider-scale;
-		&.outer {
-			width: $glider-scale * 3;
-			height: $glider-scale * 3;
-		}
-		&.inner-x {
-			width: $glider-scale * 3;
-			y: $glider-scale;
-		}
-		&.inner-y {
-			height: $glider-scale * 3;
-			x: $glider-scale;
-		}
-	}
-	circle {
-		fill: $glider-color;
-		r: $glider-scale / 3;
-		@for $x from 0 to 3 {
-			&.x-#{$x} {
-				cx: $glider-scale * ($x + 0.5);
+		.cell {
+			width: $glider-scale * 2 / 3;
+			height: $glider-scale * 2 / 3;
+			border: {
+				radius: $glider-scale / 3;
 			}
-		}
-		@for $y from 0 to 3 {
-			&.y-#{$y} {
-				cy: $glider-scale * ($y + 0.5);
+			margin: {
+				left:   auto;
+				right:  auto;
+			}
+			vertical-align: middle;
+			animation: {
+				duration: 4s;
+				iteration-count: infinite;
+			}
+			&.active {
+				background-color: $glider-color;
 			}
 		}
 	}
