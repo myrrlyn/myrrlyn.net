@@ -3,6 +3,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport"
       content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible"
+			content="IE=edge">
 <link rel="shortcut icon"
       type="image/png"
       href="/favicon.png" />
@@ -16,7 +18,23 @@
 <script type="text/javascript"
         src="/javascripts/moment.min.js">
 </script>
-<%# This depends on jQuery %>
+
 <%= javascript_include_tag :banner %>
-<%# This depends on jQuery %>
 <%= javascript_include_tag :cookie %>
+
+<%# Cookie notification is the law now... %>
+<script type="text/javascript">
+//  Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent
+window["cookieconsent_options"] = {
+	"message": "I use some cookies for convenience functions. No tracking.",
+	"dismiss": "Got it!",
+	"learnMore": "More info",
+	"link": "https://myrrlyn.net/",
+	"theme": "dark-bottom"
+};
+</script>
+<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js">
+</script>
+<!-- End Cookie Consent plugin -->
