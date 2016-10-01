@@ -27,9 +27,79 @@ table.glider {
 				duration: 4s;
 				iteration-count: infinite;
 			}
+			&.x-1.y-2,
+			&.x-2.y-1,
+			//  Holdover from JavaScript animation. Might as well leave it in.
 			&.active {
 				background-color: $glider-color;
 			}
+			&.x-1.y-0 {
+				animation: {
+					name: glider-toggle-25;
+				}
+			}
+			&.x-0.y-0,
+			&.x-1.y-1 {
+				animation: {
+					name: glider-toggle-50;
+					delay: -1s;
+					duration: 2s;
+				}
+			}
+			&.x-2.y-0 {
+				animation: {
+					name: glider-toggle-50;
+					delay: -3s;
+				}
+			}
+			&.x-2.y-2 {
+				animation: {
+					name: glider-toggle-50;
+					duration: 2s;
+				}
+			}
+			&.x-0.y-1 {
+				animation: {
+					name: glider-toggle-25;
+					delay: -2s;
+				}
+			}
+			&.x-0.y-2 {
+				animation: {
+					name: glider-toggle-50;
+					delay: -1s;
+				}
+			}
+
 		}
+	}
+}
+
+//  25% duty cycle active
+@keyframes glider-toggle-25 {
+	0% {
+		background-color: $glider-color;
+	}
+	24% {
+		background-color: $glider-color;
+	}
+	25% {
+		background-color: transparent;
+	}
+}
+
+//  50% duty cycle active
+@keyframes glider-toggle-50 {
+	0% {
+		background-color: $glider-color;
+	}
+	49% {
+		background-color: $glider-color;
+	}
+	50% {
+		background-color: transparent;
+	}
+	100% {
+		background-color: transparent;
 	}
 }
