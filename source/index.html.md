@@ -1,7 +1,13 @@
+---
+title: Home
+category: local
+---
+
 # Home
 
-I’m Alexander Payne, a computer engineering graduate of Trine University, as
-well as an Eagle Scout, lifeguard, scuba diver, and avid adventurer and student.
+I’m Alexander Payne, a Computer Engineering graduate of Trine University. I am
+also an Eagle Scout, a doubly-certified professional lifeguard, a PADI Rescue
+scuba diver, and a life-long student.
 
 I love most anything related to programming, aquatics, building new projects, or
 exploring new places.

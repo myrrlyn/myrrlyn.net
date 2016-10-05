@@ -8,11 +8,26 @@ Pages
 Local
 		</h2>
 		<ul id="links-local">
+			<% sitemap.resources.select{|p| p.data["category"] == "local"}.each do |p| %>
+				<li>
+					<% if config[:environment] == :production %>
+						<%= link_to p.data["title"], "/#{p.path.gsub(/(index)?.html/, "")}" %>
+					<% else %>
+						<%= link_to p.data["title"], "/#{p.path}" %>
+					<% end %>
+				</li>
+			<% end %>
 		</ul>
 		<h2>
 Social
 		</h2>
 		<ul id="links-social">
+			<li>
+				<%= link_to "GitHub", "https://github.com/myrrlyn" %>
+			</li>
+			<li>
+				<%= link_to "LinkedIn", "https://linkedin.com/in/myrrlyn" %>
+			</li>
 		</ul>
 	</nav>
 </aside>

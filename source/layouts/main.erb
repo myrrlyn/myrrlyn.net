@@ -5,10 +5,10 @@
 <html>
 	<head>
 		<title>
-			<% if current_page.data.title %>
-myrrlyn/<%= current_page.data.title.downcase %>
+			<% if !current_page.data.title || current_page.data.title == "Home" %>
+~myrrlyn
 			<% else %>
-myrrlyn.net ~
+myrrlyn/<%= current_page.data.title.downcase %>
 			<% end %>
 		</title>
 		<%= partial "layouts/head" %>
