@@ -1,9 +1,11 @@
 <aside id="profile"
        class="flex-item">
 	<div class="logo gravatar">
-		<img id="gravatar"
-		     src="<%= gravatar_for  'appayne@outlook.com', size: 192 %>"
-		     alt="My Gravatar" />
+		<% link_to "/" do %>
+			<img id="gravatar"
+			     src="<%= gravatar_for  'appayne@outlook.com', size: 192 %>"
+			     alt="My Gravatar" />
+		<% end %>
 	</div>
 	<h1>
 Alexander Payne
@@ -30,8 +32,8 @@ is on some spam lists, so I rarely answer cold calls; I prefer email for first
 contact.
 	</p>
 	<p>
-My public key is hosted locally <a href="/myrrlyn.asc">here</a> and at
-<a href="//keybase.io/myrrlyn">my Keybase profile</a>.
+My public key is hosted locally <%= link_to "here", "/myrrlyn.asc" %> and at
+<%= link_to "my Keybase profile", "//keybase.io/myrrlyn" %>.
 	</p>
 	<p>
 		<small>
