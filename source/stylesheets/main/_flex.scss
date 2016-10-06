@@ -37,24 +37,24 @@
 }
 
 #profile {
-	@media all and (min-width: 600px) {
+	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 2 1 0%;
 	}
-	@media all and (min-width: 800px) {
+	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		order: 1;
 	}
 }
 #nav {
-	@media all and (min-width: 600px) {
+	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 1 2 0%;
 	}
-	@media all and (min-width: 800px) {
+	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		order: 3;
 	}
 }
 
 main.flex-item {
-	@media all and (min-width: 800px) {
+	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		flex: 3 0 0%;
 		order: 2;
 	}

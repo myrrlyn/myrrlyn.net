@@ -1,0 +1,10 @@
+//  Media query breakpoints
+//  Use size- in max-width queries and size+ in min-width queries
+$breakpoints: (
+	'small-': 599px,
+	'small+': 600px,
+	'medium-': 799px,
+	'medium+': 800px,
+	'large-': 1199px,
+	'large+': 1200px,
+);
