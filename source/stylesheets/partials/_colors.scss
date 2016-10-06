@@ -1,0 +1,67 @@
+$palette-dark: lighten(black, 8.25%);
+$palette-lite: darken(white, 8.25%);
+
+//  Primary color spread
+$palette-hue-primary: (
+	#5060D8,
+	#2237D1,
+	#0E20AC,
+	#0A1882,
+	#050F58,
+);
+
+$palette-hue-secondary: (
+	#FF4F46,
+	#FF1609,
+	#FA0C00,
+	#BD0900,
+	#800600,
+);
+
+$palette-hue-tertiary: (
+	#3EE353,
+	#08DE23,
+	#00C218,
+	#009312,
+	#00630C,
+);
+
+$palette-hue-complementary: (
+	#FFCC46,
+	#FFBB09,
+	#FAB500,
+	#BD8900,
+	#805C00,
+);
+
+//  Arch Linux theme colors
+$color-arch-blue: #1793D1;
+$color-arch-grey: #4D4D4D;
+
+//  Scouting colors
+$color-scouting: (
+	'red':         #CE1126,
+	'blue':        #003F87,
+	'yellow':      #FFCC00,
+	'yellow-alt':  #FCD116,
+	'brown':       #996633,
+	'green':       #006B3F,
+	'dark-blue':   #003366,
+	'dark-brown':  #330000,
+	'dark-gold':   #996600,
+	'lite-yellow': #FFCC66,
+	'lite-brown':  #B39475,
+	'lite-blue':   #9AB3D5,
+	'deep-red':    #990000,
+	'gold':        #CC9900,
+);
+
+//  Campfire Color Theme
+//  https://color.adobe.com/Campfire-color-theme-2528696/
+$color-campfire: (
+	'green':  #588C7E,
+	'yellow': #F2E394,
+	'orange': #F2AE72,
+	'red':    #D96459,
+	'brown':  #8C4646,
+);

@@ -16,3 +16,16 @@
 	display: -webkit-flex;
 	display: flex;
 }
+
+@mixin region-border(
+	$side,
+	$color: nth($palette-hue-primary, 3),
+	$style: solid,
+	$width: 1px
+) {
+	border-#{$side}: {
+		color: $color;
+		style: $style;
+		width: $width;
+	}
+}
