@@ -1,77 +1,63 @@
 $glider-scale: 16px;
-$glider-color: gold;
+$glider-color: nth($palette-hue-complementary, 3);
 $glider-timescale: 10s;
 
-table.glider {
-	border: {
-		collapse: collapse;
-		color: black;
-		style: solid;
-		width: 1px;
+#glider {
+	fill: none;
+	rect {
+		stroke: black;
 	}
-	td {
-		border: 1px solid black;
-		width: $glider-scale;
-		height: $glider-scale;
-		.cell {
-			width: $glider-scale * 2 / 3;
-			height: $glider-scale * 2 / 3;
-			border: {
-				radius: $glider-scale / 3;
-			}
-			margin: {
-				left:   auto;
-				right:  auto;
-			}
-			vertical-align: middle;
+	circle {
+		stroke: none;
+	}
+	.cell {
+		animation: {
+			duration: $glider-timescale;
+			iteration-count: infinite;
+		}
+		&.x-1.y-2,
+		&.x-2.y-1,
+		//  Holdover from JavaScript animation. Might as well leave it in.
+		&.active {
+			background-color: $glider-color;
+			fill: $glider-color;
+		}
+		&.x-1.y-0 {
 			animation: {
-				duration: $glider-timescale;
-				iteration-count: infinite;
+				name: glider-toggle-25;
 			}
-			&.x-1.y-2,
-			&.x-2.y-1,
-			//  Holdover from JavaScript animation. Might as well leave it in.
-			&.active {
-				background-color: $glider-color;
+		}
+		&.x-0.y-0,
+		&.x-1.y-1 {
+			animation: {
+				name: glider-toggle-50;
+				delay: -($glider-timescale / 4);
+				duration: $glider-timescale / 2;
 			}
-			&.x-1.y-0 {
-				animation: {
-					name: glider-toggle-25;
-				}
+		}
+		&.x-2.y-0 {
+			animation: {
+				name: glider-toggle-50;
+				delay: -($glider-timescale * 3/4);
 			}
-			&.x-0.y-0,
-			&.x-1.y-1 {
-				animation: {
-					name: glider-toggle-50;
-					delay: -($glider-timescale / 4);
-					duration: $glider-timescale / 2;
-				}
+		}
+		&.x-2.y-2 {
+			animation: {
+				name: glider-toggle-50;
+				duration: $glider-timescale / 2;
 			}
-			&.x-2.y-0 {
-				animation: {
-					name: glider-toggle-50;
-					delay: -($glider-timescale * 3/4);
-				}
+		}
+		&.x-0.y-1 {
+			animation: {
+				name: glider-toggle-25;
+				delay: -($glider-timescale / 2);
 			}
-			&.x-2.y-2 {
-				animation: {
-					name: glider-toggle-50;
-					duration: $glider-timescale / 2;
-				}
+		}
+		&.x-0.y-2 {
+			animation: {
+				name: glider-toggle-50;
+				delay: -($glider-timescale / 4);
 			}
-			&.x-0.y-1 {
-				animation: {
-					name: glider-toggle-25;
-					delay: -($glider-timescale / 2);
-				}
-			}
-			&.x-0.y-2 {
-				animation: {
-					name: glider-toggle-50;
-					delay: -($glider-timescale / 4);
-				}
-			}
-
 		}
 	}
 }
@@ -80,12 +66,15 @@ table.glider {
 @keyframes glider-toggle-25 {
 	0% {
 		background-color: $glider-color;
+		fill: $glider-color;
 	}
 	24% {
 		background-color: $glider-color;
+		fill: $glider-color;
 	}
 	25% {
 		background-color: transparent;
+		fill: transparent;
 	}
 }
 
@@ -93,14 +82,18 @@ table.glider {
 @keyframes glider-toggle-50 {
 	0% {
 		background-color: $glider-color;
+		fill: $glider-color;
 	}
 	49% {
 		background-color: $glider-color;
+		fill: $glider-color;
 	}
 	50% {
 		background-color: transparent;
+		fill: transparent;
 	}
 	100% {
 		background-color: transparent;
+		fill: transparent;
 	}
 }

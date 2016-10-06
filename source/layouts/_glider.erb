@@ -1,18 +1,24 @@
-<%# Make a 3x3 grid with child elements in each cell so CSS can be used to %>
-<%# make a Glider pattern. %>
-<%# I don't believe using a table for this particular use case is unsemantic, %>
-<%# especially since the alternative is to use divs for everything. At least %>
-<%# tables provide semantic row and cell elements. %>
-<table class="glider">
-	<tbody>
-		<% (0...3).each do |row| %>
-			<tr class="r-<%= row %>">
-				<% (0...3).each do |col| %>
-					<td class="c-<%= col %>">
-						<div class="cell <%= "x-#{col} y-#{row}" %>"></div>
-					</td>
-				<% end %>
-			</tr>
+<svg xmlns="http://www.w3.org/2000/svg"
+     id="glider"
+     width="<%= scale * 3 %>"
+     height="<%= scale * 3 %>">
+	<rect class="outer"
+	      width="<%= scale * 3 %>"
+	      height="<%= scale * 3 %>" />
+	<rect class="inner-x"
+	      width="<%= scale * 3 %>"
+	      height="<%= scale %>"
+	      y="<%= scale %>" />
+	<rect class="inner-y"
+	      width="<%= scale %>"
+	      height="<%= scale * 3 %>"
+	      x="<%= scale %>" />
+	<% 3.times do |y| %>
+		<% 3.times do |x| %>
+			<circle class="cell x-<%= x %> y-<%= y %>"
+			        cx="<%= scale * (x + 0.5) %>"
+			        cy="<%= scale * (y + 0.5) %>"
+			        r="<%= (scale / 3).round(3) %>" />
 		<% end %>
-	</tbody>
-</table>
+	<% end %>
+</svg>

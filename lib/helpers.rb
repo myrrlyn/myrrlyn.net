@@ -19,14 +19,17 @@ module Helpers
 
 		gliders = Tomlrb.load_file "data/glider.toml", symbolize_keys: true
 
-		gb.svg xmlns: "http://www.w3.org/2000/svg", id: "glider" do |svg|\
+		gb.svg xmlns: "http://www.w3.org/2000/svg",
+		       id: "glider",
+		       width: scale * 3,
+		       height: scale * 3 do |svg|
 			svg.rect class: "outer", width: scale * 3, height: scale * 3
 			svg.rect class: "inner-x", width: scale * 3, height: scale, y: scale
 			svg.rect class: "inner-y", width: scale, height: scale * 3, x: scale
-			# I really should get a better structure for that file.
-			gliders[:glider][0][:cells].each do |pair|
-				x, y = pair
-				svg.circle class: "x-#{x} y-#{y}", cx: scale * (x + 0.5), cy: scale * (y + 0.5), r: (scale / 3).round(3)
+			3.times do |y|
+				3.times do |x|
+					svg.circle class: "cell x-#{x} y-#{y}", cx: scale * (x + 0.5), cy: scale * (y + 0.5), r: (scale / 3).round(3)
+				end
 			end
 		end
 
