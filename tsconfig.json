@@ -8,7 +8,7 @@
 	},
 	"exclude": [
 		"source/javascripts/*.js",
-		"build/typescripts/*.js",
+		"build/typescripts/*.ts",
 		"build/javascripts/*.js"
 	],
 	"compileOnSave": true
