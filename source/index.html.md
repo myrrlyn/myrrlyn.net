@@ -6,29 +6,29 @@ category: local
 # Home
 
 I’m Alexander Payne, a Computer Engineering graduate of Trine University. I am
-also an Eagle Scout, a doubly-certified professional lifeguard, a PADI Rescue
-scuba diver, and a life-long student.
+also a doubly-certified professional lifeguard and PADI Rescue Diver.
 
-I love most anything related to programming, aquatics, building new projects, or
-exploring new places.
-
-I am currently unemployed and living in southern central Michigan. I’m taking
-this time to continue to broaden my education as I look for work. While I would
-most like to work in the Midwest, I am willing and able to relocate anywhere if
-needed. I have experience in embedded systems, system administration, and web
-design, and am able to work anywhere in software development.
+I live in southern central Michigan, but I’m willing to move anywhere or travel
+if a job requires that. I am available for hire, and am looking to work anywhere
+in the software development field.
 
 ____
 
-Some JavaScript functions here use cookies to maintain state. I have no tracking
-cookies of any kind. There&rsquo;s a law that requires notification for cookie
-usage. This is that notice. If you wish to see your cookies, click the button
-below, or open your browser&rsquo;s Developer Tools.
+The Web has a complex relationship with data persistence. Web applications, a
+term which is coming to encompass any website that attempts to be more than a
+remote document viewer, require statefulness, and that needs to be stored either
+by the client or by the server.
 
-<button id="cookie-display"
-        type="button">
-Show my cookies
-</button>
+In my opinion, the client should be the default store for anything that isn’t a
+security leak for the application. Browsers accomplish this task with cookies.
 
-<pre id="cookie-anchor">
-</pre>
+Unfortunately, cookies come with their own ways to leak privacy, and now there’s
+a law which requires sites to disclose cookie usage. I have my own opinions on
+the efficacy of this law, but I do agree with its sentiment.
+
+I use cookies to enhance this site’s functionality. At the bottom of every page
+is a button that will display the cookies that page can see, and another button
+to destroy those cookies.
+
+You are welcome to peruse the source code of my site if you wish to see how
+cookies are used.

@@ -7,7 +7,9 @@
 		"sourceMap": true
 	},
 	"exclude": [
-		"source/javascripts/*.js"
+		"source/javascripts/*.js",
+		"build/typescripts/*.js",
+		"build/javascripts/*.js"
 	],
 	"compileOnSave": true
 }

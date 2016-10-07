@@ -15,9 +15,12 @@ $(document).ready(function() {
 	//  This should only be called when the DOM is finished, obviously.
 	bannerFetch.done(setBanner);
 	$("#cookie-display").click(cookieDisplay);
+	$("#cookie-wipe").click(cookieWipe);
 });
 
-//  Set the banner, either from a cookie or from a new draw.
+/**
+ * Set the banner, either from a cookie or from a new draw.
+ */
 function setBanner(jsonData) {
 	bannersMain = jsonData.banners.map(data => {
 		return BannerImg.from_json(data);
@@ -46,12 +49,14 @@ function setBanner(jsonData) {
 	}
 }
 
-//  Handle displaying cookies upon request, for transparency.
+/**
+ * Handle displaying cookies upon request, for transparency.
+ */
 function cookieDisplay() {
 	let cookieAnchor = $("#cookie-anchor");
 	if (cookieAnchor !== undefined) {
 		let cookies = document.cookie.split("; ");
-		if (cookies.length == 0) {
+		if (cookies.length == 1 && cookies[0] == "") {
 			cookieAnchor.html("No cookies");
 		}
 		else {
@@ -61,4 +66,16 @@ function cookieDisplay() {
 			cookieAnchor.html(disp);
 		}
 	}
+}
+
+/**
+ * Erase cookies upon request.
+ */
+function cookieWipe() {
+	//  Get the string of cookies and split into individual key=val pairs
+	document.cookie.split("; ")
+	//  Transform each pair into a Cookie acting on the key
+		.map(data => new Cookie(data.split("=")[0]))
+	//  And then destroy each Cookie
+		.forEach(val => val.destroy());
 }

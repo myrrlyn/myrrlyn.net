@@ -23,6 +23,17 @@ myrrlyn/<%= current_page.data.title.downcase %>
 		     class="flex-wrapper flex-cols">
 			<main class="flex-item">
 				<%= yield %>
+				<hr />
+				<button id="cookie-display"
+				        type="button">
+Show my cookies
+				</button>
+				<button id="cookie-wipe"
+				        type="button">
+Erase my cookies
+				</button>
+				<pre id="cookie-anchor">
+				</pre>
 			</main>
 			<%= partial "layouts/profile" %>
 			<%= partial "layouts/nav" %>
