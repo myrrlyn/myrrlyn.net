@@ -15,12 +15,13 @@ $glider-timescale: 10s;
 			duration: $glider-timescale;
 			iteration-count: infinite;
 		}
+		background-color: $glider-color;
+		fill: $glider-color;
 		&.x-1.y-2,
 		&.x-2.y-1,
 		//  Holdover from JavaScript animation. Might as well leave it in.
 		&.active {
-			background-color: $glider-color;
-			fill: $glider-color;
+			visibility: visible;
 		}
 		&.x-1.y-0 {
 			animation: {
@@ -65,35 +66,25 @@ $glider-timescale: 10s;
 //  25% duty cycle active
 @keyframes glider-toggle-25 {
 	0% {
-		background-color: $glider-color;
-		fill: $glider-color;
-	}
-	24% {
-		background-color: $glider-color;
-		fill: $glider-color;
+		visibility: visible;
 	}
 	25% {
-		background-color: transparent;
-		fill: transparent;
+		visibility: hidden;
+	}
+	100% {
+		visibility: hidden;
 	}
 }
 
 //  50% duty cycle active
 @keyframes glider-toggle-50 {
 	0% {
-		background-color: $glider-color;
-		fill: $glider-color;
-	}
-	49% {
-		background-color: $glider-color;
-		fill: $glider-color;
+		visibility: visible;
 	}
 	50% {
-		background-color: transparent;
-		fill: transparent;
+		visibility: hidden;
 	}
 	100% {
-		background-color: transparent;
-		fill: transparent;
+		visibility: hidden;
 	}
 }
