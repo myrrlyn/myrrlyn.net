@@ -21,7 +21,7 @@ $gravatar-rim: 8px;
 
 #gravatar {
 	background: {
-		color: nth($palette-hue-primary, 3);
+		color: nth($palette-hue-primary, 2);
 	}
 	border: {
 		radius: ($gravatar-size + (2 * $gravatar-rim)) / 2;
