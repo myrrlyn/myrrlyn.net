@@ -1,25 +1,11 @@
 @charset "utf-8";
 @import "partials";
 
-* {
-	box-sizing: border-box;
-}
-
-//  Ensure that the body will always be rendered to the full height of the
-//  viewport, even if the content is short enough that the body would not
-//  ordinarily reach the bottom.
-html {
-	height: 100%;
-}
-body {
-	min-height: 100%;
-}
-
+@import "structure";
 @import "glider";
 
-@import "main/flex";
 @import "main/header";
 @import "main/content";
 @import "main/sidebar";
-@import "main/profile";
+@import "main/about";
 @import "main/footer";

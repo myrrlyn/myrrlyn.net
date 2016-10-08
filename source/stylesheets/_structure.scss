@@ -1,3 +1,17 @@
+* {
+	box-sizing: border-box;
+}
+
+//  Ensure that the body will always be rendered to the full height of the
+//  viewport, even if the content is short enough that the body would not
+//  ordinarily reach the bottom.
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+}
+
 .flex-wrapper {
 	@include flex-wrapper;
 }
@@ -36,7 +50,7 @@
 	}
 }
 
-#profile {
+#about {
 	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 2 1 0%;
 		@include region-border('right');
@@ -60,7 +74,7 @@ main.flex-item {
 		@include region-border('bottom', $width: 2px);
 	}
 	@media all and (min-width: map-get($breakpoints, 'medium+')) {
-		flex: 3 0 0%;
+		flex: 4 0 0%;
 		order: 2;
 		@include region-border('left');
 		@include region-border('right');
@@ -71,4 +85,3 @@ footer.flex-item {
 	display: inline-flex;
 	justify-content: center;
 }
-
