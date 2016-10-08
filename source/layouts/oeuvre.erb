@@ -14,9 +14,9 @@ myrrlyn/<%= current_page.data.title.downcase %>
 		<%= partial "layouts/head" %>
 
 		<%= stylesheet_link_tag :all %>
-		<%= stylesheet_link_tag :main %>
+		<%= stylesheet_link_tag :oeuvre %>
 		<%= javascript_include_tag :all %>
-		<%= javascript_include_tag :main %>
+		<%= javascript_include_tag :oeuvre %>
 	</head>
 	<body class="<%= page_classes %> flex-wrapper flex-rows">
 		<%= partial "layouts/header" %>
@@ -36,8 +36,8 @@ Erase my cookies
 				<pre id="cookie-anchor">
 				</pre>
 			</main>
-			<%= partial "layouts/profile" %>
-			<%= partial "layouts/nav" %>
+			<%= partial "layouts/oeuvre/about" %>
+			<%= partial "layouts/oeuvre/nav" %>
 		</div>
 		<%= partial "layouts/footer" %>
 	</body>

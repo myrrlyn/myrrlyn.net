@@ -1,0 +1,52 @@
+<aside id="about"
+       class="flex-item">
+	<div class="logo gravatar">
+		<% link_to canonicalize("/oeuvre") do %>
+			<img id="gravatar"
+			     src="<%= gravatar_for 'myrrlyn@outlook.com', size: 192 %>"
+			     alt="My Gravatar"
+			     title="Logo I made up based on the Aes Sedai from Robert Jordan's 'Wheel of Time'" />
+		<% end %>
+	</div>
+	<h2>
+About the Text
+	</h2>
+	<% if current_page.data.reddit %>
+		<p>
+Published to <a href="//redd.it/<%= current_page.data.reddit %>">/r/teslore</a>
+on <%= current_page.data.date.strftime("%B %-d, %Y") %>.
+		</p>
+	<% end %>
+	<div id="about-text-anchor">
+	</div>
+	<hr />
+	<h2>
+About the Author
+	</h2>
+	<p>
+I first heard of the <em>Elder Scrolls</em> in late 2011, when my roommate
+bought <em>Skyrim</em>. I didn’t get into the more esoteric lore of the series
+until summer 2012, when I stumbled across
+<%= link_to '/r/teslore', '//reddit.com/r/teslore' %> and was immediately
+hooked.
+	</p>
+	<p>
+Due to random circumstance, I wound up in a small reddit roleplaying guild, and
+wanted to make a character that would be at least somewhat distinct from the
+flocks of Breton and Dunmer magi. Thus it was I made an Orcish blacksmith, named
+Krognaz gro-Makoza, and started sinking into the study of Orcs.
+	</p>
+	<p>
+It didn’t take long for me to get dragged into the <tt>#memospore</tt> group on
+IRC and Discord, and get really deep into the lore. Soon enough some of my
+essays on /r/teslore became very well received.
+	</p>
+	<p>
+reddit’s formatting is somewhat limiting, and so I’ve reproduced my collected
+TES essays here as I want them to be seen.
+	</p>
+	<p>
+My section of the /r/teslore Compendium is
+<a href="//reddit.com/r/teslore/w/compilationauthor#wiki_myrrlyn">here</a>.
+	</p>
+</aside>

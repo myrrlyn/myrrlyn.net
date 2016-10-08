@@ -35,4 +35,16 @@ module Helpers
 
 		gb.target!
 	end
+
+	def canonicalize path = "/"
+		if config[:environment] == :production
+			path.gsub(/.html$/, "")
+		else
+			if path != "/" && path[-5..-1] != ".html"
+				path + ".html"
+			else
+				path
+			end
+		end
+	end
 end

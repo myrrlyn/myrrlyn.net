@@ -20,6 +20,15 @@ page '/*.txt', layout: false
 
 # General configuration
 
+# Extensions
+activate :blog do |blog|
+	blog.name = "oeuvre"
+	blog.prefix = "oeuvre"
+	blog.layout = "oeuvre"
+	blog.sources = "{title}.html"
+	blog.permalink = "{title}.html"
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
 	activate :livereload

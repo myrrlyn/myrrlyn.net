@@ -1,0 +1,31 @@
+---
+title: oeuvre myrrlyn
+layout: oeuvre
+blog: oeuvre
+---
+
+I’ve been writing in the *Elder Scrolls* universe since the fall or so of 2012.
+I started out in the Tamriel Scholars’ Guild roleplaying group on reddit, though
+I believe it’s long since defunct. I’m not sure if the subreddit is accessible
+anymore; my own posts and comments aren’t deleted if for some ungodly reason you
+want to trawl my profile for them.
+
+I think I’m batting close to a thousand on my /r/teslore posts being listed in
+their Compendium. Anyting of mine not in there probably isn’t worth reading, in
+all honesty.
+
+The magic of having my own website means I get to present my texts as I please.
+To that end, here’s everything I’m hosting, sorted by date of publication. The
+nav section (right on desktop, down on mobile) is sorted alphabetically by tags.
+
+<% blog.articles.sort { |a,b| a.date <=> b.date }.each do |post| %>
+1. [<%= post.title %>](<%= canonicalize post.url %>){:.title}
+<% end %>
+
+{::options parse_block_html="true" /}
+<aside id="about-text">
+I should probably note that many of my texts are classified as “apocryphal”,
+that is, making up new things rather than analyzing existing lore. It’s totally
+fine to reject apocrypha, and whether or not you add my works to your perception
+of Tamriel is entirely up to you.
+</aside>
