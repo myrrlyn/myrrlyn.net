@@ -27,16 +27,7 @@ myrrlyn/<%= current_page.data.title.downcase %>
 					<%= yield %>
 				</article>
 				<hr />
-				<button id="cookie-display"
-				        type="button">
-Show my cookies
-				</button>
-				<button id="cookie-wipe"
-				        type="button">
-Erase my cookies
-				</button>
-				<pre id="cookie-anchor">
-				</pre>
+				<%= partial "layouts/cookie-anchor" %>
 			</main>
 			<%= partial "layouts/about" %>
 			<%= partial "layouts/nav" %>
