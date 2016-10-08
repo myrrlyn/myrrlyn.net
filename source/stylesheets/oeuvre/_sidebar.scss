@@ -9,12 +9,19 @@ aside {
 }
 
 #about {
-	@media all and (min-width: map-get($breakpoints, 'small+')) {
-		@include region-border('right', $color: nth($palette-tes, 1));
+	@media screen and (min-width: map-get($breakpoints, 'medium+')) {
+		flex: {
+			grow: 3;
+			shrink: 1;
+		}
 	}
 }
+
 #nav {
-	@media all and (min-width: map-get($breakpoints, 'small+')) {
-		@include region-border('left', $color: nth($palette-tes, 1));
+	@media screen and (min-width: map-get($breakpoints, 'medium+')) {
+		flex: {
+			grow: 4;
+			shrink: 1;
+		}
 	}
 }

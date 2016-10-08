@@ -1,0 +1,22 @@
+button {
+	background: {
+		color: fade-out(nth($palette-hue-complementary, 1), 0.3);
+	}
+	border: {
+		color: nth($palette-hue-complementary, 4);
+		radius: 8px;
+		style: solid;
+	}
+	margin: {
+		top:    2px;
+		left:   3px;
+		right:  3px;
+		bottom: 2px;
+	}
+	padding: {
+		top:    4px;
+		left:   8px;
+		right:  8px;
+		bottom: 4px;
+	}
+}

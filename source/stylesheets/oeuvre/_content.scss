@@ -1,10 +1,83 @@
-main.flex-item {
-	@media all and (max-width: map-get($breakpoints, 'medium-')) {
-		@include region-border('bottom', $width: 2px, $color: nth($palette-tes, 1));
+main {
+	border: {
+		color: nth($palette-tes, 1);
+		radius: 64px;
+		style: solid;
+		width: 8px;
 	}
-	@media all and (min-width: map-get($breakpoints, 'medium+')) {
-		@include region-border('left', $color: nth($palette-tes, 1));
-		@include region-border('right', $color: nth($palette-tes, 1));
+	margin: 1rem 0;
+	padding: 0 0.5rem 0.5rem;
+
+	@media screen and (min-width: map-get($breakpoints, 'medium+')) {
+		&.flex-item {
+			flex-grow: 8;
+		}
 	}
-	padding: 0 0.5rem;
+}
+
+h1.title {
+	font-size: 3em;
+	padding: {
+		left: 1.5rem;
+		right: 1.5rem;
+	}
+	text-align: center;
+}
+
+.title {
+	font: {
+		style: italic;
+	}
+}
+
+article {
+	img {
+		display: block;
+		min-width: 200px;
+		width: 33%;
+		max-width: 800px;
+		&.ctr {
+			margin: 0 auto;
+		}
+		&.left {
+			float: left;
+			margin-right: 1em;
+		}
+		&.right {
+			float: right;
+			margin-left: 1em;
+		}
+	}
+}
+.oeuvre {
+	&_aurbis-2-colorful-boogaloo {
+		table {
+			border: {
+				spacing: 0;
+				style: none;
+			}
+			margin: 0 auto;
+		}
+		tbody {
+			tr {
+				@for $row from 1 through 24 {
+					&:nth-child(24n + #{$row}) {
+						$from: hsl((($row - 3.5) * 15) % 360, 100.0%, 50.00%);
+						$ctr: hsl((($row - 3) * 15) % 360, 100.0%, 50.00%);
+						$to: hsl((($row - 2.5) * 15) % 360, 100.0%, 50.00%);
+						@include gradient($from, $to, $ctr);
+					}
+				}
+			}
+		}
+	}
+}
+
+#flex-focus {
+	@media screen and (min-width: 110em) {
+		border: {
+			left: 2px solid nth($palette-tes, 1);
+			right: 2px solid nth($palette-tes, 1);
+		}
+	}
 }

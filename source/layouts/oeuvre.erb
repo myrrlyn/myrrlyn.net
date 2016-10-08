@@ -5,10 +5,10 @@
 <html>
 	<head>
 		<title>
-			<% if !current_page.data.title || current_page.data.title == "Home" %>
-~myrrlyn
+			<% if current_page.data.title %>
+<%= current_page.data.title %>
 			<% else %>
-myrrlyn/<%= current_page.data.title.downcase %>
+oeuvre myrrlyn
 			<% end %>
 		</title>
 		<%= partial "layouts/head" %>
@@ -23,18 +23,12 @@ myrrlyn/<%= current_page.data.title.downcase %>
 		<div id="flex-focus"
 		     class="flex-wrapper flex-cols">
 			<main class="flex-item">
-				<%= yield %>
-				<hr />
-				<button id="cookie-display"
-				        type="button">
-Show my cookies
-				</button>
-				<button id="cookie-wipe"
-				        type="button">
-Erase my cookies
-				</button>
-				<pre id="cookie-anchor">
-				</pre>
+				<h1 class="title">
+					<%= current_page.data.title %>
+				</h1>
+				<article>
+					<%= yield %>
+				</article>
 			</main>
 			<%= partial "layouts/oeuvre/about" %>
 			<%= partial "layouts/oeuvre/nav" %>

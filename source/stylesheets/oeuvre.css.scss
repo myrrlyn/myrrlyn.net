@@ -1,10 +1,12 @@
 @charset "utf-8";
 @import "partials";
 
+@import "global";
 @import "structure";
 
 @import "oeuvre/header";
 @import "oeuvre/content";
 @import "oeuvre/sidebar";
 @import "oeuvre/about";
+@import "oeuvre/nav";
 @import "oeuvre/footer";

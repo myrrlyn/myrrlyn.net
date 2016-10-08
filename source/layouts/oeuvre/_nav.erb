@@ -1,12 +1,16 @@
 <aside id="nav"
        class="flex-item">
 	<p>
+<%= link_to "Index", canonicalize("/oeuvre.html") %>
+	</p>
+	<p>
 Categories (click to expand)
 	</p>
 	<nav class="accordion">
 		<% blog.tags.sort.each do |tag, posts| %>
-			<h4 id="<%= tag.gsub(" ", "-") %>">
-<%= tag.gsub(/\w+/) { |word| word.capitalize } %>
+			<h4 id="<%= tag.downcase.gsub(" ", "-") %>"
+			    class="category">
+				<%= tag.gsub(/\w+/) { |word| word.capitalize } %>
 			</h4>
 			<ul>
 				<% posts.sort { |a, b| a.title <=> b.title }.each do |post| %>

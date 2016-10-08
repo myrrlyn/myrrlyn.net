@@ -17,6 +17,15 @@
 	display: flex;
 }
 
+//  Gradients are still settling down
+@mixin gradient($from, $to, $ctr: mix($from, $to)) {
+	background: $ctr;
+	background: -webkit-linear-gradient($from, $to);
+	background: -moz-linear-gradient($from, $to);
+	background: -o-linear-gradient($from, $to);
+	background: linear-gradient($from, $to);
+}
+
 @mixin region-border(
 	$side,
 	$color: nth($palette-hue-primary, 3),

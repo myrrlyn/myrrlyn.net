@@ -41,7 +41,7 @@ body {
 		left: auto;
 		right: auto;
 	}
-	max-width: 120em;
+	max-width: $content-width-max;
 }
 
 .flex-item {

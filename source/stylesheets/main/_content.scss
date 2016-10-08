@@ -10,3 +10,12 @@ main {
 		}
 	}
 }
+
+#flex-focus {
+	@media screen and (min-width: 110em) {
+		border: {
+			left: 2px solid nth($palette-hue-primary, 3);
+			right: 2px solid nth($palette-hue-primary, 3);
+		}
+	}
+}
