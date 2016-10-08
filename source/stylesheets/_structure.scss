@@ -53,7 +53,6 @@ body {
 #about {
 	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 2 1 0%;
-		@include region-border('right');
 	}
 	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		order: 1;
@@ -62,7 +61,6 @@ body {
 #nav {
 	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 1 2 0%;
-		@include region-border('left');
 	}
 	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		order: 3;
@@ -70,14 +68,9 @@ body {
 }
 
 main.flex-item {
-	@media all and (max-width: map-get($breakpoints, 'medium-')) {
-		@include region-border('bottom', $width: 2px);
-	}
 	@media all and (min-width: map-get($breakpoints, 'medium+')) {
 		flex: 4 0 0%;
 		order: 2;
-		@include region-border('left');
-		@include region-border('right');
 	}
 }
 

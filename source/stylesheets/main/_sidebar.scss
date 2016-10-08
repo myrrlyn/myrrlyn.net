@@ -10,3 +10,14 @@ aside {
 		color: nth($palette-hue-secondary, 3);
 	}
 }
+
+#about {
+	@media all and (min-width: map-get($breakpoints, 'small+')) {
+		@include region-border('right');
+	}
+}
+#nav {
+	@media all and (min-width: map-get($breakpoints, 'small+')) {
+		@include region-border('left');
+	}
+}
