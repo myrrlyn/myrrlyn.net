@@ -1,0 +1,19 @@
+$gravatar-size: 192px;
+
+#about {
+	.gravatar {
+		margin: {
+			top: 16px;
+			left: auto;
+			right: auto;
+			bottom: 16px;
+		}
+		width: $gravatar-size;
+	}
+}
+
+#gravatar {
+	border: {
+		radius: $gravatar-size / 2;
+	}
+}
