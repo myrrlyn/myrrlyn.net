@@ -1,10 +1,23 @@
 <aside id="nav"
        class="flex-item">
+	<h2>
+General
+	</h2>
+	<ul>
+		<li>
+			<%= link_to "Home", "/" %>
+		</li>
+		<li>
+			<%= link_to "Index", canonicalize("/oeuvre.html") %>
+		</li>
+	</ul>
+	<h2>
+Categories
+	</h2>
 	<p>
-<%= link_to "Index", canonicalize("/oeuvre.html") %>
-	</p>
-	<p>
-Categories (click to expand)
+		<small>
+(Click a header to expand it)
+		</small>
 	</p>
 	<nav class="accordion">
 		<% blog.tags.sort.each do |tag, posts| %>
