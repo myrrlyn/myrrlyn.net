@@ -29,6 +29,14 @@ activate :blog do |blog|
 	blog.permalink = "{title}.html"
 end
 
+activate :blog do |blog|
+	blog.name = "blog"
+	blog.prefix = "blog"
+	blog.layout = "main"
+	blog.sources = "{title}.html"
+	blog.permalink = "{title}.html"
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
 	activate :livereload
