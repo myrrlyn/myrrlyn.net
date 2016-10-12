@@ -89,6 +89,13 @@ broad range of languages, tools, and systems with which I am capable of working.
         My embedded classes taught us to use ASM to start our chips, provide
         base drivers, and hand-optimize certain routines.
 
+- Rust
+
+    I had hoped to use Rust for my Senior Design project, but it could not yet
+    target AVR. I have been teaching myself Rust and am reasonably capable in
+    it. I am not yet fluent in its standard library, but I have a firm grasp on
+    the language’s core principles.
+
 - C♯:
 
     I taught myself C♯ and Visual Studio, and have used it to build console apps
