@@ -1,3 +1,6 @@
 [submodule "source/oeuvre"]
 	path = source/oeuvre
 	url = git@github.com:myrrlyn/oeuvre.git
+[submodule "source/blog"]
+	path = source/blog
+	url = git@github.com:myrrlyn/blog
