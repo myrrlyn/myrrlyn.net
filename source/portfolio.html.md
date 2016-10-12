@@ -66,12 +66,13 @@ onto our projects, and have self-modifying programs.
 
 ## Hermaeus
 
-Hermaeus ([source code][herm-gh], [Gem page][herm-gem]) is a scripted reddit
-client designed to archive posts. It operates by scraping and parsing certain
-index pages, then dereferencing links it finds on them to reach the content
-posts those pages enumerate. Hermaeus is capable of reformatting the downloaded
-text and storing it to disk; future goals include storing texts in SQL and NoSQL
-databases, and powering a website for public browsing of the archive it manages.
+Hermaeus ([homepage][herm-myrr], [source code][herm-gh], [Gem page][herm-gem])
+is a scripted reddit client designed to archive posts. It operates by scraping
+and parsing certain index pages, then dereferencing links it finds on them to
+reach the content posts those pages enumerate. Hermaeus is capable of
+reformatting the downloaded text and storing it to disk; future goals include
+storing texts in SQL and NoSQL databases, and powering a website for public
+browsing of the archive it manages.
 
 One of my design goals with Hermaeus is to have it be usable by non-technical
 people, namely, the moderators of a reddit community I frequent and for whom it
@@ -99,7 +100,7 @@ current sheet is [here][tsl-gh-old]; it is several years old and showing it. I
 am rebuilding the sheet in my spare time, but unfortunately am not at liberty to
 publicize any part of the code yet.
 
-## Rawinbow Snake
+## Rainbow Snake
 
 I built a *very* simple Snake implementation for my C++ class, using Qt. I am
 not sure I still have the source or binaries anymore. This was the only project
@@ -108,6 +109,7 @@ mention it even if I can no longer showcase it.
 
 [herm-gem]: https://rubygems.org/gems/hermaeus
 [herm-gh]: https://github.com/myrrlyn/hermaeus
+[herm-myrr]: https://myrrlyn.net/hermaeus
 [mm]: https://middlemanapp.com
 [sass]: http://sass-lang.com
 [site]: https://github.com/myrrlyn/myrrlyn.net
