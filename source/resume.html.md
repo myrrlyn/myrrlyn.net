@@ -61,23 +61,31 @@ and continued to complement my formal education with individual pursuits and
 projects. I have continued pursuing education on my own initiative, and am
 capable of working with a broad range of languages, tools, and systems.
 
+List items with a “…” following them contain additional information. Click on an
+item to show or hide its content, or click here to expand all items.
+
+<button id="cover-toggle">Toggle all “…” items.</button>
+
 ### Languages
 
 - English: I have an excellent command of English and technical communication.
 
 - Ruby
+    {:.cover}
 
     I taught myself Ruby before taking the computer engineering major, and
     continue to use it as my prototyping language. I am familiar with Ruby on
     Rails, and have written gems for public use.
 
 - Java
+    {:.cover}
 
     I learned the basics of Java in high school, and pursued it further for
     my formal courses in it. I have a solid grasp on the Java standard library,
     and am familiar with Java tool systems such as Gradle and Maven.
 
 - C, C++
+    {:.cover}
 
     I am most familiar with the language cores, as I did most of my embedded
     work with little or no standard library presence. I am also familiar with
@@ -85,22 +93,26 @@ capable of working with a broad range of languages, tools, and systems.
     applications using it.
 
     - AVR Assembly
+        {:.cover}
 
         My embedded classes taught us to use ASM to start our controllers,
         implement base drivers, and hand-optimize certain routines.
 
 - Rust
+    {:.cover}
 
     I investigated using Rust for my Senior Design project. I taught myself Rust
     and am fluent in its core concepts.
 
 - C♯:
+    {:.cover}
 
     I taught myself C♯ and Visual Studio, and have used them to build console
     apps and ASP.NET websites. I have also used the graphical frameworks to
     build applications.
 
 - HTML/CSS/JavaScript
+    {:.cover}
 
     I taught myself web design, and volunteered to help my professor teach these
     languages for my Software Engineering classes. I write this site myself, and
@@ -116,11 +128,13 @@ capable of working with a broad range of languages, tools, and systems.
 ### Systems and Tools
 
 - Windows
+    {:.cover}
 
     I’ve used Windows all my life, and have experience in system administration
     and Windows Server usage.
 
 - Linux
+    {:.cover}
 
     I started on Ubuntu, and now run Arch Linux as my daily-use system. I am
     comfortable working with GNU userspace tools on the command line. I have
@@ -128,16 +142,19 @@ capable of working with a broad range of languages, tools, and systems.
     use Linux both as my desktop system and on my server.
 
 - OSX / macOS
+    {:.cover}
 
     I am comfortable using Macintosh’s graphical and terminal environments.
 
 - Microsoft Office
+    {:.cover}
 
     I have used Word, Excel, and Outlook since elementary school, and am
     proficient in their use. I am skilled with Powerpoint and familiar with
     Access.
 
 - Git
+    {:.cover}
 
     I learned Git the hardest way: on a team project, with my partner in Texas,
     by experimentation. I have several years of experience using Git and have a
@@ -145,10 +162,12 @@ capable of working with a broad range of languages, tools, and systems.
     work.
 
 - UNIX shells
+    {:.cover}
 
     I use `zsh` as my daily shell, and am familiar with `bash` as well.
 
 - Editors/IDEs
+    {:.cover}
 
     I have used many text editors and IDEs. The editors which with I am most
     familiar are:
@@ -167,17 +186,8 @@ lifeguard and then aquatics director. My responsibilities included:
 - Managing area resources ($30,000 of material and capital assets)
 - Maintaining area safety
 - Coordinating emergency response with campers, staffers, and emergency services
-
 - Training my staff members
 - Enforcing safety protocols for my area and
-
-- Recruiting and training staff
-- Maintaining a safe area
-- Managing area resources and personnel
-- Managing campers
-- Coordinating emergency response
-- Delivering the customer experience (merit badges and fun) without compromising
-safety
 
 I received excellent reviews from the scouts, parents, and my management. My
 technical capabilities are largely self-evident, from projects I’ve already done
@@ -188,12 +198,17 @@ request.
 ## Professional Certifications and Associations
 
 - Order of the Engineer
+- Professional Association of Diving Instructors
+    - Rescue Diver
+    - Advanced Open Water Diver
+    - *Enriched Air/Nitrox Diver*
+    - *Wreck Diver*
 - American Red Cross
     - ARC Lifeguard
     - CPR and Emergency First Aid Provider
 - Boy Scouts of America
-    - BSA Lifeguard
-    - Lifeguard Instructor
     - Aquatics Instructor
+    - Lifeguard Instructor
+    - BSA Lifeguard
 
 [srd]: https://www.youtube.com/watch?v=K3CKSovJbJQ

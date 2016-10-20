@@ -19,3 +19,17 @@ main {
 		}
 	}
 }
+
+p.cover {
+	cursor: pointer;
+	&:after {
+		content: " …";
+	}
+	& + p {
+		display: none;
+	}
+}
+
+button {
+	cursor: pointer;
+}
