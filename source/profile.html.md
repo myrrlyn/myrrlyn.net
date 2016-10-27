@@ -27,9 +27,9 @@ instructor. I have worked as a lifeguard, instructor, and area director at a
 local BSA summer camp for three years, during which time I received excellent
 reviews and maintained a strong safety record.
 
-I am deeply passionate about safety in risky environments through familiarity,
-competence, and assistance. I aim to make delivery of such safety benefits a
-primary goal of my career and personal life.
+I am deeply passionate about achieving safety in risky environments through
+familiarity, competence, and assistance. I aim to make delivery of such safety
+benefits a primary goal of my career and personal life.
 
 # Career Goals
 
