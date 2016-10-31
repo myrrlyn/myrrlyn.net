@@ -21,11 +21,15 @@ control than by the finished products, I switched to Computer Engineering. My
 Senior Design project, the construction and programming of a large autonomous
 vehicle, involved my skills in both disciplines.
 
-In addition to my academic pursuits, I have a passion for aquatics that has led
-me to become a Red Cross and BSA lifeguard, a PADI Rescue Diver, and an aquatics
-instructor. I have worked as a lifeguard, instructor, and area director at a
-local BSA summer camp for three years, during which time I received excellent
-reviews and maintained a strong safety record.
+In addition to my academic and technical pursuits, I also greatly enjoy music
+and aquatics. I began learning piano when I was six, and added the trumpet and
+French horn in middle and high school, respectively. I’ve played in my school
+bands for ten years and would like to continue in a community orchestra wherever
+I wind up. I have been a strong swimmer all my life, and became a Red Cross
+lifeguard at 14. My passion for aquatic safety has led me to become a BSA
+lifeguard and PADI Rescue Diver, and I have employed these skills as the
+aquatics director at a local Boy Scout camp. During my tenure at Rota-Kiwan, I
+received excellent reviews and maintained a strong safety record.
 
 I am deeply passionate about achieving safety in risky environments through
 familiarity, competence, and assistance. I aim to make delivery of such safety

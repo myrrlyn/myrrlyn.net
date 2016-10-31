@@ -8,7 +8,13 @@ Pages
 Local
 		</h2>
 		<ul id="links-local">
-			<% sitemap.resources.select{|p| p.data["category"] == "local"}.each do |p| %>
+			<% sitemap.resources.select do |p| %>
+				<% p.data["category"] == "local" %>
+			<% end %>
+			<% .sort do |a, b| %>
+				<% a.data["title"] <=> b.data["title"] %>
+			<% end %>
+			<% .each do |p| %>
 				<li>
 <%= link_to p.data["title"], canonicalize(p.url) %>
 				</li>
@@ -19,13 +25,13 @@ Miscellaneous
 		</h3>
 		<ul id="links-projects">
 			<li>
-<%= link_to "Hermaeus", canonicalize("/hermaeus.html") %>
+<%= link_to "Hermaeus", canonicalize("hermaeus") %>
 			</li>
 			<li>
-<%= link_to "My Blog", canonicalize("/blog.html") %>
+<%= link_to "My Blog", canonicalize("blog") %>
 			</li>
 			<li>
-<%= link_to "My <em>TES</em> Writings", canonicalize("/oeuvre.html") %>
+<%= link_to "My <em>TES</em> Writings", canonicalize("oeuvre") %>
 			</li>
 		</ul>
 		<h2>
