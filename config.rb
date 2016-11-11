@@ -33,7 +33,7 @@ activate :blog do |blog|
 	blog.name = "blog"
 	blog.prefix = "blog"
 	blog.layout = "main"
-	blog.sources = "{title}.html"
+	blog.sources = "{year}-{month}-{day}-{title}.html"
 	blog.permalink = "{title}.html"
 end
 
