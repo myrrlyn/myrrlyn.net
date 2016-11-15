@@ -34,8 +34,10 @@ activate :blog do |blog|
 	blog.prefix = "blog"
 	blog.layout = "main"
 	blog.sources = "{year}-{month}-{day}-{title}.html"
-	blog.permalink = "{title}.html"
+	blog.permalink = "{year}/{month}/{title}.html"
 end
+
+activate :syntax, line_numbers: true
 
 # Reload the browser automatically whenever files change
 configure :development do
