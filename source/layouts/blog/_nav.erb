@@ -1,0 +1,37 @@
+<aside id="nav"
+       class="flex-item">
+	<h2>
+General
+	</h2>
+	<ul>
+		<li>
+			<%= link_to "Home", "/" %>
+		</li>
+		<li>
+			<%= link_to "Index", canonicalize("/blog.html") %>
+		</li>
+	</ul>
+	<h2>
+Categories
+	</h2>
+	<p>
+		<small>
+(Click a header to expand it)
+		</small>
+	</p>
+	<nav class="accordion">
+		<% blog.tags.sort.each do |tag, posts| %>
+			<h4 id="<%= tag.downcase.gsub(" ", "-") %>"
+			    class="category">
+				<%= tag.gsub(/\w+/) { |word| word.capitalize } %>
+			</h4>
+			<ul>
+				<% posts.sort { |a, b| a.title <=> b.title }.each do |post| %>
+					<li class="title">
+						<%= link_to post.title, canonicalize(post.url) %>
+					</li>
+				<% end %>
+			</ul>
+		<% end %>
+	</nav>
+</aside>

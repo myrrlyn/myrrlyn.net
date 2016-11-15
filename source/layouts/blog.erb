@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--  |
+    ——0—— REGISTERED BY C0DA.
+      |   -->
+<html>
+	<head>
+		<title>
+			<% if !current_page.data.title || current_page.data.title == "Blog" %>
+Unsolicited Discourse
+			<% else %>
+<%= current_page.data.title %>
+			<% end %>
+		</title>
+		<%= partial "layouts/head" %>
+
+		<%= stylesheet_link_tag :blog %>
+		<%= javascript_include_tag :oeuvre %>
+	</head>
+	<body class="<%= page_classes %> flex-wrapper flex-rows">
+		<%= partial "layouts/header" %>
+		<div id="flex-focus"
+		     class="flex-wrapper flex-cols">
+			<main class="flex-item">
+				<article>
+					<%= yield %>
+				</article>
+			</main>
+			<%= partial "layouts/blog/about" %>
+			<%= partial "layouts/blog/nav" %>
+		</div>
+		<%= partial "layouts/footer" %>
+	</body>
+</html>

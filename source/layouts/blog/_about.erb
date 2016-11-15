@@ -1,0 +1,26 @@
+<aside id="about"
+       class="flex-item">
+	<div class="logo gravatar">
+		<% link_to canonicalize("/oeuvre") do %>
+			<img id="gravatar"
+			     src="<%= gravatar_for "appayne@outlook.com", size: 192 %>"
+			     alt="My Gravatar"
+			     title="Headshot taken in October 2016" />
+		<% end %>
+	</div>
+	<h1>
+Blogging
+	</h1>
+	<p>
+The concept has been around for years and years and yet the word itself still
+looks wildly out of place and silly. Or maybe I’m just projecting my feelings
+about broadcasting opinions rather than
+	</p>
+	<p>
+I don’t plan on this being a hotbed of activity; I would eventually like to get
+some articles published but for now it’s simply a repository for pre-assembled
+talks I have reason to use in person.
+	</p>
+	<hr />
+	<%= partial "layouts/cookie-anchor" %>
+</aside>
