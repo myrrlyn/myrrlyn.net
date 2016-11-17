@@ -19,7 +19,8 @@ Categories
 (Click a header to expand it)
 		</small>
 	</p>
-	<nav class="accordion">
+	<nav id="oeuvre-tag"
+	     class="accordion">
 		<% blog.tags.sort.each do |tag, posts| %>
 			<h4 id="<%= tag.downcase.gsub(" ", "-") %>"
 			    class="category">
