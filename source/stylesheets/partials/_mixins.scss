@@ -38,3 +38,28 @@
 		width: $width;
 	}
 }
+
+@mixin sidenote-border(
+	$side,
+	$color: nth($palette-hue-tertiary, 3),
+	$style: solid,
+	$width: 4px
+) {
+	border: {
+		top: {
+			color: transparent;
+			style: $style;
+			width: $width;
+		}
+		#{$side}: {
+			color: $color;
+			style: $style;
+			width: $width;
+		}
+		bottom: {
+			color: transparent;
+			style: $style;
+			width: $width;
+		}
+	}
+}
