@@ -34,7 +34,7 @@ activate :blog do |blog|
 	blog.prefix = "blog"
 	blog.layout = "blog"
 	blog.sources = "{year}-{month}-{day}-{title}.html"
-	blog.permalink = "{year}/{month}/{title}.html"
+	blog.permalink = "{category}/{title}.html"
 end
 
 activate :syntax, line_numbers: true
