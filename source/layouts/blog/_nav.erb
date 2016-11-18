@@ -16,7 +16,7 @@ Series
 	</h2>
 	<nav id="blog-series"
 	     class="accordion">
-		<% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? }.each do |c, as| %>
+		<% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? || c == "misc" }.each do |c, as| %>
 			<h4 id="<%= c.downcase.gsub(" ", "-") %>"
 			    class="category">
 				<%= c.gsub(/\w+/) { |word| word.capitalize } %>
