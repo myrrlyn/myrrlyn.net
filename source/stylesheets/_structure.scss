@@ -13,7 +13,9 @@ body {
 }
 
 .flex-wrapper {
-	@include flex-wrapper;
+	@media all and (min-width: map-get($breakpoints, 'small+')) {
+		@include flex-wrapper;
+	}
 }
 
 .flex-rows {
@@ -54,7 +56,7 @@ body {
 	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 2 1 0%;
 	}
-	@media all and (min-width: map-get($breakpoints, 'medium+')) {
+	@media all and (min-width: map-get($breakpoints, 'large+')) {
 		order: 1;
 	}
 }
@@ -62,19 +64,20 @@ body {
 	@media all and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 1 2 0%;
 	}
-	@media all and (min-width: map-get($breakpoints, 'medium+')) {
+	@media all and (min-width: map-get($breakpoints, 'large+')) {
 		order: 3;
 	}
 }
 
 main.flex-item {
-	@media all and (min-width: map-get($breakpoints, 'medium+')) {
+	@media all and (min-width: map-get($breakpoints, 'large+')) {
 		flex: 4 0 0%;
 		order: 2;
 	}
 }
 
 footer.flex-item {
-	display: inline-flex;
+	display: flex;
 	justify-content: center;
+	text-align: center;
 }

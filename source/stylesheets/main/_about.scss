@@ -17,7 +17,7 @@ $gravatar-height: $gravatar-size + (2 * $gravatar-rim);
 		}
 	}
 	//  Get ready for some fuckery
-	@media all and (min-width: map-get($breakpoints, 'medium+')) {
+	@media all and (min-width: map-get($breakpoints, 'large+')) {
 		.logo.gravatar a {
 			position: absolute;
 			top: $header-height - ($gravatar-height + $header-border) / 2;
