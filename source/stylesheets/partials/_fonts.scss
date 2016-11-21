@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url("https://fontlibrary.org/face/fantasque-sans-mono");
+
+%monospace {
+	font: {
+		family: "Inconsolata", "Roboto Mono", "FantasqueSansMonoRegular", "Menlo", "Consolas", "Courier New", monospace;
+	}
+}
