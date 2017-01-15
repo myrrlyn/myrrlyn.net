@@ -44,22 +44,28 @@ function nav() {
 		heightStyle: "content",
 	});
 
-	let groups = Object.keys(allCookies);
+	let querySelected = false;
+	let queryKey = search("tag");
+	if (queryKey.length != 0) {
+		$(`#${queryKey[queryKey.length - 1]}`).click();
+		querySelected = true;
+	}
 
 	//  Read the cookies to click on the most recent headings
-	groups.forEach(function(group) {
-		let cookie = allCookies[group][0];
-		let val = cookie.read();
+	Object.keys(allCookies).forEach(group => {
+		let val = allCookies[group][0].read();
 
 		//  If val is populated, it will be with the ID of an element to expand.
-		if (val !== null && val !== "") {
+		if (val !== null && val !== "" && querySelected == false) {
 			$(`#${val}`).click();
 		}
-	});
 
-	//  Register click handlers for each cluster of nav elements
-	groups.forEach(function(group) {
-		let id = group.replace(/([A-Z])/, "-$&").toLowerCase();
+		//  Register click handlers on all tag entries.
+		let id = group
+			//  Map camelCase to snake-Case
+			.replace(/([A-Z])/, "-$&")
+			//  Map snake-Case to snake-case
+			.toLowerCase();
 		$(`#${id} .ui-accordion-header`).click(function() {
 			allCookies[group].forEach(c =>
 				c.create($(`#${id} .ui-state-active`).attr("id")).update({
