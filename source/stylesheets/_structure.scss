@@ -76,8 +76,7 @@ main.flex-item {
 	}
 }
 
-footer.flex-item {
-	display: flex;
-	justify-content: center;
-	text-align: center;
+footer .flex-item {
+	flex: 1 0 0%;
+	height: 1em;
 }
