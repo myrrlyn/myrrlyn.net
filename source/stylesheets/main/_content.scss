@@ -36,7 +36,7 @@ h1.title {
 		left: 1.5rem;
 		right: 1.5rem;
 	}
-	text-align: center;
+	@extend .text-center;
 }
 
 .title {
