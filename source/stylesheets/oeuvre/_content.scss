@@ -21,10 +21,19 @@ h1.title {
 		left: 1.5rem;
 		right: 1.5rem;
 	}
-	text-align: center;
+	@extend .text-center;
+}
+h2.subtitle {
+	font-size: 2.5em;
+	padding: {
+		left: 1.25rem;
+		right: 1.25rem;
+	}
+	@extend .text-center;
 }
 
-.title {
+.title,
+.subtitle {
 	font: {
 		style: italic;
 	}
@@ -32,21 +41,7 @@ h1.title {
 
 article {
 	img {
-		display: block;
-		min-width: 200px;
-		width: 33%;
-		max-width: 800px;
-		&.ctr {
-			margin: 0 auto;
-		}
-		&.left {
-			float: left;
-			margin-right: 1em;
-		}
-		&.right {
-			float: right;
-			margin-left: 1em;
-		}
+		@extend %article-img;
 	}
 }
 .oeuvre {

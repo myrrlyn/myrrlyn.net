@@ -3,6 +3,9 @@ article {
 		@include sidenote-border("left", $color: nth($palette-hue-tertiary, 2), $width: 8px);
 		padding-left: 1em;
 	}
+	img {
+		@extend %article-img;
+	}
 }
 
 pre.highlight {

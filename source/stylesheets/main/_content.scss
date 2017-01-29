@@ -38,6 +38,14 @@ h1.title {
 	}
 	@extend .text-center;
 }
+h2.subtitle {
+	font-size: 2.5em;
+	padding: {
+		left: 1.25rem;
+		right: 1.25rem;
+	}
+	@extend .text-center;
+}
 
 .title {
 	font: {

@@ -70,7 +70,7 @@ type = [
 ]
 
 [[banners]]
-name =  "2014-07-05_011.jpg"
+name = "2014-07-05_011.jpg"
 type = [
 	"sea",
 	"sky",
@@ -92,7 +92,6 @@ type = [
 	"dune",
 	"sky",
 ]
-freq = 10
 
 [[banners]]
 name = "2014-07-05T21-37-04.jpg"

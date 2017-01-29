@@ -1,0 +1,17 @@
+%article-img {
+	display: block;
+	min-width: 200px;
+	width: 33%;
+	max-width: 800px;
+	&.ctr {
+		margin: 0 auto;
+	}
+	&.left {
+		float: left;
+		margin-right: 1em;
+	}
+	&.right {
+		float: right;
+		margin-left: 1em;
+	}
+}
