@@ -18,3 +18,6 @@ gem 'middleman-syntax'
 # Support Gems
 gem 'tomlrb'
 gem 'builder'
+
+gem 'opal'
+gem 'typescript-node'
