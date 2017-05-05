@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			<%= current_page.data.title %>
+		</title>
+		<%= partial "layouts/head" %>
+
+		<%= stylesheet_link_tag :main %>
+		<%= stylesheet_link_tag :klaus %>
+		<%= javascript_include_tag :main %>
+		<%= javascript_include_tag :klaus %>
+	</head>
+	<body class="<%= page_classes %> flex-wrapper flex-rows">
+		<%#= partial "layouts/header" %>
+		<div id="flex-focus"
+		     class="flex-wrapper flex-cols">
+			<main class="flex-item">
+				<article>
+					<%= yield %>
+				</article>
+				<hr />
+				<%#= partial "layouts/cookie-anchor" %>
+			</main>
+			<%#= partial "layouts/about" %>
+			<%#= partial "layouts/nav" %>
+		</div>
+		<%#= partial "layouts/footer" %>
+	</body>
+</html>
