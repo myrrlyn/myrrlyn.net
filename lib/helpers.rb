@@ -37,14 +37,17 @@ module Helpers
 	end
 
 	def canonicalize path = "/"
-		if build?
-			path.gsub(/.html$/, "")
-		else
+		if path[0] != "/"
+			path = "/#{path}"
+		end
+		if config[:indev]
 			if path != "/" && path[-5..-1] != ".html"
 				path + ".html"
 			else
 				path
 			end
+		else
+			path.gsub(/.html$/, "")
 		end
 	end
 end

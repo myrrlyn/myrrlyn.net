@@ -42,6 +42,7 @@ activate :syntax, line_numbers: true
 # Reload the browser automatically whenever files change
 configure :development do
 	activate :livereload
+	config[:indev] ||= true
 end
 
 ###
@@ -59,7 +60,8 @@ require 'lib/helpers.rb'
 helpers Helpers
 
 # Build-specific configuration
-configure :production do
+configure :build do
+	config[:build] ||= true
 	# Minify CSS on build
 	activate :minify_css
 
