@@ -1,6 +1,9 @@
 $(document).ready(function() {
 	//  This should only be called when the DOM is finished, obviously.
-	bannerFetch.done(setBanner);
+	bannerFetch.done(data => {
+		//  Strip TES banners from the list
+		setBanner(data.banners.filter(x => !x.type.includes("tes")), "/");
+	});
 	//  Set text expansion/collapse rules
 	$("p.cover").click(function() {
 		//  Inside the handler, `this` refers to the object receiving the event.

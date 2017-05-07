@@ -13,9 +13,6 @@
 # Usage of "type" and "freq" data is not documented here.
 
 [[banners]]
-name = "2012-12-29_004.jpg"
-
-[[banners]]
 name = "2013-07-12_002.jpg"
 type = [
 	"sunset",
@@ -681,4 +678,46 @@ type = [
 	"panorama",
 	"sky",
 	"snow",
+]
+
+[[banners]]
+name = "map_cyrod.jpg"
+type = [
+	"tes",
+	"map",
+]
+
+[[banners]]
+name = "map_skyrim.jpg"
+type = [
+	"tes",
+	"map",
+]
+
+[[banners]]
+name = "map_stylized.jpg"
+type = [
+	"tes",
+	"map",
+]
+
+[[banners]]
+name = "map_wilderness.jpg"
+type = [
+	"tes",
+	"map",
+]
+
+[[banners]]
+name = "text_daedric.jpg"
+type = [
+	"tes",
+	"text",
+]
+
+[[banners]]
+name = "text_oghma.jpg"
+type = [
+	"tes",
+	"text",
 ]

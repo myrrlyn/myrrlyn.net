@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	bannerFetch.done(data => {
+		//  Strip non-TES banners from the list
+		setBanner(data.banners.filter(x => x.type.includes("tes")), "/oeuvre");
+	});
 	shuntBlurb();
 	nav();
 });
