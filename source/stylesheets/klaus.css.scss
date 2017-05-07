@@ -1,7 +1,10 @@
+@import "partials";
+@import "structure";
 article {
 	max-width: 60em;
 	margin: 0 auto;
 	padding: 0.25em 0.5em;
+	border: 1px solid navy;
 }
 
 .img {
@@ -12,10 +15,16 @@ article {
 	&.float-left {
 		float: left;
 	}
+	max-width: 100%;
 }
 
 .portrait {
-	max-width: 250px;
+	@media all and (max-width: 500px) {
+		max-width: 50%;
+	}
+	@media all and (min-width: 500px) {
+		max-width: 250px;
+	}
 }
 
 #img-gallery {

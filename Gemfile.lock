@@ -135,7 +135,7 @@ PLATFORMS
 
 DEPENDENCIES
   builder
-  middleman (>= 4.0.0)
+  middleman (~> 4.2)
   middleman-blog
   middleman-livereload
   middleman-minify-html

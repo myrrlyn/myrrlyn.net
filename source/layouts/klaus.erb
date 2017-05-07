@@ -4,27 +4,38 @@
 		<title>
 			<%= current_page.data.title %>
 		</title>
-		<%= partial "layouts/head" %>
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+		     content="width=device-width, initial-scale=1" />
+		<meta http-equiv="X-UA-Compatible"
+		      content="IE=edge" />
 
-		<%= stylesheet_link_tag :main %>
 		<%= stylesheet_link_tag :klaus %>
+		<link rel="shortcut icon"
+		      type="image/png"
+		      href="/favicon.png" />
+		<%# stylesheet_link_tag :main %>
+		<script type="text/javascript"
+		        src="https://code.jquery.com/jquery-3.1.1.min.js">
+		</script>
+		<script type="text/javascript"
+		        async
+		        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_SVG">
+		</script>
+		<script type="text/javascript"
+		        src="/javascripts/moment.min.js">
+		</script>
 		<%= javascript_include_tag :main %>
 		<%= javascript_include_tag :klaus %>
 	</head>
 	<body class="<%= page_classes %> flex-wrapper flex-rows">
-		<%#= partial "layouts/header" %>
 		<div id="flex-focus"
 		     class="flex-wrapper flex-cols">
 			<main class="flex-item">
 				<article>
 					<%= yield %>
 				</article>
-				<hr />
-				<%#= partial "layouts/cookie-anchor" %>
 			</main>
-			<%#= partial "layouts/about" %>
-			<%#= partial "layouts/nav" %>
 		</div>
-		<%#= partial "layouts/footer" %>
 	</body>
 </html>

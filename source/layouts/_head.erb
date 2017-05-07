@@ -4,29 +4,27 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1" />
 <meta http-equiv="X-UA-Compatible"
-			content="IE=edge">
+      content="IE=edge" />
 <link rel="shortcut icon"
       type="image/png"
       href="/favicon.png" />
+
+<link rel="stylesheet"
+      type="text/css"
+      href="https://use.fontawesome.com/d3d82ead4a.css" />
+<%= stylesheet_link_tag :rouge %>
+<%= stylesheet_link_tag :all %>
 
 <script type="text/javascript"
         src="https://code.jquery.com/jquery-3.1.1.min.js">
 </script>
 <script type="text/javascript"
-				src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js">
+        src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js">
 </script>
 <script type="text/javascript"
         async
-        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_SVG">
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_SVG">
 </script>
-<!-- I am using the CSS icons rather than JS icons.
-<script type="text/javascript"
-        src="https://use.fontawesome.com/d3d82ead4a.js">
-</script>
--->
-<link rel="stylesheet"
-      type="text/css"
-      href="https://use.fontawesome.com/d3d82ead4a.css" />
 <%# The MomentJS folks don't have HTTPS, and I can't download raw JS from %>
 <%# from GitHub as it's flagged as text/plain, so I have to host it myself. %>
 <%# This isn't /ideal/, but I'm not about to have unsecure traffic mixed in. %>
@@ -39,23 +37,3 @@
 <%= javascript_include_tag :banner %>
 <%= javascript_include_tag :nav %>
 <%= javascript_include_tag :all %>
-
-<%= stylesheet_link_tag :rouge %>
-<%= stylesheet_link_tag :all %>
-
-<%# Cookie notification is the law now... %>
-<script type="text/javascript">
-//  Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent
-window["cookieconsent_options"] = {
-	"message": "I use some cookies for convenience functions. No tracking.",
-	"dismiss": "Got it!",
-	"learnMore": "More info",
-	"link": "https://myrrlyn.net/",
-	"theme": "dark-bottom"
-};
-</script>
-<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.10/cookieconsent.min.js">
-</script>
-<!-- End Cookie Consent plugin -->
