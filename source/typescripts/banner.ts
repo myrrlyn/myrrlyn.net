@@ -214,17 +214,6 @@ function deployBanner(banner: BannerImg) {
 }
 
 /**
- * Global cookie object for accessing the banner.
- */
-let bannerCookie = new Cookie("banner", {
-	path: "/",
-});
-
-/**
- * List of all banner images available for use.
- */
-let bannersMain: BannerImg[] = [];
-/**
  * Asynchronous data retrieval handle.
  */
 let bannerFetch = $.getJSON("/javascripts/banners.json");
@@ -233,9 +222,7 @@ let bannerFetch = $.getJSON("/javascripts/banners.json");
  * Set the banner, either from a cookie or from a new draw.
  */
 function setBanner(jsonData: BannerJson[], path?: string) {
-	bannersMain = jsonData.map(data => {
-		return BannerImg.from_json(data);
-	});
+	let banners = jsonData.map(bjson => BannerImg.from_json(bjson));
 	let pathTrue;
 	if (!path) {
 		pathTrue = "/";
@@ -253,17 +240,14 @@ function setBanner(jsonData: BannerJson[], path?: string) {
 	//  cookie expired and was destroyed).
 	let bannerStore;
 	if (document.location.pathname == pathTrue + ".html") {
-		console.log(cookiePage);
 		bannerStore = cookiePage.read();
 	}
 	else {
-		console.log(cookieDir);
 		bannerStore = cookieDir.read();
 	}
-	// let bannerStore = cookieDir.read() || cookiePage.read();
 	//  deserializeBanner safely handles null inputs, so null-checks are not
 	//  required here.
-	let oldBanner = deserializeBanner(bannerStore, bannersMain);
+	let oldBanner = deserializeBanner(bannerStore, banners);
 	//  If the deserializer returns a valid image, we're set.
 	if (oldBanner !== null) {
 		deployBanner(oldBanner);
@@ -271,11 +255,11 @@ function setBanner(jsonData: BannerJson[], path?: string) {
 	//  Otherwise, start banner selection from scratch.
 	else {
 		//  TODO: Create other lists and permit choosing among them.
-		let newBanner = randomBanner(bannersMain);
+		let newBanner = randomBanner(banners);
 		//  Use the ever-handy MomentJS library to come up with a timestamp an
 		//  hour in the future.
 		let newExpiry = moment().utc().add(1, "hour").toString();
-		//  Write to the banenr cookie with the new name and expiration time.
+		//  Write to the banner cookie with the new name and expiration time.
 		cookieDir.create(newBanner.name).update({expires: newExpiry});
 		cookiePage.create(newBanner.name).update({expires: newExpiry});
 		//  Set the CSS to actually use the newly chosen banner.
