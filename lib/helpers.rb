@@ -54,4 +54,9 @@ module Helpers
 	def fa title, link
 		link_to "<i class=\"fa fa-2x fa-#{title}\"></i>", "#{link}"
 	end
+
+	def h5logo *elems, **kwargs
+		elems = elems.sort.join("-")
+		image_tag "https://www.w3.org/html/logo/badge/html5-badge-h-#{elems}.png", kwargs
+	end
 end
