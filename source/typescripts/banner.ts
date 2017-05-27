@@ -3,6 +3,7 @@ type BannerJson = {
 	freq?: number,
 	position?: string,
 	type?: string[],
+	caption?: string,
 }
 
 /**
@@ -20,13 +21,17 @@ class BannerImg {
 	/**
 	 * CSS position tuple.
 	 */
-	position: {x: string, y: string,} = { x: "center", y: "center", };
+	position: { x: string, y: string, } = { x: "center", y: "center", };
 	/**
 	 * List of keywords describing the image.
 	 *
 	 * May be used for sorting or filtering in the future.
 	 */
 	type: string[] = [];
+	/**
+	 * Caption for the banner image.
+	 */
+	caption?: string;
 
 	/**
 	 * Constructs a new BannerImg from the given name.
@@ -59,6 +64,9 @@ class BannerImg {
 		}
 		if (json.type) {
 			tmp.setType(json.type);
+		}
+		if (json.caption) {
+			tmp.setCaption(json.caption);
 		}
 		return tmp;
 	}
@@ -111,6 +119,20 @@ class BannerImg {
 	 */
 	public setType(info?: string[]) {
 		this.type = this.type.concat(info || []);
+	}
+
+	/**
+	 * Sets the caption, if one is provided.
+	 *
+	 * @param caption A description of the banner picture
+	 */
+	public setCaption(caption?: string) {
+		if (caption) {
+			this.caption = caption;
+		}
+		else {
+			this.caption = null;
+		}
 	}
 
 	/**
@@ -210,6 +232,9 @@ function deployBanner(banner: BannerImg) {
 			"background-image": banner.getCssUrl(),
 			"background-position": banner.getPosition(),
 		});
+		if (banner.caption) {
+			$("header").attr("title", banner.caption);
+		}
 	}
 }
 
