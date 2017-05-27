@@ -50,4 +50,8 @@ module Helpers
 			path.gsub(/.html$/, "")
 		end
 	end
+
+	def fa title, link
+		link_to "<i class=\"fa fa-2x fa-#{title}\"></i>", "#{link}"
+	end
 end
