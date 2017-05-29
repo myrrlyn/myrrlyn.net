@@ -11,3 +11,8 @@
 # Ignore source/javascripts, since that directory is populated by the TypeScript
 # compiler
 /source/javascripts
+
+# Ignore artifacts of the serve script
+mid.*.log
+tsc.*.log
+*.pid

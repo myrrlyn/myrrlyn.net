@@ -1,6 +1,0 @@
-#!/bin/bash
-
-for file in build/**/*.{css,html,js}
-do
-	gzip --best --force --keep $@ $file
-done
