@@ -15,14 +15,12 @@ Alexander Payne
 Introduction
 	</h2>
 	<p>
-I am a software engineer at Space Dynamics Laboratory, working on embedded
+I’m a software engineer at Space Dynamics Laboratory, working on embedded
 software for satellite missions. I work primarily in C, and have hopes to
 introduce the Rust language into aerospace.
 	</p>
 	</p>
-My education and personal experience include embdedded systems C/C++, web
-development, and systems administration. I am also an Eagle Scout and lifeguard,
-with experience as a manager and instructor.
+I’m a bigger Taylor Swift fan than you.
 	</p>
 	<h2>
 Contact Info
@@ -35,7 +33,8 @@ first contact.
 	</p>
 	<p>
 My public key is hosted locally <%= link_to "here", "/myrrlyn.asc" %> and at
-<%= link_to "my Keybase profile", "//keybase.io/myrrlyn" %>.
+<%= link_to "my Keybase profile", "//keybase.io/myrrlyn" %>. Encryption probably
+isn’t <em>that</em> important to talk to me, but good habits are good habits.
 	</p>
 	<p>
 		<small>
@@ -43,16 +42,18 @@ This site is a work in progress. I would greatly appreciate reports of bugs, and
 equally appreciate patience as I build it.
 		</small>
 	</p>
-	<p class="text-center">
-<%= link_to h5logo("css3", "semantics", height: 32), "https://www.w3.org/html/logo/" %>
-<%= link_to image_tag("arch-logo.png", height: 32), "https://www.archlinux.org" %>
-	</p>
+	<div id="about-logos">
+		<p class="text-center">
+<%= link_to image_tag("arch-logo.png", height: 32, alt: "Arch Linux"), "https://www.archlinux.org" %>
+<%= link_to h5logo("css3", "semantics", height: 32, alt: "HTML5"), "https://www.w3.org/html/logo/" %>
+		</p>
 
-	<div class="logo glider">
-		<a alt="Hacker emblem as proposed by Eric S. Raymond"
-		   href="//catb.org/hacker-emblem"
-		   title="Hacker emblem as proposed by Eric S. Raymond">
-			 <%= partial "layouts/glider", locals: { scale: 16 } %>
-		</a>
+		<div class="logo glider">
+			<a alt="Hacker emblem as proposed by Eric S. Raymond"
+			   href="//catb.org/hacker-emblem"
+			   title="Hacker emblem as proposed by Eric S. Raymond">
+				 <%= partial "layouts/glider", locals: { scale: 16 } %>
+			</a>
+		</div>
 	</div>
 </aside>

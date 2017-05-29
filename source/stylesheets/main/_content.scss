@@ -1,10 +1,10 @@
 main {
 	padding: 0 0.5em;
 	&.flex-item {
-		@media all and (max-width: map-get($breakpoints, 'medium-')) {
+		@media all and (max-width: map-get($breakpoints, 'large-')) {
 			@include region-border('bottom', $width: 2px);
 		}
-		@media all and (min-width: map-get($breakpoints, 'medium+')) {
+		@media all and (min-width: map-get($breakpoints, 'large+')) {
 			@include region-border('left');
 			@include region-border('right');
 		}
