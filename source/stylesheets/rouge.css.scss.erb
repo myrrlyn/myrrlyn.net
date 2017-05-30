@@ -1,0 +1,14 @@
+<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+
+@mixin tabs($width) {
+	table pre {
+		tab-size: $width;
+	}
+}
+
+.highlight {
+	@include tabs(4);
+	&.ruby {
+		@include tabs(2);
+	}
+}
