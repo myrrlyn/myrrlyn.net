@@ -7,8 +7,8 @@ category: local
 
 ## Formal Education
 
-**Trine University:** Angola, IN; August 2011 to May 2016. Bachelor of Science,
-Computer Engineering.
+**Trine University:** Angola, IN; August 2011 to May 2016. Computer Engineering
+major.
 
 Notable courses:
 
@@ -81,8 +81,7 @@ item to show or hide its content, or click here to expand all items.
     {:.cover}
 
     I learned the basics of Java in high school, and pursued it further for
-    my formal courses in it. I have a solid grasp on the Java standard library,
-    and am familiar with Java tool systems such as Gradle and Maven.
+    my formal courses in it.
 
 - C, C++
     {:.cover}
@@ -102,7 +101,7 @@ item to show or hide its content, or click here to expand all items.
     {:.cover}
 
     I investigated using Rust for my Senior Design project. I taught myself Rust
-    and am fluent in its core concepts.
+    and am fluent in its core concepts. I
 
 - C♯:
     {:.cover}
@@ -121,19 +120,19 @@ item to show or hide its content, or click here to expand all items.
 #### Others
 
 - Bash and Zsh scripting
-- D
 - Python
-- AVR, x86 assembly
+- AVR, MIPS, x86 assemblers
 
 ### Systems and Tools
 
 - Windows
     {:.cover}
 
-    I’ve used Windows all my life, and have experience in system administration
-    and Windows Server usage.
+    I’ve used Windows all my life, and have some experience in system
+    administration and Windows Server usage. I currently only use Windows at
+    work.
 
-- Linux
+- GNU/Linux
     {:.cover}
 
     I started on Ubuntu, and now run Arch Linux as my daily-use system. I am
@@ -161,23 +160,24 @@ item to show or hide its content, or click here to expand all items.
     firm understanding of its theory and actual usage. I use Git for all my
     work.
 
-- UNIX shells
+- Command shells
     {:.cover}
 
-    I use `zsh` as my daily shell, and am familiar with `bash` as well.
+    I use Zsh as my daily shell, and am familiar with GNU Bash as well. I use
+    PowerShell at work.
 
 - Editors/IDEs
-    {:.cover}
-
-    I have used many text editors and IDEs. The editors which with I am most
-    familiar are:
-
-    - Visual Studio
-    - Atom and Visual Studio Code
+    - Microsoft Visual Studio
+    - Atom and Microsoft Visual Studio Code (not at all related to VS)
     - Eclipse and NetBeans
-    - Vim
+    - I exited Vim once
+    - GNU Nano
+    - I have never even installed, much less used, GNU Emacs, and have no plans
+        to do so.
 
 ## Work Experience
+
+### Rota-Kiwan Scout Reservation
 
 I worked at Rota-Kiwan Scout Reservation over the summers during college, as a
 lifeguard and then aquatics director. My responsibilities included:
@@ -195,9 +195,17 @@ and through any technical interviews. My abilities as an employee, team member,
 and leader are less quantifiable. I can provide references to these effects upon
 request.
 
+### Space Dynamics Laboratory
+
+I wrote middleware networking drivers for the NASA BioSentinel mission. This
+required working knowledge of POSIX I/O driver structure, VxWorks kernel use,
+and SPARCv8 performance. My code was written in ISO C99.
+
+I am currently working with Ruby to orchestrate ground operations for another
+mission, about which I know little and can disclose less.
+
 ## Professional Certifications and Associations
 
-- Order of the Engineer
 - Professional Association of Diving Instructors
     - Rescue Diver
     - Advanced Open Water Diver

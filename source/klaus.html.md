@@ -15,7 +15,8 @@ layout: klaus
 **Dear Reader,**
 
 I am writing regarding an upcoming social opportunity. As you are no doubt
-aware, Ring Dance is rapidly approaching for the USNA class of 2018. Ring Dance brings with it an assortment of bacchanalia and revelry which is the envy of all
+aware, Ring Dance is rapidly approaching for the USNA class of 2018. Ring Dance
+brings with it an assortment of bacchanalia and revelry which is the envy of all
 and serves as a siren song to college students across the mid-Atlantic region.
 It would behoove both your organization and myself to enter into negotiation
 regarding mutual attendance of the aforementioned Ring Dance.
@@ -137,10 +138,10 @@ Self-evident, with demonstrations upon request
     of 2013. Responsible for a multi month training regimen and one week
     performance regarding drill and tour guide/ park maintenance duties for the
     Troop on Mackinac Island, responsible for 63 staff.
-- Eagle Scout, 2013.
-- Selected as Lima Company Commander, 2017. Responsibilities will include training
-    and inculcating newly arrived plebe midshipmen into competent, disciplined
-    midshipmen through both physical and mental development.
+- Eagle Scout, 2010.
+- Selected as Lima Company Commander, 2017. Responsibilities will include
+    training and inculcating newly arrived plebe midshipmen into competent,
+    disciplined midshipmen through both physical and mental development.
 - Captain, Culver Military Academy Men’s Crew Team, 2013-2014.
 
 ### Sales
@@ -170,7 +171,6 @@ Currently selling myself. Customers include:
 <div id="klaus-logos" class="img-row"></div>
 </div>
 
-<!--
 ## Experience
 
 ### Midshipman │ United States Naval Academy │ 2014 June 1 – present
@@ -184,4 +184,3 @@ Currently selling myself. Customers include:
 ### Farmhand │ local │ 2012 – 2013, summers
 
 A degree of experience which is adequate, but not trashy
--->

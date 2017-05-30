@@ -25,11 +25,8 @@
         async
         src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_SVG">
 </script>
-<%# The MomentJS folks don't have HTTPS, and I can't download raw JS from %>
-<%# from GitHub as it's flagged as text/plain, so I have to host it myself. %>
-<%# This isn't /ideal/, but I'm not about to have unsecure traffic mixed in. %>
 <script type="text/javascript"
-        src="/javascripts/moment.min.js">
+        src="https://momentjs.com/downloads/moment.min.js">
 </script>
 
 <%= javascript_include_tag :storage %>
