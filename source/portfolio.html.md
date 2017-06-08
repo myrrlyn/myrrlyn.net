@@ -7,6 +7,44 @@ category: local
 
 These are projects I’ve worked on either for class or my own personal pursuits.
 
+## `libwyzyrdry`
+
+Nothing says “cool” like puns on an author’s name. I trust I don’t need to
+explain the thought process that created the above consonant salad.
+
+There’s no such thing as an un-improveable tool, and everyone has their own
+personal touches to make a tool or environment truly theirs. Much as dotfiles
+make one’s `$HOME` (or `%HOMEPATH%`, Windows users are people too) a unique and
+distinctive …home, collections of programming libraries make one’s workshop.
+
+I use the base name `wyzyrdry` for my personal library projects, and decorate it
+as each language requires.
+
+Currently, I am only making my C and Rust libraries publicly available, as those
+are the only languages in which I’m actively working and have noticed needs
+strong enough to fill.
+
+### `wyzyrdry-c`
+
+The [C library][wyzyrdry-c] is currently getting the most activity, as I use C
+for my day job and find its standard library extremely lacking. I will also
+freely confess that the items populating it are inspired by, if not directly
+stolen from, Rust. The `Vec` (growable array) and `Slice` (pointer/length tuple)
+are absolute plagiarism.
+
+I am also writing `Str` (length-prefixed variable length array) and `RingBuf`
+components, which are taken directly from work projects and will be wheels I do
+not wish to reinvent after this.
+
+### `wyzyrdry-rs`
+
+The [Rust library][wyzyrdry-rs] doesn’t have much, but I’ve found that macros
+for early exit and for printing to `stderr` instead of `stdout` are invaluable
+for my uses. So I wrote an `alert!` and `alertln!` macro that functions
+identically to `print!` and `println!`, but targeting `stderr`, and an `exit!`
+macro that supports custom program return values and optionally printing a
+farewell message indicating the cause of the exit.
+
 ## Senior Design
 
 My Senior Design project is the largest and most complex project I have
@@ -111,4 +149,6 @@ mention it even if I can no longer showcase it.
 [tsl]: https://reddit.com/r/teslore
 [tsl-gh-old]: https://github.com/myrrlyn/teslore
 [vls]: https://github.com/myrrlyn/DigitalSystemsProject
+[wyzyrdry-c]: https://github.com/myrrlyn/wyzyrdry-c
+[wyzyrdry-rs]: https://github.com/myrrlyn/wyzyrdry-rs
 [yt]: https://www.youtube.com/watch?v=K3CKSovJbJQ
