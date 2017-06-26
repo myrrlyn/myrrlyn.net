@@ -2,6 +2,12 @@
 title: PayneCraft
 ---
 
+<%
+mcver = "1.11.2"
+mcfver = "13.20.0.2366"
+ic2ver = "2.7.72-ex111"
+%>
+
 # Overview
 
 I run a lightly modded Minecraft server. Chances are that if you can read this
@@ -10,8 +16,8 @@ page, the server is alive and well. Aim your Minecraft at `myrrlyn.net`.
 The server is currently running Minecraft v1.10.2 with the following server-side
 mods:
 
-- Minecraft Forge 1.10.2 - 12.18.2.2107
-- IndustrialCraft<sup>2</sup> 2.6.88-ex110
+- Minecraft Forge <%= mcver %> - <%= mcfver %>
+- IndustrialCraft<sup>2</sup> <%= ic2ver %>
 
 You *must* install these two mods in order to connect.
 
@@ -34,7 +40,7 @@ the [Forge website][forge], and I am hosting copies of the correct version here.
 2. Run Minecraft at least once to be sure Forge is correctly set up.
 
 3. Download the [IndustrialCraft<sup>2</sup>][ic2] file and copy it to your mods
-directory. ([IC<sup>2</sup> 2.6.88-ex110][ic2j])
+directory. ([IC<sup>2</sup> <%= ic2ver %>][ic2j])
 
     By default, Minecraft lives in these locations. The `mods` folder will be in
     here, after Minecraft has been run once with Forge installed.
@@ -52,7 +58,7 @@ them correctly, you should be all set.
 6. Try to enter, and pester me if it fails.
 
 [forge]: http://files.minecraftforge.net/
-[fw]: /minecraft/forge-1.10.2-12.18.2.2107-installer-win.exe
-[fl]: /minecraft/forge-1.10.2-12.18.2.2107-installer.jar
-[ic2]: http://jenkins.ic2.player.to/job/IC2_110/
-[ic2j]: /minecraft/industrialcraft-2-2.6.88-ex110.jar
+[fw]: /minecraft/forge-<%= mcver %>-<%= mcfver %>-installer-win.exe
+[fl]: /minecraft/forge-<%= mcver %>-<%= mcfver %>-installer.jar
+[ic2]: http://jenkins.ic2.player.to/job/IC2_111/
+[ic2j]: /minecraft/industrialcraft-2-<%= ic2ver %>.jar
