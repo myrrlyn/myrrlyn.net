@@ -6,6 +6,7 @@ title: PayneCraft
 mcver = "1.11.2"
 mcfver = "13.20.0.2366"
 ic2ver = "2.7.72-ex111"
+bcver = "7.99.4"
 %>
 
 # Overview
@@ -18,8 +19,9 @@ mods:
 
 - Minecraft Forge <%= mcver %> - <%= mcfver %>
 - IndustrialCraft<sup>2</sup> <%= ic2ver %>
+- BuildCraft <%= bcver %>
 
-You *must* install these two mods in order to connect.
+You *must* install these mods in order to connect.
 
 ## Access
 
@@ -32,15 +34,18 @@ have a means of reaching me. Send me your username and I’ll open the gates.
 the [Forge website][forge], and I am hosting copies of the correct version here.
 
     - [Windows installer][fw]: Download, tell your computer it’s safe, run.
-    - [Mac/Linux installer][fl]: Download, run.
+    - [Mac/Linux installer][fl]: Download, tell your computer it’s safe, run.
 
     You’ll want to install the client. When you next launch Minecraft, be sure
     you’re using the “Forge” profile, with this version selected.
 
-2. Run Minecraft at least once to be sure Forge is correctly set up.
+1. Run Minecraft at least once to be sure Forge is correctly set up.
 
-3. Download the [IndustrialCraft<sup>2</sup>][ic2] file and copy it to your mods
+1. Download the [IndustrialCraft<sup>2</sup>][ic2] file and copy it to your mods
 directory. ([IC<sup>2</sup> <%= ic2ver %>][ic2j])
+
+1. Download the [BuildCraft][bc] file and install it the same way.
+([BC <%= bcver %>][bcj])
 
     By default, Minecraft lives in these locations. The `mods` folder will be in
     here, after Minecraft has been run once with Forge installed.
@@ -49,16 +54,18 @@ directory. ([IC<sup>2</sup> <%= ic2ver %>][ic2j])
     - OS X / macOS: `~/Library/Application Support/minecraft`
     - Linux: `~/.minecraft`
 
-4. Run Minecraft again. Verify that Forge sees IndustrialCraft<sup>2</sup>.
+1. Run Minecraft again. Verify that Forge sees IndustrialCraft<sup>2</sup>.
 
-5. In the Multiplayer section, add my server (`myrrlyn.net`) and verify that
+1. In the Multiplayer section, add my server (`myrrlyn.net`) and verify that
 Forge reports it as compatible. If you used the files on this page and installed
 them correctly, you should be all set.
 
-6. Try to enter, and pester me if it fails.
+1. Try to enter, and pester me if it fails.
 
 [forge]: http://files.minecraftforge.net/
 [fw]: /minecraft/forge-<%= mcver %>-<%= mcfver %>-installer-win.exe
 [fl]: /minecraft/forge-<%= mcver %>-<%= mcfver %>-installer.jar
-[ic2]: http://jenkins.ic2.player.to/job/IC2_111/
+[ic2]: http://industrial-craft.net/
 [ic2j]: /minecraft/industrialcraft-2-<%= ic2ver %>.jar
+[bc]: https://www.mod-buildcraft.com/
+[bcj]: /minecraft/buildcraft-<%= bcver %>.jar
