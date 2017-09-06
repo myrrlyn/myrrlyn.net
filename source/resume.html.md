@@ -17,19 +17,19 @@ of an autonomous cargo hauler. I worked with three mechanical engineers on the
 physical machine, and personally built the electrical and software systems. The
 machine capably navigated along a pre-programmed route, and successfully
 detected obstacles such as pedestrians and a train. The code is on my GitHub
-profile, and the summary video is [on YouTube][srd]. I can provide design
+profile, and the summary video is [on YouTube][1]. I can provide design
 documents upon request.
 
 - **Logic and Computer Design**: This class focused on the hardware construction
-of a computer and the instruction primitives executing on it. We built a MIPS
-CPU in Verilog.
+of a computer and the instruction primitives executing on it. We built a
+five-stage MIPS CPU in Verilog.
 
 - **Embedded Systems**: This class taught real-time operating systems and
 OS-less programming. We built an oscilloscope and basic RTOS.
 
 - **Software Engineering I and II**: These classes focused on development
 patterns, software design, and algorithm use. We learned C++/Qt and Ruby, and
-built a Rails app and SQL database.
+built a Rails app and PostgreSQL database.
 
 General courses:
 
@@ -75,7 +75,8 @@ item to show or hide its content, or click here to expand all items.
 
     I taught myself Ruby before taking the computer engineering major, and
     continue to use it as my prototyping language. I am familiar with Ruby on
-    Rails, and have written gems for public use.
+    Rails, and have written gems for public use. I am currently using Ruby at
+    work to drive the ground end of one of our satellite projects.
 
 - Java
     {:.cover}
@@ -101,7 +102,10 @@ item to show or hide its content, or click here to expand all items.
     {:.cover}
 
     I investigated using Rust for my Senior Design project. I taught myself Rust
-    and am fluent in its core concepts. I
+    and am fluent in its core concepts. I have used it for approximately two
+    years now, and have a [published crate][2] demonstrating my knowledge of
+    various language features. I have also deployed a Rust project for data
+    stream processing at work, though I am not at liberty to disclose its code.
 
 - C♯:
     {:.cover}
@@ -167,13 +171,11 @@ item to show or hide its content, or click here to expand all items.
     PowerShell at work.
 
 - Editors/IDEs
-    - Microsoft Visual Studio
     - Atom and Microsoft Visual Studio Code (not at all related to VS)
-    - Eclipse and NetBeans
-    - I exited Vim once
+    - Basic Vim usage
     - GNU Nano
-    - I have never even installed, much less used, GNU Emacs, and have no plans
-        to do so.
+    - Eclipse and NetBeans
+    - Microsoft Visual Studio
 
 ## Work Experience
 
@@ -219,4 +221,5 @@ mission, about which I know little and can disclose less.
     - Lifeguard Instructor
     - BSA Lifeguard
 
-[srd]: https://www.youtube.com/watch?v=K3CKSovJbJQ
+[1]: https://www.youtube.com/watch?v=K3CKSovJbJQ
+[2]: https://crates.io/crates/endian_trait

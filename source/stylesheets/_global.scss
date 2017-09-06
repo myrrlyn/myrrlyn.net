@@ -36,3 +36,13 @@ pre,
 code {
 	@extend %monospace;
 }
+
+del {
+	text-decoration: none;
+	background-color: fade-out(lightpink, 0.5);
+}
+
+ins {
+	text-decoration: none;
+	background-color: fade-out(lightgreen, 0.3);
+}
