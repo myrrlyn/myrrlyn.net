@@ -5,7 +5,7 @@ title: Hermaeus
 # `Hermaeus`
 {:.text-center}
 
-[![Gem Version](https://badge.fury.io/rb/hermaeus.svg)](https://badge.fury.io/rb/hermaeus)
+[![Gem Version](https://badge.fury.io/rb/hermaeus.svg){:.unset}](https://badge.fury.io/rb/hermaeus)
 
 - [Source Code][gh]
 - [Gem Download][gem]

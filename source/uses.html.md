@@ -125,18 +125,27 @@ helps that I have a `.edu` email address for the forseeable future.
 ## Programming Languages
 
 1. [Rust][11]
+
     Personal language of choice. I’m slowly expanding the scope of where I use
     it, including working on rebuilding this website to be driven by it.
+
 1. [Ruby][12]
+
     I use Ruby at work for driving the ground side of one of our missions, and
     to power this website (currently).
+
 1. [C][13], split evenly between [GCC][14] and [Clang][15] compilers.
+
     I specialize in low-level systems languages, and Rust has not yet displaced
     this.
+
 1. [Sass][16]
+
     Still my absolute favorite CSS super-language. I use it for all my CSS
     projects, and cannot yet imagine going back.
+
 1. [TypeScript][17]
+
     I don’t really have a firm reason I picked TypeScript as my JavaScript
     super-language, but I really enjoy working in it.
 

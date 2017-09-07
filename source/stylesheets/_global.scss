@@ -37,12 +37,17 @@ code {
 	@extend %monospace;
 }
 
-del {
+ins, del {
 	text-decoration: none;
+	padding: 0 0.6em;
+	border-top-left-radius: 1000px;
+	border-bottom-right-radius: 1000px;
+}
+
+del {
 	background-color: fade-out(lightpink, 0.5);
 }
 
 ins {
-	text-decoration: none;
 	background-color: fade-out(lightgreen, 0.3);
 }
