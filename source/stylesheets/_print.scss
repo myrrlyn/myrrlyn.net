@@ -1,0 +1,30 @@
+//  Stylesheet to be applied when printing
+
+//  Kill the unimportant regions of the screen
+header,
+footer,
+#about,
+#nav,
+main > :not(article) {
+	display: none !important;
+}
+
+del, ins {
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+}
+del {
+	text-decoration: {
+		color: red;
+		line: line-through;
+		style: wavy;
+	}
+}
+ins {
+	text-decoration: {
+		color: green;
+		line: underline;
+		style: solid;
+	}
+}

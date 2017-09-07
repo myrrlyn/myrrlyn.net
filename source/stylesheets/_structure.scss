@@ -94,9 +94,3 @@ and (min-height: 800px) {
 		overflow-y: auto;
 	}
 }
-
-@media only print {
-	header, footer, #about, #nav {
-		display: none !important;
-	}
-}

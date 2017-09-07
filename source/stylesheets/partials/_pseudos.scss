@@ -1,8 +1,10 @@
 %article-img {
 	display: block;
-	min-width: 200px;
-	width: 33%;
-	max-width: 800px;
+	&:not(.unset) {
+		min-width: 200px;
+		width: 33%;
+		max-width: 800px;
+	}
 	&.ctr {
 		margin: 0 auto;
 	}

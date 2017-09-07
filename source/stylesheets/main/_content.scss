@@ -61,22 +61,8 @@ article {
 		@include sidenote-border("left", $color: nth($palette-hue-secondary, 4), $width: 8px);
 		padding-left: 1em;
 	}
-	img:not(.unset) {
-		display: block;
-		min-width: 200px;
-		width: 33%;
-		max-width: 800px;
-		&.ctr {
-			margin: 0 auto;
-		}
-		&.left {
-			float: left;
-			margin-right: 1em;
-		}
-		&.right {
-			float: right;
-			margin-left: 1em;
-		}
+	img {
+		@extend %article-img;
 	}
 }
 

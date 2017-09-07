@@ -10,3 +10,7 @@
 @import "main/sidebar";
 @import "main/about";
 @import "main/footer";
+
+@media only print {
+	@import "print";
+}
