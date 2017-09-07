@@ -81,7 +81,9 @@ footer .flex-item {
 	height: 1em;
 }
 
-@media only screen and (min-width: map-get($breakpoints, 'large+')) {
+@media only screen
+and (min-width: map-get($breakpoints, 'large+'))
+and (min-height: 800px) {
 	#flex-focus {
 		height: calc(100vh - 32px - 2px - 128px - 4px);
 	}
