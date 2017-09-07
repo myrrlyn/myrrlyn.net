@@ -53,24 +53,24 @@ body {
 }
 
 #about {
-	@media all and (min-width: map-get($breakpoints, 'small+')) {
+	@media only screen and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 2 1 0%;
 	}
-	@media all and (min-width: map-get($breakpoints, 'large+')) {
+	@media only screen and (min-width: map-get($breakpoints, 'large+')) {
 		order: 1;
 	}
 }
 #nav {
-	@media all and (min-width: map-get($breakpoints, 'small+')) {
+	@media only screen and (min-width: map-get($breakpoints, 'small+')) {
 		flex: 1 2 0%;
 	}
-	@media all and (min-width: map-get($breakpoints, 'large+')) {
+	@media only screen and (min-width: map-get($breakpoints, 'large+')) {
 		order: 3;
 	}
 }
 
 main.flex-item {
-	@media all and (min-width: map-get($breakpoints, 'large+')) {
+	@media only screen and (min-width: map-get($breakpoints, 'large+')) {
 		flex: 4 0 0%;
 		order: 2;
 	}
@@ -79,4 +79,22 @@ main.flex-item {
 footer .flex-item {
 	flex: 1 0 0%;
 	height: 1em;
+}
+
+@media only screen and (min-width: map-get($breakpoints, 'large+')) {
+	#flex-focus {
+		height: calc(100vh - 32px - 2px - 128px - 4px);
+	}
+	.hide-scroll {
+		overflow-y: hidden;
+	}
+	main, #about, #nav {
+		overflow-y: auto;
+	}
+}
+
+@media only print {
+	header, footer, #about, #nav {
+		display: none !important;
+	}
 }

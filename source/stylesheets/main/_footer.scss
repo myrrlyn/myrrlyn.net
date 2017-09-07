@@ -1,4 +1,6 @@
 footer {
-	@include region-border('top', $width: 2px);
+	@media not print {
+		@include region-border('top', $width: 2px);
+	}
 	padding: 0.5rem;
 }

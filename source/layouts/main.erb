@@ -15,11 +15,12 @@ myrrlyn/<%= current_page.data.title.downcase %>
 		<%= partial "layouts/head" %>
 		<%= javascript_include_tag :main %>
 	</head>
-	<body class="<%= page_classes %> flex-wrapper flex-rows">
+	<body class="<%= page_classes %>">
 		<%= partial "layouts/header" %>
 		<div id="flex-focus"
-		     class="flex-wrapper flex-cols">
-			<main class="flex-item">
+		     class="flex-wrapper flex-cols hide-scroll">
+			<main class="flex-item"
+			      role="main">
 				<article>
 					<%= yield %>
 				</article>

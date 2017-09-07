@@ -5,7 +5,9 @@ header {
 		repeat: no-repeat;
 		size: cover;
 	}
-	@include region-border('bottom', $width: $header-border);
+	@media not print {
+		@include region-border('bottom', $width: $header-border);
+	}
 	//  Dammit Firefox
 	// height: $header-height;
 	padding-bottom: $header-height;
