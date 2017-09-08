@@ -85,12 +85,10 @@ footer .flex-item {
 and (min-width: map-get($breakpoints, 'large+'))
 and (min-height: 800px) {
 	#flex-focus {
-		height: calc(100vh - 32px - 2px - 128px - 4px);
-	}
-	.hide-scroll {
-		overflow-y: hidden;
+		height: calc(100vh - #{core-height()});
 	}
 	main, #about, #nav {
 		overflow-y: auto;
+		height: inherit;
 	}
 }
