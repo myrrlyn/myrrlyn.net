@@ -21,3 +21,8 @@ pre.highlight {
 		overflow-x: scroll;
 	}
 }
+
+blockquote {
+	@include sidenote-border("left", $color: nth($palette-hue-complementary, 3), $width: 10px);
+	padding-left: 0.5em;
+}
