@@ -287,6 +287,8 @@ I also use Dropbox, OneDrive, and Google Drive as means of backing up
 and/or sharing items with specific groups of people or ecosystems. These
 are fairly mainstream and banal, so I won’t go into more detail.
 
+[1]: https://agilebits.com/
+[2]: https://enpass.io/
 [3]: http://www.coolermaster.com/case/lan-box-haf-series/haf-xb-evo
 [4]: https://www.asus.com/Motherboards/Z97A
 [5]: https://ark.intel.com/products/80807
