@@ -13,6 +13,116 @@ Anyway, here’s what I have in my virtual workshop.
 1. ToC
 {:toc}
 
+# PASSWORD MANAGER
+
+I’m putting this first because it is, in my opinion, critically important to the
+rest of the list.
+
+I have previously used [1Password][1], but recently switched to [Enpass][2]. In
+my experience, these two managers are closely matched in features, though Enpass
+wins out in that it has a Linux desktop client and 1Password does not. Enpass
+furthermore has a Windows 10 Mobile app, so I can recommend it to my parents; I
+do not recall if 1Password does (I believe it does not).
+
+Enpass is free for desktop apps, and $10 per user per mobile OS. If you own an
+iPhone, an Android, and/or a Windows Phone, you'll pay per app. Otherwise, it is
+free for personal use. The price is only invoked when you try to store your
+21<sup>st</sup> credential, so you can give it a trial spin to see if you like
+it without committment. I bought it immediately and regret nothing.
+
+Enpass offers a number of features I find both compelling and, to be honest,
+mandatory in any modern password manager. I know this reads like I’m shilling
+for them and I swear I’m not; I’m just very enthusiastic about this.
+
+- Synchronization
+
+    Enpass has native hooks with a variety of synchronization services. At the
+    time of this writing, that list includes Dropbox, OneDrive, Google Drive,
+    OwnCloud, and Box. If none of these strike your fancy, you can also instruct
+    it to store its database in a specific location and manage it yourself (such
+    as via SyncThing).
+
+    The database file is always stored fully encrypted. When an Enpass client
+    seeks to update it, it locks the file, decrypts it in local memory, updates,
+    re-encrypts, and then clobbers the file on disk with the new version. Don’t
+    cause a race, I guess.
+
+- Platform Support
+
+    Essentially all of them. Windows, macOS, Linux, iOS, Android, Windows
+    Mobile, Chromebook, and even BlackBerry. No BSD though, and as it’s closed
+    source, you can’t port it yourself.
+
+- Environment Integration
+
+    On desktop, Enpass offers browser integrations for Firefox, Chrome, Safari,
+    and Opera. On mobile, it offers (at least on Android; I don’t own an iPhone)
+    a custom keyboard that can fill fields for you. I have found using it in
+    both environments to be a pleasant mix of convenience and security.
+
+- TOTP Support
+
+    <dfn>Time-based One Time Password</dfn> algorithms are commonly used for Two
+    Factor Authentication. If you so choose, you can use Enpass to store your
+    TOTP seed and have it generate 2FA codes for you when unlocked. This is,
+    however, moving your 2FA into the same database that stores your password,
+    and thus both are compromised if your Enpass database is lost or breached. I
+    am using it for my less-important services, but will likely continue to use
+    Authy for more important 2FA accounts.
+
+- Password Generation
+
+    You can specify length and mix (uppercase, digits, yes or no visually
+    similar characters, non-alphanumeric symbols) anywhere in the app, including
+    (of course) browser extensions or the app keyboard, and auto-fill and copy
+    to a self-destructing clipboard. After generation and entry, Enpass will
+    detect a new or updated identity and ask you if it should update its
+    database accordingly.
+
+- Display of weak or duplicate passwords
+
+    Identities with weak and/or duplicate passwords are displayed in their own
+    categories so you can rapidly identify them and take action to change them.
+    Enpass does not yet have Dashlane's ability to change passwords en masse;
+    you have to do so manually and individually. This is, regardless, good
+    information to have
+
+- Importing from other managers
+
+    I exported my 1Password database to its 1pif format, and Enpass ate that
+    archive directly with only minor loss of information.
+
+- Display of aging passwords
+
+    I have not yet experienced this, as Enpass believes all my passwords are a
+    few days old (it did not collect their creation dates from the 1Password
+    export). As my passwords age, it will display those identites in categories
+    for various ages of password as an incentive to rotate regularly.
+
+- Fingerprint Unlock
+
+    **THIS IS A SECURITY REDUCTION**. However, it is very convenient, and Enpass
+    takes every step to limit the security reduction of biometric unlocks. If
+    your phone changes the fingerprint set in any way, Enpass invalidates the
+    stored master password and requires that you re-authenticate with it.
+
+    But yes, you can use Touch ID to unlock your password vault. I recommend
+    disabling this if you are in an environment where this may be unsafe, such
+    as heavy police or other security personnel presence, or an untrustworthy
+    home environment.
+
+The only thing Enpass does not have that 1Password does, *to my knowledge*, is
+1Password’s recent feature add of Travel Mode. If you inform 1Password that you
+are travelling, it will destroy local copies of select vaults and attempt to
+reacquire onec you turn travel mode off. This makes it so that, if you are
+compelled to open your password vault by, say, American TSA, your sensitive
+items will be completely absent and you can do so safely.
+
+If this is something likely to affect you, disable Enpass synchronization on the
+affected devices and the local databases will be destroyed; reenable it later to
+reacquire. This is not selective and you will temporarily lose all data, not
+just the vaults you mark as sensitive as 1Password permits.
+
 # Hardware
 
 I have six computers at the moment in various roles. Don’t look at me like that.
@@ -42,10 +152,10 @@ be done in a small shop behind your house. So … yeah.
 
 Here are the parts for it:
 
-- [CoolerMaster HAF XB EVO][1] case (no I don’t know what those letters mean)
-- [ASUS Z97-A][2] motherboard
-- [Intel Core i7 4790K][3] CPU (not overclocked; I’m not a cool ricer)
-- 2x [nVidia GeForce GTX960][4] GPUs (this was a mistake; identical cards means
+- [CoolerMaster HAF XB EVO][3] case (no I don’t know what those letters mean)
+- [ASUS Z97-A][4] motherboard
+- [Intel Core i7 4790K][5] CPU (not overclocked; I’m not a cool ricer)
+- 2x [nVidia GeForce GTX960][6] GPUs (this was a mistake; identical cards means
     I can’t pass just one through to a VM. Also, VR support starts at the 970)
 - A ThermalTake liquid cooler whose specific SKU I can’t remember and probably
     doesn’t matter.
@@ -78,7 +188,7 @@ isn’t in a great situation vis-a-vis uptime. *Thanks, Comcast*.
 
 ## Phone
 
-I currently use a [Moto Z][6]. <del>I don’t have any of the mods for it, though
+I currently use a [Moto Z][8]. <del>I don’t have any of the mods for it, though
 I should probably get some. I play Ingress and take landscape pictures, and the
 battery packs and camera mod look extremely cool.</del> <ins>I bought the
 battery and camera mods. The battery is tremendously helpful, though I’ve
@@ -88,7 +198,7 @@ eclipse pictures with it.</ins>
 
 ## Keyboard
 
-I have two [WASD][7] keyboards in the Dvorak layout that I greatly enjoy. My
+I have two [WASD][9] keyboards in the Dvorak layout that I greatly enjoy. My
 favorite part of them is that the Dvorak scheme is controlled by a switch on the
 back that remaps the scan codes of each key, so that it can be plugged into a
 computer expecting the QWERTY US keymap without any change to software.
@@ -106,52 +216,52 @@ that as well, though without nearly the fluency that I do Arch.
 
 ## Desktop Environments
 
-KDE’s [Plasma 5][8]. I know, I know; the only way I could get more generic and
+KDE’s [Plasma 5][10]. I know, I know; the only way I could get more generic and
 boring is if I used GNOME. It works tremendously and I don’t use Vim either;
 I’ve resigned myself to not being “cool”. Plus, KDE Connect pairing with my
 phone is very convenient.
 
 ## Editors
 
-Primarily [Visual Studio Code][9]. I know how to type in, save, AND exit Vim, so
+Primarily [Visual Studio Code][11]. I know how to type in, save, AND exit Vim, so
 I’ve got that going for me. I mostly use GNU Nano as my notepad when I can’t
 leave the terminal environment, though.
 
 ### IDEs
 
-I do half of my Rust work in [IntelliJ IDEA][10]. It is truly remarkable. It
+I do half of my Rust work in [IntelliJ IDEA][12]. It is truly remarkable. It
 helps that I have a `.edu` email address for the forseeable future.
 
 ## Programming Languages
 
-1. [Rust][11]
+1. [Rust][13]
 
     Personal language of choice. I’m slowly expanding the scope of where I use
     it, including working on rebuilding this website to be driven by it.
 
-1. [Ruby][12]
+1. [Ruby][14]
 
     I use Ruby at work for driving the ground side of one of our missions, and
     to power this website (currently).
 
-1. [C][13], split evenly between [GCC][14] and [Clang][15] compilers.
+1. [C][15], split evenly between [GCC][16] and [Clang][17] compilers.
 
     I specialize in low-level systems languages, and Rust has not yet displaced
     this.
 
-1. [Sass][16]
+1. [Sass][18]
 
     Still my absolute favorite CSS super-language. I use it for all my CSS
     projects, and cannot yet imagine going back.
 
-1. [TypeScript][17]
+1. [TypeScript][19]
 
     I don’t really have a firm reason I picked TypeScript as my JavaScript
     super-language, but I really enjoy working in it.
 
 ## System Shells
 
-[Zsh][18]. I strongly prefer it to Bash, though I am not well versed enough in
+[Zsh][20]. I strongly prefer it to Bash, though I am not well versed enough in
 terminal lore to clearly state why. I am looking forward to some new shells
 under development to experiment with, though as yet they don’t seem completely
 ready for full time use.
@@ -160,21 +270,39 @@ I also use PowerShell at work, and a bit at home. I am incredibly impressed with
 its piping object model and scripting language, but it’s not something I yet see
 myself using personally.
 
-[1]: http://www.coolermaster.com/case/lan-box-haf-series/haf-xb-evo
-[2]: https://www.asus.com/Motherboards/Z97A
-[3]: https://ark.intel.com/products/80807
-[4]: http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-960
-[5]: https://digitalocean.com
-[6]: https://www.motorola.com/us/products/moto-z
-[7]: http://www.wasdkeyboards.com
-[8]: https://www.kde.org/plasma-desktop
-[9]: https://code.visualstudio.com
-[10]: https://www.jetbrains.com/idea
-[11]: https://rust-lang.org
-[12]: https://ruby-lang.org
-[13]: https://en.wikipedia.org/wiki/C_(programming_language)
-[14]: https://gcc.gnu.org
-[15]: http://clang.llvm.org
-[16]: https://sass-lang.com
-[17]: https://www.typescriptlang.org
-[18]: https://www.zsh.org
+## Data Synchronization
+
+I use [SyncThing][21] for decentralized data sync; all my machines shunt
+my Projects and Pictures folders, among others, this way. These folders
+are *massive* and thus cannot use sync services that include cloud
+storage as a target. SyncThing is a distributed network that operates by
+having your machines introduce themselves to each other. You can then
+select which folders are synchronized between which machines -- this can
+also be used to maintain disparate sync networks, whereby each machine
+has a different set of folders shared with different networks. For a
+short time, that was how I deployed this website and shared project code
+with a team of mine.
+
+I also use Dropbox, OneDrive, and Google Drive as means of backing up
+and/or sharing items with specific groups of people or ecosystems. These
+are fairly mainstream and banal, so I won’t go into more detail.
+
+[3]: http://www.coolermaster.com/case/lan-box-haf-series/haf-xb-evo
+[4]: https://www.asus.com/Motherboards/Z97A
+[5]: https://ark.intel.com/products/80807
+[6]: http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-960
+[7]: https://digitalocean.com/
+[8]: https://www.motorola.com/us/products/moto-z
+[9]: http://www.wasdkeyboards.com/
+[10]: https://www.kde.org/plasma-desktop
+[11]: https://code.visualstudio.com/
+[12]: https://www.jetbrains.com/idea
+[13]: https://rust-lang.org/
+[14]: https://ruby-lang.org/
+[15]: https://en.wikipedia.org/wiki/C_(programming_language)
+[16]: https://gcc.gnu.org/
+[17]: http://clang.llvm.org/
+[18]: https://sass-lang.com/
+[19]: https://www.typescriptlang.org/
+[20]: https://www.zsh.org/
+[21]: https://syncthing.net/
