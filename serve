@@ -2,20 +2,24 @@
 
 function start() {
 	echo "Starting the TypeScript watcher"
-	tsc --watch >tsc.out.log 2>tsc.err.log &
-	echo $! > tsc.pid
+	tsc --watch >"$(filename tsc.out log)" 2>"$(filename tsc.err log)" &
+	echo $! > "$(filename tsc pid)"
 	echo "Starting the Middleman server"
-	bundle exec middleman serve >mid.out.log 2>mid.err.log &
-	echo $! > mid.pid
+	bundle exec middleman serve >"$(filename mid.out log)" 2>"$(filename mid.err log)" &
+	echo $! > "$(filename mid pid)"
 }
 
 function stop() {
 	echo "Stopping the Middleman server"
-	kill $(cat mid.pid)
-	rm mid.pid
+	kill $(cat $(filename mid pid))
+	rm "$(filename mid pid)"
 	echo "Stopping the TypeScript watcher"
-	kill $(cat tsc.pid)
-	rm tsc.pid
+	kill $(cat $(filename tsc pid))
+	rm "$(filename tsc pid)"
+}
+
+function filename() {
+	echo "${1}-$(cat /etc/hostname).${2}"
 }
 
 case $1 in
