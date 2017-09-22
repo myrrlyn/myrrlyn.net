@@ -232,36 +232,50 @@ leave the terminal environment, though.
 I do half of my Rust work in [IntelliJ IDEA][12]. It is truly remarkable. It
 helps that I have a `.edu` email address for the forseeable future.
 
+### Fonts
+
+I was introduced to the [Iosevka][13] font, and use it for all the monospaced
+text on this site, as well as in my editors. The specific variant I use (with
+numbers collapsed using `sh` syntax) is:
+
+~~~sh
+sans term ss03 cv{01,{0,1}{3,7},19,2{1,3,4},3{0,1,4,7,8},4{0,2,4,6}}
+~~~
+
+The `term` variant makes the box-drawing characters I use for text diagrams
+render properly. I replace `term` with `type` for text I know will not contain
+these characters, in scenarios where I want fancier features such as ligatures.
+
 ## Programming Languages
 
-1. [Rust][13]
+1. [Rust][14]
 
     Personal language of choice. I’m slowly expanding the scope of where I use
     it, including working on rebuilding this website to be driven by it.
 
-1. [Ruby][14]
+1. [Ruby][15]
 
     I use Ruby at work for driving the ground side of one of our missions, and
     to power this website (currently).
 
-1. [C][15], split evenly between [GCC][16] and [Clang][17] compilers.
+1. [C][16], split evenly between [GCC][17] and [Clang][18] compilers.
 
     I specialize in low-level systems languages, and Rust has not yet displaced
     this.
 
-1. [Sass][18]
+1. [Sass][19]
 
     Still my absolute favorite CSS super-language. I use it for all my CSS
     projects, and cannot yet imagine going back.
 
-1. [TypeScript][19]
+1. [TypeScript][20]
 
     I don’t really have a firm reason I picked TypeScript as my JavaScript
     super-language, but I really enjoy working in it.
 
 ## System Shells
 
-[Zsh][20]. I strongly prefer it to Bash, though I am not well versed enough in
+[Zsh][21]. I strongly prefer it to Bash, though I am not well versed enough in
 terminal lore to clearly state why. I am looking forward to some new shells
 under development to experiment with, though as yet they don’t seem completely
 ready for full time use.
@@ -272,7 +286,7 @@ myself using personally.
 
 ## Data Synchronization
 
-I use [SyncThing][21] for decentralized data sync; all my machines shunt
+I use [SyncThing][22] for decentralized data sync; all my machines shunt
 my Projects and Pictures folders, among others, this way. These folders
 are *massive* and thus cannot use sync services that include cloud
 storage as a target. SyncThing is a distributed network that operates by
@@ -299,12 +313,13 @@ are fairly mainstream and banal, so I won’t go into more detail.
 [10]: https://www.kde.org/plasma-desktop
 [11]: https://code.visualstudio.com/
 [12]: https://www.jetbrains.com/idea
-[13]: https://rust-lang.org/
-[14]: https://ruby-lang.org/
-[15]: https://en.wikipedia.org/wiki/C_(programming_language)
-[16]: https://gcc.gnu.org/
-[17]: http://clang.llvm.org/
-[18]: https://sass-lang.com/
-[19]: https://www.typescriptlang.org/
-[20]: https://www.zsh.org/
-[21]: https://syncthing.net/
+[13]: https://be5invis.github.io/Iosevka/
+[14]: https://rust-lang.org/
+[15]: https://ruby-lang.org/
+[16]: https://en.wikipedia.org/wiki/C_(programming_language)
+[17]: https://gcc.gnu.org/
+[18]: http://clang.llvm.org/
+[19]: https://sass-lang.com/
+[20]: https://www.typescriptlang.org/
+[21]: https://www.zsh.org/
+[22]: https://syncthing.net/

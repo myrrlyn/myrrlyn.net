@@ -65,16 +65,3 @@ article {
 		@extend %article-img;
 	}
 }
-
-//  Box-drawing characters are not well-supported in all pretty monospace fonts.
-//  Regions which use box-drawing characters must use this subset.
-%monospace-special {
-	font-family: "FantasqueSansMonoRegular", "Menlo", "Courier New", monospace;
-}
-
-pre.highlight {
-	&,
-	pre {
-		@extend %monospace-special;
-	}
-}

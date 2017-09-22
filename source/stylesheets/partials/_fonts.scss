@@ -1,9 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-@import url("https://fontlibrary.org/face/fantasque-sans-mono");
+@function iosevka($name) {
+	$loc: "/fonts/iosevka-#{$name}";
+	@return url("#{$loc}/woff2/iosevka-#{$name}-regular.woff2") format("woff2"),
+		url("#{$loc}/woff/iosevka-#{$name}-regular.woff") format("woff"),
+		url("#{$loc}/ttf/iosevka-#{$name}-regular.ttf") format("ttf");
+}
 
-%monospace {
+@font-face {
+	font-family: "Iosevka myrrlyn regular";
+	src: iosevka("myrrlyn");
+}
+
+@font-face {
+	font-family: "Iosevka myrrlyn term regular";
+	src: iosevka("myrrlyn-term");
+}
+
+@font-face {
 	font: {
-		family: "Inconsolata", "Roboto Mono", "FantasqueSansMonoRegular", "Menlo", "Consolas", "Courier New", monospace;
+		family: "Iosevka myrrlyn slab regular";
+	}
+	src: iosevka("myrrlyn-slab");
+}
+
+%mono-type {
+	font: {
+		family: "Iosevka myrrlyn regular", "Menlo", "Consolas", "Courier New", monospace;
+	}
+}
+
+//  Box-drawing characters are not well-supported in all pretty monospace fonts.
+//  Regions which use box-drawing characters must use this subset.
+%mono-term {
+	font-family: "Iosevka myrrlyn term regular", "Menlo", "Courier New", monospace;
+}
+
+%serif {
+	font: {
+		family: "Iosevka myrrlyn slab regular";
 	}
 }

@@ -34,7 +34,13 @@ button {
 
 pre,
 code {
-	@extend %monospace;
+	@extend %mono-type;
+}
+pre.highlight.plaintext {
+	&,
+	pre {
+		@extend %mono-term;
+	}
 }
 
 ins, del {
@@ -50,4 +56,13 @@ del {
 
 ins {
 	background-color: fade-out(lightgreen, 0.3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@extend %serif;
 }
