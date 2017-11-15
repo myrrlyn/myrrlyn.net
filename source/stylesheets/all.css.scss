@@ -2,6 +2,15 @@
 @import "partials";
 @import "normalize";
 
+//  Base font for everything is the sans-serif set. Specific elements will
+//  override this
+a,
+li,
+p,
+span, {
+	@extend %sans-serif;
+}
+
 a {
 	color: -webkit-link;
 	color: blue;

@@ -1,3 +1,5 @@
+//  Global styles, serving as the baseline on which all pages are built
+
 button {
 	background: {
 		color: fade-out(nth($palette-hue-complementary, 1), 0.3);
@@ -32,30 +34,19 @@ button {
 	text-align: right;
 }
 
+//  All code spans can use the type variant, which may in the future have fancy
+//  effects, when I learn how to do that.
 pre,
 code {
 	@extend %mono-type;
 }
+//  The plaintext code blocks need the term variant so that box-drawing chars
+//  will render correctly.
 pre.highlight.plaintext {
 	&,
 	pre {
 		@extend %mono-term;
 	}
-}
-
-ins, del {
-	text-decoration: none;
-	padding: 0 0.6em;
-	border-top-left-radius: 1000px;
-	border-bottom-right-radius: 1000px;
-}
-
-del {
-	background-color: fade-out(lightpink, 0.5);
-}
-
-ins {
-	background-color: fade-out(lightgreen, 0.3);
 }
 
 h1,
