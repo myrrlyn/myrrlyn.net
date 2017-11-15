@@ -1,7 +1,7 @@
 main {
 	border: {
 		color: nth($palette-tes, 1);
-		radius: 64px;
+		radius: 32px;
 		style: solid;
 		width: 8px;
 	}
@@ -75,4 +75,8 @@ article {
 			right: 2px solid nth($palette-tes, 1);
 		}
 	}
+}
+
+.handwriting * {
+	font-family: "Nothing You Could Do", serif !important;
 }
