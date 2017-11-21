@@ -25,7 +25,7 @@ furthermore has a Windows 10 Mobile app, so I can recommend it to my parents; I
 do not recall if 1Password does (I believe it does not).
 
 Enpass is free for desktop apps, and $10 per user per mobile OS. If you own an
-iPhone, an Android, and/or a Windows Phone, you'll pay per app. Otherwise, it is
+iPhone, an Android, and/or a Windows Phone, you’ll pay per app. Otherwise, it is
 free for personal use. The price is only invoked when you try to store your
 21<sup>st</sup> credential, so you can give it a trial spin to see if you like
 it without committment. I bought it immediately and regret nothing.
@@ -56,9 +56,16 @@ for them and I swear I’m not; I’m just very enthusiastic about this.
 - Environment Integration
 
     On desktop, Enpass offers browser integrations for Firefox, Chrome, Safari,
-    and Opera. On mobile, it offers (at least on Android; I don’t own an iPhone)
-    a custom keyboard that can fill fields for you. I have found using it in
-    both environments to be a pleasant mix of convenience and security.
+    and Opera. On mobile, it offers an Android custom keyboard that can fill
+    fields for you. I have found using it in both environments to be a pleasant
+    mix of convenience and security.
+
+    I recently switched to an iPhone, and Enpass is less well-integrated (no
+    keyboard or service to detect fields and give a notification to do so), but
+    it does offer a home-screen widget that holds your favorites, and is readily
+    usable. I intend to keep using it, but the experience on Android was
+    definitely better. I think that’s more of a commentary on the phone vendor,
+    though.
 
 - TOTP Support
 
@@ -83,7 +90,7 @@ for them and I swear I’m not; I’m just very enthusiastic about this.
 
     Identities with weak and/or duplicate passwords are displayed in their own
     categories so you can rapidly identify them and take action to change them.
-    Enpass does not yet have Dashlane's ability to change passwords en masse;
+    Enpass does not yet have Dashlane’s ability to change passwords en masse;
     you have to do so manually and individually. This is, regardless, good
     information to have
 
@@ -110,6 +117,13 @@ for them and I swear I’m not; I’m just very enthusiastic about this.
     disabling this if you are in an environment where this may be unsafe, such
     as heavy police or other security personnel presence, or an untrustworthy
     home environment.
+
+    <aside markdown="block">
+    I refuse to set up Face ID on my iPhone, so I can’t speak to how Enpass uses
+    iOS biometrics.
+
+    I encourage you to not use biometrics as a password, because they’re not.
+    </aside>
 
 The only thing Enpass does not have that 1Password does, *to my knowledge*, is
 1Password’s recent feature add of Travel Mode. If you inform 1Password that you
@@ -184,17 +198,34 @@ Arch, FreeBSD, Qubes, and currently CentOS.
 I have a Mac Mini and an old (2012) homebrew PC acting as servers. The Mac Mini
 lives with me in Utah; the old PC is with my parents in Michigan and is
 currently dead. I also rent a [DigitalOcean][5] droplet because my apartment
-isn’t in a great situation vis-a-vis uptime. *Thanks, Comcast*.
+isn’t in a great situation vis-a-vis uptime. *Thanks, <del>Comcast</del>*
+*<ins>BlueRim</ins>.*
 
 ## Phone
 
-I currently use a [Moto Z][8]. <del>I don’t have any of the mods for it, though
-I should probably get some. I play Ingress and take landscape pictures, and the
-battery packs and camera mod look extremely cool.</del> <ins>I bought the
-battery and camera mods. The battery is tremendously helpful, though I’ve
-discovered the magnet in it can, when placed on one specific part of my work
-laptop, turn off the laptop’s screen. The camera is incredible; I took all of my
-eclipse pictures with it.</ins>
+I currently use an [iPhone X][8]. I had previously used a Moto Z, until I bought
+the external battery mod and something went wrong in the phone itsely (I think)
+that cause its battery sensor firmware to panic and believe that the phone was
+utterly without power, and shut down until plugged into the wall.
+
+The problem escalated to the point that even when both batteries were full,
+taking the phone outside in autumnal weather caused the phone to abort. This is,
+obviously, unacceptable.
+
+Naturally, shortly after I bought the iPhone, Apple released iOS 11.1.2, with
+this patch note:
+
+> – Fixes an issue where the iPhone X screen becomes temporarily unresponsive to
+> touch after a rapid temperature drop
+
+As northern Utah is the farthest *south* I have ever lived, I am particularly
+annoyed by failures of technology to handle the environment in which it will see
+use. In ordinary autumn/winter weather, I will encounter drops of -40℉ (building
+at 70℉, air at freezing) and the most I’ve encountered in real life has been a
+-100℉ (from 70℉ to -30℉). Isn’t it important that phones work in these
+environments?
+
+Anyway. I haven’t used the phone enough to leave further comment.
 
 ## Keyboard
 
@@ -214,12 +245,15 @@ I’m doing it’s been very solid and a joy to use.
 I have not yet changed my MacBook to use anything other than macOS, so, I use
 that as well, though without nearly the fluency that I do Arch.
 
+I haven’t used Windows personally in about two or three years, though I use it
+at work. It’s still a good OS; I just personally prefer Arch+KDE at the moment.
+
 ## Desktop Environments
 
 KDE’s [Plasma 5][10]. I know, I know; the only way I could get more generic and
 boring is if I used GNOME. It works tremendously and I don’t use Vim either;
-I’ve resigned myself to not being “cool”. Plus, KDE Connect pairing with my
-phone is very convenient.
+I’ve resigned myself to not being “cool”. <del>Plus, KDE Connect pairing with my
+phone is very convenient.</del>
 
 ## Editors
 
@@ -248,34 +282,33 @@ these characters, in scenarios where I want fancier features such as ligatures.
 
 ## Programming Languages
 
-1. [Rust][14]
-
-    Personal language of choice. I’m slowly expanding the scope of where I use
-    it, including working on rebuilding this website to be driven by it.
+1. [Rust][14] is my personal language of choice. I’m slowly expanding the scope
+    of where I use it, including working on rebuilding this website to be driven
+    by it.
 
 1. [Ruby][15]
 
     I use Ruby at work for driving the ground side of one of our missions, and
     to power this website (currently).
 
-1. [C][16], split evenly between [GCC][17] and [Clang][18] compilers.
+1. [Elixir][16], in which I’m practicing for future web work.
+
+1. [C][17], split evenly between [GCC][18] and [Clang][19] compilers.
 
     I specialize in low-level systems languages, and Rust has not yet displaced
     this.
 
-1. [Sass][19]
+1. [Sass][20] is still my absolute favorite CSS super-language. I use it for all
+    my CSS projects, and cannot yet imagine going back.
 
-    Still my absolute favorite CSS super-language. I use it for all my CSS
-    projects, and cannot yet imagine going back.
-
-1. [TypeScript][20]
+1. [TypeScript][21]
 
     I don’t really have a firm reason I picked TypeScript as my JavaScript
     super-language, but I really enjoy working in it.
 
 ## System Shells
 
-[Zsh][21]. I strongly prefer it to Bash, though I am not well versed enough in
+[Zsh][22]. I strongly prefer it to Bash, though I am not well versed enough in
 terminal lore to clearly state why. I am looking forward to some new shells
 under development to experiment with, though as yet they don’t seem completely
 ready for full time use.
@@ -286,7 +319,7 @@ myself using personally.
 
 ## Data Synchronization
 
-I use [SyncThing][22] for decentralized data sync; all my machines shunt
+I use [SyncThing][23] for decentralized data sync; all my machines shunt
 my Projects and Pictures folders, among others, this way. These folders
 are *massive* and thus cannot use sync services that include cloud
 storage as a target. SyncThing is a distributed network that operates by
@@ -308,7 +341,7 @@ are fairly mainstream and banal, so I won’t go into more detail.
 [5]: https://ark.intel.com/products/80807
 [6]: http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-960
 [7]: https://digitalocean.com/
-[8]: https://www.motorola.com/us/products/moto-z
+[8]: https://www.apple.com/iphone-x/
 [9]: http://www.wasdkeyboards.com/
 [10]: https://www.kde.org/plasma-desktop
 [11]: https://code.visualstudio.com/
@@ -316,10 +349,11 @@ are fairly mainstream and banal, so I won’t go into more detail.
 [13]: https://be5invis.github.io/Iosevka/
 [14]: https://rust-lang.org/
 [15]: https://ruby-lang.org/
-[16]: https://en.wikipedia.org/wiki/C_(programming_language)
-[17]: https://gcc.gnu.org/
-[18]: http://clang.llvm.org/
-[19]: https://sass-lang.com/
-[20]: https://www.typescriptlang.org/
-[21]: https://www.zsh.org/
-[22]: https://syncthing.net/
+[16]: https://elixir-lang.org/
+[17]: https://en.wikipedia.org/wiki/C_(programming_language)
+[18]: https://gcc.gnu.org/
+[19]: http://clang.llvm.org/
+[20]: https://sass-lang.com/
+[21]: https://www.typescriptlang.org/
+[22]: https://www.zsh.org/
+[23]: https://syncthing.net/

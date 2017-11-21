@@ -28,7 +28,7 @@ bands for ten years and would like to continue in a community orchestra wherever
 I wind up. I have been a strong swimmer all my life, and became a Red Cross
 lifeguard at 14. My passion for aquatic safety has led me to become a BSA
 lifeguard and PADI Rescue Diver, and I have employed these skills as the
-aquatics director at a local Boy Scout camp. During my tenure at Rota-Kiwan, I
+aquatics director at a local Boy Scout camp. During my time at Rota-Kiwan, I
 received excellent reviews and maintained a strong safety record.
 
 I am deeply passionate about achieving safety in risky environments through
