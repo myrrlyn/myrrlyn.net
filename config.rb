@@ -2,6 +2,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+load "lib/extensions.rb"
+
 set :layout, :main
 
 # Per-page layout changes:
@@ -75,4 +77,7 @@ configure :build do
 
 	# GZip built files
 	activate :gzip
+
+	# Deploy
+	activate :deploy
 end

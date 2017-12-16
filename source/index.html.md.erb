@@ -15,6 +15,17 @@ Utah has to offer. I also ski and SCUBA dive, and look forward to honing both of
 those skills in the near future. Sometimes I take pictures of landscapes I think
 are pretty, and use those for the banner pictures.
 
+I also believe in trying to make more normal the use of cryptography in ordinary
+communication between people. As such, in addition to only serving this site
+over HTTPS, I also provide cryptographic signatures for every served resource.
+If you have my PGP public key or my Keybase identity, you can use those to
+verify any page against its signature file. There are buttons to retrieve the
+signature on every page.
+
+This provides little value in and of itself, but now you’re slightly more aware
+of the idea of cryptographic signatures and their use in ordinary life, which is
+worthwhile in my opinion.
+
 See my [profile] for more about me, my [résumé] for more about my skills, or my
 [portfolio] for more about projects I’ve done.
 
@@ -36,6 +47,10 @@ require … cookies. The two buttons below will be on almost every page here, an
 if you’re really feeling nerdy, you can browse the [source code] for this
 website or just open up a console and type `document.cookie` to see that I’m
 behaving myself.
+
+The other two buttons will display a cryptographic signature for the page’s
+compiled code that can be verified with my posted public keys. Just because I
+can.
 
 [portfolio]: <%= canonicalize("portfolio") %>
 [profile]:   <%= canonicalize("profile") %>

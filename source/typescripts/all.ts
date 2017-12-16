@@ -1,6 +1,8 @@
 $(document).ready(function() {
 	$("#cookie-display").click(cookieDisplay);
 	$("#cookie-wipe").click(cookieWipe);
+	$("#sig-pgp").click(() => showSig("pgp"));
+	$("#sig-keybase").click(() => showSig("keybase"));
 });
 
 /**
@@ -9,6 +11,11 @@ $(document).ready(function() {
 function cookieDisplay() {
 	let cookieAnchor = $("#cookie-anchor");
 	if (cookieAnchor !== undefined) {
+		//  If the anchor is populated, empty it and exit.
+		if (cookieAnchor.html() !== "&nbsp;") {
+			cookieAnchor.html("&nbsp;");
+			return;
+		}
 		let cookies = document.cookie.split("; ");
 		if (cookies.length == 1 && cookies[0] == "") {
 			cookieAnchor.html("No cookies");
@@ -32,4 +39,51 @@ function cookieWipe() {
 		.map(data => new Cookie(data.split("=")[0]))
 	//  And then destroy each Cookie
 		.forEach(val => val.destroy());
+}
+
+/**
+ * Generates the filename of a detached signature file for a given resource.
+ *
+ * HTML pages are accessible without extension, so this will optionally append a
+ * ".html" suffix to the path before looking for the signature.
+ * @param path The path for which a signature is to be found.
+ * @param kind The signature kind. Must be "pgp" or "keybase".
+ * @param add_html Whether to add ".html" to an unsuffixed path. Default true.
+ */
+function getSig(
+	path: any,
+	kind: string,
+	add_html: boolean = true
+): string | null {
+	let ext = path.match(/\..*$/);
+	if (path.endsWith("/")) {
+		path += "index";
+	}
+	if (add_html && (ext == null || ext[0] == "")) {
+		path += ".html";
+	}
+	switch (kind) {
+	case "keybase":
+		return path + ".kbs";
+	case "pgp":
+		return path + ".asc";
+	default:
+		return null;
+	}
+}
+
+/**
+ * Retrieves a signature from the server and inserts it into the DOM.
+ * @param sig The signature type to retrieve.
+ */
+function showSig(sig: string) {
+	$.ajax({
+		url: getSig(document.location.pathname, sig),
+		success: (data) => {
+			let anchor = $("#sig-anchor");
+			if (anchor !== undefined) {
+				anchor.html(data);
+			}
+		},
+	});
 }
