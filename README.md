@@ -18,3 +18,10 @@ bundle
 tsc
 middleman build # or middleman serve for a temporary view at localhost:4567
 ```
+
+The build command now attempts to cryptographically sign every artifact. This
+wants `parallel`, `gpg` and `keybase` commands in `PATH`.
+
+I use [mmstick parallel][1], but GNU Parallel should suffice as well.
+
+[1]: https://github.com/mmstick/parallel
