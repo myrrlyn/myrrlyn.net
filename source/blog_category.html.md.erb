@@ -1,0 +1,17 @@
+---
+layout: blog
+blog: blog
+---
+
+<% data = Tomlrb.load_file("data/blog-categories.toml", symbolize_keys: true) %>
+
+# <%= category.titlecase %>
+
+<%= data[category.to_sym][:summary] %>
+
+<% blog_categories(blog, category)[category].each do |a| %>
+1. <%= link_to a.title, canonicalize(a.url), class: "title" %>
+    (<%= a.date.strftime "%Y %B %d" %>)
+
+    <%= a.data["summary"] %>
+<% end %>

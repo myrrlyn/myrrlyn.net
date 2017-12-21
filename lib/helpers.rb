@@ -59,4 +59,16 @@ module Helpers
 		elems = elems.sort.join("-")
 		image_tag "https://www.w3.org/html/logo/badge/html5-badge-h-#{elems}.png", **opts
 	end
+
+	def blog_categories(blog, category = "misc", method = :select)
+		blog.articles.send(method) do |a|
+			a.data["category"] == category
+		end
+		.sort do |a, b|
+			a.data["number"] <=> b.data["number"]
+		end
+		.group_by do |a|
+			a.data["category"]
+		end
+	end
 end

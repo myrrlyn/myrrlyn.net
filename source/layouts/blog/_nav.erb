@@ -16,8 +16,8 @@ Series
 	</h2>
 	<nav id="blog-series"
 	     class="accordion">
-		<% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? || c == "misc" }.each do |c, as| %>
-			<h4 id="<%= c.downcase.gsub(" ", "-") %>"
+		<% blog_categories(blog, "misc", :reject).each do |c, as| %>
+			<h4 id="<%= c.gsub(" ", "-") %>"
 			    class="category">
 				<%= c.titlecase %>
 			</h4>

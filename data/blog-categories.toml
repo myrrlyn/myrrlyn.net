@@ -1,0 +1,24 @@
+["Type Theory"]
+summary = """
+While I have no formal education in the algebra behind type theory, I have just
+enough education in set theory and experience in typed languages that I have
+elected to risk making a fool of myself talking about it anyway.
+
+I will be using examples from programming languages in which I actively work, so
+largely C and Rust. I don’t speak any languages with more intricate type
+systems, which is no doubt limiting what I’m able to express.
+
+These are often drawn directly from my experience at work.
+"""
+
+["How Computers Work"]
+summary = """
+Between my education in computer engineering and software development, I have
+a reasonable level of knowledge in computing from the electrical science on up.
+These are my efforts to make that knowledge more available to anyone interested.
+"""
+
+[misc]
+summary = """
+These articles don’t belong in a definitive series.
+"""

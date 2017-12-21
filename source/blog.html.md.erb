@@ -13,9 +13,9 @@ There’s no RSS feed, because I have yet to figure out how to have Middleman
 build one. I could switch to Jekyll or manage it myself, but, I just haven’t
 gotten around to that yet. Sorry.
 
-<% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? || c == "misc" }.each do |c, as| %>
+<% blog_categories(blog, "misc", :reject).each do |c, as| %>
 
-### <%= c.titlecase %>
+### <%= link_to c.titlecase, canonicalize(category_path(c)) %>
 
 <%   as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
 1. <%= link_to post.title, canonicalize(post.url), class: "title" %>
@@ -23,10 +23,10 @@ gotten around to that yet. Sorry.
 
 <% end %>
 
-### Miscellaneous
+### <%= link_to "Miscellaneous", canonicalize(category_path("misc")) %>
 
-<% blog.articles.group_by { |a| a.data["category"] }.select { |c| c.nil? || c == "misc" }.each do |c, as| %>
-<%   as.reject { |p| p.title.nil? }.sort { |a, b| b.date <=> a.date }.each do |post| %>
+<% blog_categories(blog, "misc").each do |c, as| %>
+<%   as.sort { |a, b| b.date <=> a.date }.each do |post| %>
 - <%= link_to post.title, canonicalize(post.url), class: "title" %>
 <%   end %>
 <% end %>

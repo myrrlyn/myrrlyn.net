@@ -39,6 +39,12 @@ activate :blog do |blog|
 	blog.layout = "blog"
 	blog.sources = "{year}-{month}-{day}-{title}.html"
 	blog.permalink = "{category}/{title}.html"
+	blog.custom_collections = {
+		category: {
+			link: "category/{category}.html",
+			template: "blog_category.html",
+		}
+	}
 end
 
 activate :syntax, line_numbers: true
