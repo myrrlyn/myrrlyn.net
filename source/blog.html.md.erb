@@ -19,6 +19,9 @@ gotten around to that yet. Sorry.
 
 <%   as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
 1. <%= link_to post.title, canonicalize(post.url), class: "title" %>
+    (<%= post.date.strftime "%Y %B %d" %>)
+
+    <%= post.data["summary"] %>
 <%   end %>
 
 <% end %>
@@ -28,5 +31,8 @@ gotten around to that yet. Sorry.
 <% blog_categories(blog, "misc").each do |c, as| %>
 <%   as.sort { |a, b| b.date <=> a.date }.each do |post| %>
 - <%= link_to post.title, canonicalize(post.url), class: "title" %>
+    (<%= post.date.strftime "%Y %B %d" %>)
+
+    <%= post.data["summary"] %>
 <%   end %>
 <% end %>

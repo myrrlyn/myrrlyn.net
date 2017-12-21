@@ -54,7 +54,7 @@ body {
 
 #about {
 	@media only screen and (min-width: map-get($breakpoints, 'small+')) {
-		flex: 2 1 0%;
+		flex: 1.75 1 0%;
 	}
 	@media only screen and (min-width: map-get($breakpoints, 'large+')) {
 		order: 1;
@@ -62,7 +62,7 @@ body {
 }
 #nav {
 	@media only screen and (min-width: map-get($breakpoints, 'small+')) {
-		flex: 1 2 0%;
+		flex: 1.25 2 0%;
 	}
 	@media only screen and (min-width: map-get($breakpoints, 'large+')) {
 		order: 3;
