@@ -13,9 +13,9 @@ module Helpers
 
 	# Render the Glider pattern with inlined size and position attributes
 	# This trick brought to you by Firefox's suboptimal SVG renderer.
-	def glider_svg **kwargs
+	def glider_svg **opts
 		gb = Builder::XmlMarkup.new indent: 2
-		scale = kwargs[:scale] || 48
+		scale = opts[:scale] || 48
 
 		gliders = Tomlrb.load_file "data/glider.toml", symbolize_keys: true
 
@@ -51,12 +51,12 @@ module Helpers
 		end
 	end
 
-	def fa title, link
-		link_to "<i class=\"fa fa-2x fa-#{title}\"></i>", "#{link}"
+	def fa kind, link, title = ""
+		link_to "<i class=\"fa fa-2x fa-#{kind}\", title=\"#{title}\"></i>", "#{link}"
 	end
 
-	def h5logo *elems, **kwargs
+	def h5logo *elems, **opts
 		elems = elems.sort.join("-")
-		image_tag "https://www.w3.org/html/logo/badge/html5-badge-h-#{elems}.png", kwargs
+		image_tag "https://www.w3.org/html/logo/badge/html5-badge-h-#{elems}.png", **opts
 	end
 end
