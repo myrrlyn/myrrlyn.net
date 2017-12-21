@@ -90,7 +90,10 @@ GEM
     middleman-syntax (3.0.0)
       middleman-core (>= 3.2)
       rouge (~> 2.0)
+    mini_portile2 (2.2.0)
     minitest (5.10.1)
+    nokogiri (1.8.0)
+      mini_portile2 (~> 2.2.0)
     opal (0.10.3)
       hike (~> 1.2)
       sourcemap (~> 0.1.0)
@@ -140,6 +143,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-minify-html
   middleman-syntax
+  nokogiri
   opal
   tomlrb
   typescript-node

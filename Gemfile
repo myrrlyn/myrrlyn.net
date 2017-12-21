@@ -16,8 +16,9 @@ gem 'middleman-blog'
 gem 'middleman-syntax'
 
 # Support Gems
-gem 'tomlrb'
 gem 'builder'
+gem 'nokogiri'
+gem 'tomlrb'
 
 gem 'opal'
 gem 'typescript-node'
