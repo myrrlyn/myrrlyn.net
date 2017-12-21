@@ -84,6 +84,6 @@ configure :build do
 	# GZip built files
 	activate :gzip
 
-	# Deploy
+	# Sign
 	activate :sign
 end
