@@ -1,11 +1,11 @@
-class Deploy < Middleman::Extension
+class Sign < Middleman::Extension
 	def initialize(app, **opts, &block)
 		super(app, **opts, &block)
 	end
 	#alias :included :registered
 	def after_build(builder)
-		builder.thor.run 'app/deploy.sh'
+		builder.thor.run 'app/sign.sh'
 	end
 end
 
-::Middleman::Extensions.register(:deploy, Deploy)
+::Middleman::Extensions.register(:sign, Sign)

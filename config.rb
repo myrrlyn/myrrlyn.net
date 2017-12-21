@@ -79,5 +79,5 @@ configure :build do
 	activate :gzip
 
 	# Deploy
-	activate :deploy
+	activate :sign
 end
