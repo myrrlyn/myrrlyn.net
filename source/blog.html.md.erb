@@ -15,7 +15,7 @@ gotten around to that yet. Sorry.
 
 <% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? || c == "misc" }.each do |c, as| %>
 
-### <%= c.gsub(/\w+/) { |word| word.capitalize } %>
+### <%= c.titlecase %>
 
 <%   as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
 1. <%= link_to post.title, canonicalize(post.url), class: "title" %>

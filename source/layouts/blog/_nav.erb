@@ -19,7 +19,7 @@ Series
 		<% blog.articles.group_by { |a| a.data["category"] }.reject { |c| c.nil? || c == "misc" }.each do |c, as| %>
 			<h4 id="<%= c.downcase.gsub(" ", "-") %>"
 			    class="category">
-				<%= c.gsub(/\w+/) { |word| word.capitalize } %>
+				<%= c.titlecase %>
 			</h4>
 			<ol>
 				<% as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
