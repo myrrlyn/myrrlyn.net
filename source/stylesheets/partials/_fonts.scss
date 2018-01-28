@@ -1,6 +1,6 @@
 // Font imports and psuedoclasses
 
-// @import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Slab');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata|Roboto|Roboto+Slab');
 
 @function iosevka($name) {
 	$loc: "/fonts/iosevka-#{$name}";
