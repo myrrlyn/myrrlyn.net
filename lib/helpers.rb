@@ -67,9 +67,7 @@ module Helpers
 	end
 
 	def fa(kind, link, title = "")
-		b = Builder::XmlMarkup.new(indent: 2)
-		b.i(class: "fa fa-2x fa-#{kind}", title: title)
-		link_to(b.target!, link)
+		link_to("<i class=\"fa fa-2x fa-#{kind}\" title=\"#{title}\"></i>", link)
 	end
 
 	def h5logo(*elems, **opts)
