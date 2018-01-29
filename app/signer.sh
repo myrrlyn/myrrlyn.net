@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sed=""
-if [[ $(which gsed) != "gsed not found" ]]; then
+if hash gsed &>/dev/null; then
 	sed=$(which gsed)
 else
 	sed=$(which sed)
