@@ -78,5 +78,8 @@ article {
 }
 
 .handwriting * {
-	font-family: "Nothing You Could Do", serif !important;
+	font: {
+		family: "Nothing You Could Do", serif !important;
+		size: 1.25em;
+	}
 }
