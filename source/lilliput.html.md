@@ -112,31 +112,31 @@ meant anything, and you move on. Then if you ever change a type definition from
 ZST to real, or inverse, all the code still works.
 </aside>
 
-~~~rust
+```rust
 struct Foo {
     a: i32,
     b: char,
 }
 struct Bar(u32, bool);
 struct Quux;
-~~~
+```
 
 Implement `Endian` on them. You can do it yourself, but since endian conversions
 don’t change the order of fields, just of bytes within a single field, why would
 you? So you can `impl Endian for Foo { ... }`, or you can scrap the above and do
 
-~~~rust
+```rust
 #[derive(Endian)]
 struct Foo { a: i32, b: char, }
 #[derive(Endian)]
 struct Bar(u32, bool);
 #[derive(Endian)]
 struct Quux;
-~~~
+```
 
 Make instances of them, and call `Endian` methods.
 
-~~~rust
+```rust
 let f = Foo {
     a: 0x01234567,
     b: 'A',
@@ -148,7 +148,7 @@ let fb = f.to_be();
 let bl = b.to_le();
 //  this does nothing, ever
 let q = q.from_le();
-~~~
+```
 
 That’s it.
 

@@ -15,6 +15,12 @@ page '/*.txt', layout: false
 
 ignore 'typescripts/*.ts'
 
+set :markdown_engine, :kramdown
+set :markdown, {
+	input: :GFM,
+	hard_wrap: false,
+}
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 

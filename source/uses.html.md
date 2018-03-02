@@ -272,9 +272,9 @@ I was introduced to the [Iosevka][13] font, and use it for all the monospaced
 text on this site, as well as in my editors. The specific variant I use (with
 numbers collapsed using `sh` syntax) is:
 
-~~~sh
+```sh
 sans term ss03 cv{01,{0,1}{3,7},19,2{1,3,4},3{0,1,4,7,8},4{0,2,4,6}}
-~~~
+```
 
 The `term` variant makes the box-drawing characters I use for text diagrams
 render properly. I replace `term` with `type` for text I know will not contain
