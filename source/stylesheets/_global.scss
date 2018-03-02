@@ -37,7 +37,8 @@ button {
 //  All code spans can use the type variant, which may in the future have fancy
 //  effects, when I learn how to do that.
 pre,
-code {
+code,
+pre span {
 	@extend %mono-type;
 }
 //  The plaintext code blocks need the term variant so that box-drawing chars
