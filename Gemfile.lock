@@ -8,8 +8,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
-    ast (2.3.0)
-    backports (3.10.3)
+    ast (2.4.0)
+    backports (3.11.1)
     builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
@@ -28,7 +28,7 @@ GEM
     execjs (2.7.0)
     fast_blank (1.0.0)
     fastimage (2.1.1)
-    ffi (1.9.18)
+    ffi (1.9.23)
     haml (5.0.4)
       temple (>= 0.8.0)
       tilt
@@ -92,8 +92,8 @@ GEM
       middleman-core (>= 3.2)
       rouge (~> 2.0)
     mini_portile2 (2.3.0)
-    minitest (5.10.3)
-    nokogiri (1.8.1)
+    minitest (5.11.3)
+    nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
     opal (0.11.0)
       ast (>= 2.3.0)
@@ -109,8 +109,8 @@ GEM
     parallel (1.12.1)
     parser (2.3.3.1)
       ast (~> 2.2)
-    public_suffix (3.0.1)
-    rack (2.0.3)
+    public_suffix (3.0.2)
+    rack (2.0.4)
     rack-livereload (0.3.16)
       rack
     rb-fsevent (0.10.2)
@@ -128,7 +128,7 @@ GEM
     typescript-node (1.6.2)
       typescript-src (~> 1.6.2)
     typescript-src (1.6.2.0)
-    tzinfo (1.2.4)
+    tzinfo (1.2.5)
       thread_safe (~> 0.1)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
@@ -151,4 +151,4 @@ DEPENDENCIES
   wdm (~> 0.1.0)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
