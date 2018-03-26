@@ -16,13 +16,20 @@ Series
 	</h2>
 	<nav id="blog-series"
 	     class="accordion">
-		<% blog_categories(blog, "misc", :reject).each do |c, as| %>
-			<h4 id="<%= c.gsub(" ", "-") %>"
+		<% blog_categories(blog, "misc", :reject).each do |series, posts| %>
+			<h4 id="<%= series.gsub(" ", "-").downcase %>"
 			    class="category">
-				<%= c.titlecase %>
+				<%= series %>
 			</h4>
 			<ol>
-				<% as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
+				<% posts.sort do |a, b| %>
+				<%   if a.data.has_key?("number") && b.data.has_key?("number") %>
+				<%     a.data["number"] <=> b.data["number"] %>
+				<%   else %>
+				<%     a.date <=> b.date %>
+				<%   end %>
+				<% end %>
+				<% .each do |post| %>
 					<li class="title">
 						<%= link_to post.title, canonicalize(post.url) %>
 					</li>
@@ -47,7 +54,7 @@ Categories
 			</h4>
 			<ul>
 				<% posts.sort do |a, b| %>
-				<%   if a.data["number"] && b.data["number"] %>
+				<%   if a.data.has_key?("number") && b.data.has_key?("number") %>
 				<%     a.data["number"] <=> b.data["number"] %>
 				<%   else %>
 				<%     a.title <=> b.title %>

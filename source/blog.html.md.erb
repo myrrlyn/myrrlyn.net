@@ -15,7 +15,7 @@ gotten around to that yet. Sorry.
 
 <% blog_categories(blog, "misc", :reject).each do |c, as| %>
 
-### <%= link_to c.titlecase, canonicalize(category_path(c)) %>
+### <%= link_to c, canonicalize(category_path(c)) %>
 
 <%   as.sort { |a, b| a.data["number"] <=> b.data["number"] }.each do |post| %>
 1. <%= link_to post.title, canonicalize(post.url), class: "title" %>

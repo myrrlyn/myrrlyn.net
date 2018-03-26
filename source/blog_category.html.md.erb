@@ -5,7 +5,7 @@ blog: blog
 
 <% data = Tomlrb.load_file("data/blog-categories.toml", symbolize_keys: true) %>
 
-# <%= category.titlecase %>
+# <%= category %>
 
 <%= data[category.to_sym][:summary] %>
 

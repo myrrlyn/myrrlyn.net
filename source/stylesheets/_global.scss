@@ -41,12 +41,17 @@ code,
 pre span {
 	@extend %mono-type;
 }
-//  The plaintext code blocks need the term variant so that box-drawing chars
-//  will render correctly.
-pre.highlight.plaintext {
-	&,
-	pre {
-		@extend %mono-term;
+pre.highlight {
+	//  The plaintext code blocks need the term variant so that box-drawing
+	//  chars will render correctly.
+	&.plaintext {
+		&,
+		pre {
+			@extend %mono-term;
+		}
+	}
+	pre.lineno {
+		text-align: right;
 	}
 }
 

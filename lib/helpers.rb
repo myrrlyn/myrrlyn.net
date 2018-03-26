@@ -80,7 +80,11 @@ module Helpers
 			a.data["category"] == category
 		end
 		.sort do |a, b|
-			a.data["number"] <=> b.data["number"]
+			if a.data.kas_key?("number") && b.data.has_key?("number")
+				a.data["number"] <=> b.data["number"]
+			else
+				a.date <=> b.date
+			end
 		end
 		.group_by do |a|
 			a.data["category"]
