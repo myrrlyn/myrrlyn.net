@@ -5,9 +5,11 @@ target = "droplet"
 build:
 	bundle exec middleman build
 
+clean:
+	rm -r build/
+
 deploy: build
 	rsync {{rsync_args}} build/ myrrlyn@{{target}}:{{dest}}
-	rm -r build/
 
 serve:
 	bundle exec middleman serve

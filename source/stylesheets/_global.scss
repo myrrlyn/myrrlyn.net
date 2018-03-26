@@ -44,7 +44,8 @@ pre span {
 pre.highlight {
 	//  The plaintext code blocks need the term variant so that box-drawing
 	//  chars will render correctly.
-	&.plaintext {
+	&.plaintext,
+	&.shell {
 		&,
 		pre {
 			@extend %mono-term;
