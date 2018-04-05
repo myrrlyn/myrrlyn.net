@@ -89,7 +89,4 @@ configure :build do
 
 	# GZip built files
 	activate :gzip
-
-	# Sign
-	activate :sign
 end

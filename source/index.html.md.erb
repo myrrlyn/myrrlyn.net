@@ -52,6 +52,17 @@ The other two buttons will display a cryptographic signature for the page’s
 compiled code that can be verified with my posted public keys. Just because I
 can.
 
+To verify, you can do something like this on a POSIX shell:
+
+```sh
+wget https://myrrlyn.net/index.html{,.{asc,kbs}}
+gpg --verify index.html{.asc,}
+keybase verify -i index.html -d index.html.kbs
+```
+
+Substitute `/index.html` with any path on the site. Most page URLs I give out
+have an implicit `/index.html` on the end of them.
+
 [portfolio]: <%= canonicalize("portfolio") %>
 [profile]:   <%= canonicalize("profile") %>
 [résumé]:    <%= canonicalize("resume") %>
