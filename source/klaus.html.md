@@ -10,7 +10,7 @@ layout: klaus
 
 > <span id="today"></span>
 
-![](/images/klaus-formal.jpg){:.img.portrait.float-right}
+![Klaus in uniform](/images/klaus-formal.jpg){:.img.portrait.float-right}
 
 **Dear Reader,**
 
@@ -44,15 +44,15 @@ so that you may be assured of the quality of experience awaiting you.
 
 **Sincerely,**
 
-> ![](/images/klaus-signature.png){:.img}
+> ![Klaus’s signature](/images/klaus-signature.png){:.img}
 >
 > **Nicholas (Klaus) Frederick Payne**
 
-<hr />
+----
 
 ## Physical Information
 
-![](/images/klaus-casual.jpg){:.img.portrait.float-right}
+![Klaus doing a ridiculous pose](/images/klaus-casual.jpg){:.img.portrait.float-right}
 
 Height
 : 6’1” (185cm)
@@ -99,9 +99,9 @@ to a rabbit hole – once you fall in, there’s no going back
 - GPA: 3.41 / 4.00
 - Class Rank: 339 / 1,090
 - Related Coursework:
-    - Independent Research analyzing the interaction between high energy IR
-        lasers and suspended small scale water droplets
-    - Internship at Naval Surface Warfare Center Dahlgren; Laser Lethality Lab –
+  - Independent Research analyzing the interaction between high energy IR
+    lasers and suspended small scale water droplets
+  - Internship at Naval Surface Warfare Center Dahlgren; Laser Lethality Lab –
     examining re-radiation of heat from high energy laser impacts on carbon
     fiber composites
 
@@ -110,17 +110,17 @@ to a rabbit hole – once you fall in, there’s no going back
 
 - Major: N/A
 - Related Coursework:
-    -as little as possible
+  - as little as possible
 - AP Courses:
-    - Biology (5)
-    - World History (5)
-    - U.S. History (5)
-    - Language and Composition (5)
-    - Physics C (5)
-    - Calculus BC (5)
-    - European History (5)
-    - Chemistry (5)
-    - Statistics (5)
+  - Biology (5)
+  - World History (5)
+  - U.S. History (5)
+  - Language and Composition (5)
+  - Physics C (5)
+  - Calculus BC (5)
+  - European History (5)
+  - Chemistry (5)
+  - Statistics (5)
 
 ## Skills and Abilities
 
@@ -131,17 +131,17 @@ Self-evident, with demonstrations upon request
 ### Leadership
 
 - Served as Lima Company Administrative Officer, Plebe Summer 2016. Responsible
-    for the paperwork and administrative duties of bringing 60 new plebes into
-    the Navy, as well as serving as an adjunct to squad and platoon command
-    positions through the basic training ordeal.
+  for the paperwork and administrative duties of bringing 60 new plebes into the
+  Navy, as well as serving as an adjunct to squad and platoon command positions
+  through the basic training ordeal.
 - Served as Senior Patrol Leader for the Mackinac Contingent, Troop 641, Summer
-    of 2013. Responsible for a multi month training regimen and one week
-    performance regarding drill and tour guide/ park maintenance duties for the
-    Troop on Mackinac Island, responsible for 63 staff.
+  of 2013. Responsible for a multi month training regimen and one week
+  performance regarding drill and tour guide/ park maintenance duties for the
+  Troop on Mackinac Island, responsible for 63 staff.
 - Eagle Scout, 2010.
 - Selected as Lima Company Commander, 2017. Responsibilities will include
-    training and inculcating newly arrived plebe midshipmen into competent,
-    disciplined midshipmen through both physical and mental development.
+  training and inculcating newly arrived plebe midshipmen into competent,
+  disciplined midshipmen through both physical and mental development.
 - Captain, Culver Military Academy Men’s Crew Team, 2013-2014.
 
 ### Sales
@@ -160,10 +160,10 @@ Currently selling myself. Customers include:
 ### Miscellaneous
 
 - Braids, French braids, and fishtails on a high level. Couples dashing looks
-    and ruffian humor with dreamboat skills – plus who doesn’t enjoy having
-    their hair played with. Contact for proof of skill.
-- Woodworking – grew up in a cabinet makers shop and am known to procure
-    trinkets or gifts. Examples are shown below.
+  and ruffian humor with dreamboat skills – plus who doesn’t enjoy having their
+  hair played with. Contact for proof of skill.
+- Woodworking – grew up in a cabinet maker’s shop and am known to procure
+  trinkets or gifts. Examples are shown below.
 
 <div id="img-gallery">
 <div id="klaus-lamp" class="img-row"></div>
@@ -174,6 +174,7 @@ Currently selling myself. Customers include:
 ## Experience
 
 ### Midshipman │ United States Naval Academy │ 2014 June 1 – present
+{:.small-caps}
 
 - I drive large boats
 - I row smaller boats
@@ -182,5 +183,6 @@ Currently selling myself. Customers include:
 - I do a lot of laundry. These dress whites don’t press themselves
 
 ### Farmhand │ local │ 2012 – 2013, summers
+{:.small-caps}
 
 A degree of experience which is adequate, but not trashy

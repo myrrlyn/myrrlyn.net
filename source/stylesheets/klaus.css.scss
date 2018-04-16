@@ -36,7 +36,7 @@ article {
 		display: inline-block;
 	}
 }
-$inblpad: 3px;
+$inblpad: 4px;
 #klaus-lamp {
 	background-image: url("/images/klaus-lamp.png");
 }
@@ -100,5 +100,17 @@ $width-thick: 54.8;
 		float: none;
 		clear: both;
 		margin: 0 auto;
+	}
+}
+
+@media only screen
+and (min-width: map-get($breakpoints, 'large+'))
+and (min-height: 800px) {
+	#flex-focus {
+		height: 100%;
+	}
+	main {
+		overflow-y: auto;
+		height: inherit;
 	}
 }
