@@ -5,6 +5,34 @@ category: local
 
 # Résumé
 
+## Work
+
+**Space Dynamics Laboratory:** Logan, UT; December 2016 to present. Satellite
+software engineer.
+
+### BioSentinel (NASA Ames Research Center)
+
+For the [BioSentinel][biosentinel] mission, I wrote a network/filesystem kernel
+module that enabled communication between the vehicle’s primary computer and an
+array of peripheral devices. I designed, formally verified, and implemented the
+systsem in C89. I was responsible for performing software and system integration
+tests, and have assisted in the troubleshooting of electrical system faults.
+
+### DARPA/MIT Research Mission
+
+I served as the ground support software developer and mission operator for a
+DARPA/MIT research mission for four months. I am not at liberty to disclose
+mission specifics. I built our operations platform on the [COSMOS][cosmos]
+framework, and was on the team responsible for our C♯ network processor. I also
+wrote a specialized Rust network processor for this mission.
+
+### EAGLE/Mycroft (Air Force Research Laboratory)
+
+I served as a ground support software developer for the [EAGLE][eagle] mission,
+working both from our Logan office and directly onsite at Kirtland AFB. I became
+the SDL lead developer, and worked directly with the AFRL vehicle team to
+provide a well-tailored and correct operations program.
+
 ## Formal Education
 
 **Trine University:** Angola, IN; August 2011 to May 2016. Computer Engineering
@@ -13,35 +41,35 @@ major.
 Notable courses:
 
 - ***Senior Design***: My capstone project was the construction and programming
-of an autonomous cargo hauler. I worked with three mechanical engineers on the
-physical machine, and personally built the electrical and software systems. The
-machine capably navigated along a pre-programmed route, and successfully
-detected obstacles such as pedestrians and a train. The code is on my GitHub
-profile, and the summary video is [on YouTube][1]. I can provide design
-documents upon request.
+    of an autonomous cargo hauler. I worked with three mechanical engineers on
+    the physical machine, and personally built the electrical and software
+    systems. The machine capably navigated along a pre-programmed route, and
+    successfully detected obstacles such as pedestrians and a train. The code is
+    on my GitHub profile, and the summary video is [on YouTube][1]. I can
+    provide design documents upon request.
 
 - **Logic and Computer Design**: This class focused on the hardware construction
-of a computer and the instruction primitives executing on it. We built a
-five-stage MIPS CPU in Verilog.
+    of a computer and the instruction primitives executing on it. We built a
+    five-stage MIPS CPU in Verilog.
 
 - **Embedded Systems**: This class taught real-time operating systems and
-OS-less programming. We built an oscilloscope and basic RTOS.
+    OS-less programming. We built an oscilloscope and basic RTOS.
 
 - **Software Engineering I and II**: These classes focused on development
-patterns, software design, and algorithm use. We learned C++/Qt and Ruby, and
-built a Rails app and PostgreSQL database.
+    patterns, software design, and algorithm use. We learned C++/Qt and Ruby,
+    and built a Rails app and PostgreSQL database.
 
 General courses:
 
 - *Mathematics*: Calculus III, Linear Algebra, Differential Equations, Graph
-Theory and Combinatorics, Statistics, Random Processes
+    Theory and Combinatorics, Statistics, Random Processes
 
 - *Programming*: Object-Oriented Programming (Java), Application Programming
-(C++/Qt), Computer Security (Java), Net-Centric Computing (PHP, C++), Algorithms
-(C++, Python).
+    (C++/Qt), Computer Security (Java), Net-Centric Computing (PHP, C++),
+    Algorithms (C++, Python).
 
 - *Electronic Systems*: Circuit Theory and Analysis, Digital Systems (Verilog),
-Microcontrollers (C, Assembly).
+    Microcontrollers (C, Assembly).
 
 Mechanical Engineering major (two years):
 
@@ -223,3 +251,6 @@ mission, about which I know little and can disclose less.
 
 [1]: https://www.youtube.com/watch?v=K3CKSovJbJQ
 [2]: https://crates.io/crates/endian_trait
+[biosentinel]: https://www.nasa.gov/centers/ames/engineering/projects/biosentinel.html
+[cosmos]: //cosmosrb.com
+[eagle]: http://www.wpafb.af.mil/News/Article-Display/Article/1496419/successful-launch-for-afrl-eagle-spacecraft-experiment-on-afspc-11-mission/
