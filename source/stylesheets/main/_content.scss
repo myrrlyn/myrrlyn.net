@@ -57,6 +57,8 @@ img {
 	max-width: 100%;
 }
 article {
+	max-width: $content-max-width;
+	margin: 0 auto;
 	aside {
 		@include sidenote-border("left", $color: nth($palette-hue-secondary, 4), $width: 8px);
 		padding-left: 1em;

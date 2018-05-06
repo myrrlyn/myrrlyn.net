@@ -1,8 +1,10 @@
 $(document).ready(function() {
+	setPanels();
 	$("#cookie-display").click(cookieDisplay);
 	$("#cookie-wipe").click(cookieWipe);
 	$("#sig-pgp").click(() => showSig("pgp"));
 	$("#sig-keybase").click(() => showSig("keybase"));
+	$("#decorator-toggle").click(togglePanels);
 });
 
 /**
@@ -86,4 +88,42 @@ function showSig(sig: string) {
 			}
 		},
 	});
+}
+
+/**
+ * Sets display properties on <body> to manage rendering of the side panels.
+ */
+function setPanels() {
+	let vis = new Cookie("panel-vis").update({path: "/"});
+	//  If the cookie doesn't exist, use visible as the default.
+	let state = vis.read() || "shown";
+	if (state == "hidden") {
+		$("body").addClass("hide-panels");
+	}
+	setPanelButton(state);
+	vis.create(state);
+}
+
+function togglePanels() {
+	let vis = new Cookie("panel-vis").update({path: "/"});
+	let state = vis.read() || "shown";
+	if (state == "shown") {
+		state = "hidden";
+		$("body").addClass("hide-panels");
+	}
+	else {
+		state = "shown";
+		$("body").removeClass("hide-panels");
+	}
+	setPanelButton(state);
+	vis.create(state);
+}
+
+function setPanelButton(state: string) {
+	if (state == "hidden") {
+		$("#decorator-toggle").text("Show the outer panels");
+	}
+	else if (state == "shown") {
+		$("#decorator-toggle").text("Hide the outer panels");
+	}
 }

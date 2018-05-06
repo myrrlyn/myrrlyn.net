@@ -40,6 +40,8 @@ h2.subtitle {
 }
 
 article {
+	max-width: $content-max-width;
+	margin: 0 auto;
 	img {
 		@extend %article-img;
 	}

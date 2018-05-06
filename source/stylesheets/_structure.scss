@@ -81,14 +81,33 @@ footer .flex-item {
 	height: 1em;
 }
 
+body.hide-panels {
+	#about,
+	#nav,
+	#anchor-wrap,
+	header,
+	footer {
+		display: none;
+	}
+}
+
 @media only screen
 and (min-width: map-get($breakpoints, 'large+'))
 and (min-height: 800px) {
-	#flex-focus {
+	body:not(.hide-panels) #flex-focus {
 		height: calc(100vh - #{core-height()});
 	}
 	main, #about, #nav {
 		overflow-y: auto;
 		height: inherit;
 	}
+}
+
+button#decorator-toggle {
+	@include screen-only;
+	@media only screen and (max-width: map-get($breakpoints, 'large-')) {
+		display: none;
+	}
+	float: right;
+	margin-top: 5px;
 }

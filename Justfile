@@ -4,6 +4,7 @@ target = "droplet"
 
 # Build strips all non-tracked files in build/, such as signature files
 build:
+	tsc
 	bundle exec middleman build
 
 clean:

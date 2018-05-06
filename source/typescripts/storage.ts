@@ -60,7 +60,7 @@ class Cookie implements ICrud {
 		}
 		//  If options are given from the start, use them.
 		if (opts !== undefined) {
-			this.options = opts;
+			this.options = Object.assign({path: "/"}, opts);
 		}
 	}
 

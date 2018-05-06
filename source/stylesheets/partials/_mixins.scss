@@ -63,3 +63,9 @@
 		}
 	}
 }
+
+@mixin screen-only {
+	@media not screen {
+		display: none !important;
+	}
+}
