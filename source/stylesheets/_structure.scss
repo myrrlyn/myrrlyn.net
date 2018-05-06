@@ -32,6 +32,12 @@ body {
 	}
 }
 
+.flex-item {
+	flex: {
+		basis: 100%;
+	}
+}
+
 #flex-focus {
 	flex: {
 		grow: 1;
@@ -44,12 +50,6 @@ body {
 		right: auto;
 	}
 	max-width: $content-width-max;
-}
-
-.flex-item {
-	flex: {
-		basis: 100%;
-	}
 }
 
 #about {

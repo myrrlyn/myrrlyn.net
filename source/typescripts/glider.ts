@@ -55,7 +55,7 @@ function setGlider(state: string, glider: {cells: number[][]}) {
 		let c = cell[0] + 1;
 		let r = cell[1] + 1;
 		//  Alternatively, the ERb generator also puts 0-indexed .x-$x and .y-$y
-		//  classes on div.dell, so that could also be the selection target.
+		//  classes on div.cell, so that could also be the selection target.
 		//  Doesn't really matter.
 		let selector = `table.glider tr:nth-child(${r}) td:nth-child(${c}) div.cell`;
 		if (state == "on") {

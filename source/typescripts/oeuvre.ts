@@ -1,5 +1,8 @@
+import { bannerFetch, setBanner } from "./banner";
+import { nav } from "./nav";
+
 $(document).ready(function() {
-	bannerFetch.done(data => {
+	bannerFetch().done(data => {
 		//  Strip non-TES banners from the list
 		setBanner(data.banners.filter(x => x.type.includes("tes")), "/oeuvre");
 	});

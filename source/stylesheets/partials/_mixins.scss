@@ -30,7 +30,7 @@
 	$side,
 	$color: nth($palette-hue-primary, 3),
 	$style: solid,
-	$width: 1px
+	$width: 2px
 ) {
 	border-#{$side}: {
 		color: $color;

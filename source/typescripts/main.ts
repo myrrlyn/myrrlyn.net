@@ -1,6 +1,8 @@
+import { bannerFetch, setBanner } from "./banner";
+
 $(document).ready(function() {
 	//  This should only be called when the DOM is finished, obviously.
-	bannerFetch.done(data => {
+	bannerFetch().done(data => {
 		//  Strip TES banners from the list
 		setBanner(data.banners.filter(x => !x.type.includes("tes")), "/");
 	});

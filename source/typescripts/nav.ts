@@ -1,3 +1,5 @@
+import * as moment from "moment";
+
 /**
  * Master list of Cookie objects.
  *
@@ -38,7 +40,7 @@ let allCookies = {
  * Master navigator function to be called on page setup. Sets click hooks and
  * jQuery initialization.
  */
-function nav() {
+export function nav() {
 	//  All nav.accordion elements get this treatment
 	$("nav.accordion").accordion({
 		heightStyle: "content",

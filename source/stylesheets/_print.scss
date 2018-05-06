@@ -6,7 +6,7 @@ footer,
 #about,
 #nav,
 main > :not(article) {
-	display: none !important;
+	@include screen-only;
 }
 
 del, ins {

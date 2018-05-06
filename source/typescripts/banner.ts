@@ -1,3 +1,5 @@
+import * as moment from "moment";
+
 type BannerJson = {
 	name: string,
 	freq?: number,
@@ -238,15 +240,21 @@ function deployBanner(banner: BannerImg) {
 	}
 }
 
+let _bannerFetch = null;
 /**
  * Asynchronous data retrieval handle.
  */
-let bannerFetch = $.getJSON("/javascripts/banners.json");
+export function bannerFetch() {
+	if (_bannerFetch == null) {
+		_bannerFetch = $.getJSON("/javascripts/banners.json");
+	}
+	return _bannerFetch;
+}
 
 /**
  * Set the banner, either from a cookie or from a new draw.
  */
-function setBanner(jsonData: BannerJson[], path?: string) {
+export function setBanner(jsonData: BannerJson[], path?: string) {
 	let banners = jsonData.map(bjson => BannerImg.from_json(bjson));
 	let pathTrue;
 	if (!path) {
