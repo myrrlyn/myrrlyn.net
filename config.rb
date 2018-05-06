@@ -2,8 +2,6 @@
 # Page options, layouts, aliases and proxies
 ###
 
-load "lib/extensions.rb"
-
 set :layout, :main
 
 # Per-page layout changes:
@@ -13,7 +11,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-ignore 'typescripts/*.ts'
+ignore 'typescripts/*'
 
 set :markdown_engine, :kramdown
 set :markdown, {
@@ -82,7 +80,8 @@ configure :build do
 	activate :minify_css
 
 	# Minify Javascript on build
-	activate :minify_javascript
+	# For some reason, this panics.
+	# activate :minify_javascript
 
 	# Minify HTML on build
 	# activate :minify_html

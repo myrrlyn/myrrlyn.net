@@ -5,6 +5,8 @@ target = "droplet"
 # Build strips all non-tracked files in build/, such as signature files
 build:
 	tsc
+	gsed -i 's:^import .*$::' source/javascripts/*.js
+	gsed -i 's:^ *export ::' source/javascripts/*.js
 	bundle exec middleman build
 
 clean:
