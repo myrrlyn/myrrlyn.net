@@ -37,25 +37,31 @@ benefits a primary goal of my career and personal life.
 
 # Personal Life
 
-I haven’t yet figured out how to make a vibrant personal life for myself as a
-transplant in Utah, as I am not of the LDS church nor am I a student at Utah
-State University, so that’s something on which I’ll need to work in the next few
-years. I am an assistant scoutmaster with Troop 1, which I tremendously enjoy,
-and I have a few friends my own age from work. Mostly I’m just glad that several
-of my friends from back in Michigan still speak to me.
+As I am one of the few young, unmarried, engineers at my company, I have found
+myself receiving the travel assignments that my coworkers’ families don’t want
+to bear. As such, I moved from Michigan to Utah to start my job and then,
+eighteen months later, transferred to Albuquerque. I expect to be moved at least
+twice more in the next five years as my career and our work grow.
+
+I served as an assistant scoutmaster for Troop 1 while I lived in Logan, Utah,
+and I hope to resume that post upon my eventual return. I am not sure how
+involved in Scouting I will be while on my travel rotation. As I am not LDS or
+a university student, my options for in-person socializing are significantly
+curtailed.
 
 I am very excited about all the new geography to explore around me, as well as
-the multitude of national parks near by. So far I’ve only been to Arches
-National Park, but I am far too Boy Scout to hold out on all the rest for long.
+the multitude of national parks near by. So far I’ve only been to Arches,
+Yellowstone, and Grand Teton National Parks, but I am far too Boy Scout to hold
+out on all the rest for long.
 
 # Career Goals
 
-I’m almost a year into my first job at [Space Dynamics][1], and I’m very happy
-with both the work I’m doing and the company culture there. I currently don’t
-have any plans to switch jobs or move out of Logan, but, who knows. I’m only 24
-and as yet unwed.
+I’m almost two years into my first job at [Space Dynamics Laboratory][SDL], and
+I’m very happy with both the work I’m doing and the company culture there. I
+currently don’t have any plans to search for new jobs or move away from wherever
+SDL has me stationed.
 
-I am interested in the [Rust programming language][2] for its memory safety and
+I am interested in the [Rust] programming language for its memory safety and
 performance characteristics, both of which are rather important in aerospace
 work. Rust isn’t *quite* ready to displace C/C++ in flight software, as it uses
 LLVM, which has fewer targets than GCC, and it is not yet readily integrable with
@@ -65,5 +71,5 @@ I’d like to start getting Rust’s foot in the door in my workplace, including
 necessary (and possible for me to do…) contributing to Rust in areas that we
 identify it as needing work.
 
-[1]: http://sdl.usu.edu/
-[2]: https://www.rust-lang.org/
+[SDL]: http://sdl.usu.edu/
+[Rust]: https://www.rust-lang.org/

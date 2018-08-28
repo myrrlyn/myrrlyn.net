@@ -11,6 +11,10 @@ Unsolicited Discourse
 <%= current_page.data.title %>
 			<% end %>
 		</title>
+		<link rel="alternate"
+		      type="application/rss+xml"
+		      href="//myrrlyn.net/blog/feed.rss"
+		      title="Unsolicited Discourse" />
 		<%= partial "layouts/head" %>
 		<%= stylesheet_link_tag :blog %>
 		<%= javascript_include_tag :blog %>
@@ -24,6 +28,16 @@ Unsolicited Discourse
 				<h1 class="title">
 					<%= current_page.data.title %>
 				</h1>
+				<% unless current_page.data.date.nil? %>
+					<% date = current_page.data.date %>
+					<p class="right">
+Published on
+						<time datetime="<%= date %>">
+							<%suf={1=>"st",2=>"nd",3=>"rd",21=>"st",22=>"nd",23=>"rd",31=>"st"}[date.day]||"th"%>
+							<%= date.strftime("%B %d<sup>#{suf}</sup>, %Y") %>
+						</time>
+					</p>
+				<% end %>
 				<article>
 					<%= yield %>
 				</article>

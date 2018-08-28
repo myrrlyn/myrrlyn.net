@@ -11,6 +11,10 @@
 myrrlyn/<%= current_page.data.title.downcase %>
 			<% end %>
 		</title>
+		<link rel="alternate"
+		      type="application/rss+xml"
+		      href="//myrrlyn.net/blog/feed.rss"
+		      title="Unsolicited Discourse" />
 		<%= partial "layouts/head" %>
 		<%= stylesheet_link_tag :main %>
 		<%= javascript_include_tag :main %>

@@ -7,6 +7,10 @@ YOU: please show me the blogs in the order that they were made
 
 WEBSITE: thats too hard. heres some people i think are good. Do you like this
 
+<small>
+[Text reference](https://twitter.com/dril/status/760997832237129729)
+</small>
+
 ----
 
 <div id="shuf" markdown="block">

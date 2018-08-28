@@ -1,5 +1,6 @@
 ---
 title: Lilliput
+category: projects
 ---
 
 # Lilliput

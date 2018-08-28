@@ -18,8 +18,8 @@ Anyway, here’s what I have in my virtual workshop.
 I’m putting this first because it is, in my opinion, critically important to the
 rest of the list.
 
-I have previously used [1Password][1], but recently switched to [Enpass][2]. In
-my experience, these two managers are closely matched in features, though Enpass
+I have previously used [1Password], but recently switched to [Enpass]. In my
+experience, these two managers are closely matched in features, though Enpass
 wins out in that it has a Linux desktop client and 1Password does not. Enpass
 furthermore has a Windows 10 Mobile app, so I can recommend it to my parents; I
 do not recall if 1Password does (I believe it does not).
@@ -40,7 +40,7 @@ for them and I swear I’m not; I’m just very enthusiastic about this.
     time of this writing, that list includes Dropbox, OneDrive, Google Drive,
     OwnCloud, and Box. If none of these strike your fancy, you can also instruct
     it to store its database in a specific location and manage it yourself (such
-    as via SyncThing).
+    as via [SyncThing]).
 
     The database file is always stored fully encrypted. When an Enpass client
     seeks to update it, it locks the file, decrypts it in local memory, updates,
@@ -61,11 +61,12 @@ for them and I swear I’m not; I’m just very enthusiastic about this.
     mix of convenience and security.
 
     I recently switched to an iPhone, and Enpass is less well-integrated (no
-    keyboard or service to detect fields and give a notification to do so), but
-    it does offer a home-screen widget that holds your favorites, and is readily
-    usable. I intend to keep using it, but the experience on Android was
-    definitely better. I think that’s more of a commentary on the phone vendor,
-    though.
+    native keyboard, and applications have to explicitly opt-in to hooking into
+    it for credential insertion with more effort than is needed to access the
+    iOS Keychain), but it does offer a home-screen widget that holds your
+    favorites, and is readily usable. I intend to keep using it, but the
+    experience on Android was definitely better. I think that’s more of a
+    commentary on the phone vendor, though.
 
 - TOTP Support
 
@@ -166,11 +167,12 @@ be done in a small shop behind your house. So … yeah.
 
 Here are the parts for it:
 
-- [CoolerMaster HAF XB EVO][3] case (no I don’t know what those letters mean)
-- [ASUS Z97-A][4] motherboard
-- [Intel Core i7 4790K][5] CPU (not overclocked; I’m not a cool ricer)
-- 2x [nVidia GeForce GTX960][6] GPUs (this was a mistake; identical cards means
-    I can’t pass just one through to a VM. Also, VR support starts at the 970)
+- [CoolerMaster HAF XB EVO][case] case (no I don’t know what those letters mean)
+- [ASUS Z97-A][mobo] motherboard
+- [Intel Core i7 4790K][core] CPU (not overclocked; I’m not a cool ricer)
+- 2x [nVidia GeForce GTX960][gpu] GPUs (this was a mistake; identical cards
+    means I can’t pass just one through to a VM. Also, VR support starts at the
+    970)
 - A ThermalTake liquid cooler whose specific SKU I can’t remember and probably
     doesn’t matter.
 - Two Seagate hybrid disks (4TB HDD/64GB SSD) and two Samsung 850 SSDs.
@@ -197,15 +199,15 @@ Arch, FreeBSD, Qubes, and currently CentOS.
 
 I have a Mac Mini and an old (2012) homebrew PC acting as servers. The Mac Mini
 lives with me in Utah; the old PC is with my parents in Michigan and is
-currently dead. I also rent a [DigitalOcean][5] droplet because my apartment
+currently dead. I also rent a [DigitalOcean][do] droplet because my apartment
 isn’t in a great situation vis-a-vis uptime. *Thanks, <del>Comcast</del>*
 *<ins>BlueRim</ins>.*
 
 ## Phone
 
-I currently use an [iPhone X][8]. I had previously used a Moto Z, until I bought
-the external battery mod and something went wrong in the phone itsely (I think)
-that cause its battery sensor firmware to panic and believe that the phone was
+I currently use an [iPhone X]. I had previously used a Moto Z, until I bought
+the external battery mod and something went wrong in the phone itself (I think)
+that caused its battery sensor firmware to panic and believe that the phone was
 utterly without power, and shut down until plugged into the wall.
 
 The problem escalated to the point that even when both batteries were full,
@@ -225,20 +227,32 @@ at 70℉, air at freezing) and the most I’ve encountered in real life has been
 -100℉ (from 70℉ to -30℉). Isn’t it important that phones work in these
 environments?
 
-Anyway. I haven’t used the phone enough to leave further comment.
+I’ve had the phone for almost a year now and I’m, by and large, okay with it. I
+wouldn’t say *happy*, given that I strongly dislike the no-buttons aesthetic and
+the notch is, while not crippling, still noticeable and moderately annoying. I
+also strongly dislike the home screen layout choices Apple made.
+
+But it’s functional, and the hardware quality is undeniably better than any
+Android phone I’ve yet used, so I guess there’s that. I’ll probably keep it
+until I finally manage to break it, or two or three years and it obsoletes.
 
 ## Keyboard
 
-I have two [WASD][9] keyboards in the Dvorak layout that I greatly enjoy. My
+I have two [WASD] keyboards in the Dvorak layout that I greatly enjoy. My
 favorite part of them is that the Dvorak scheme is controlled by a switch on the
 back that remaps the scan codes of each key, so that it can be plugged into a
 computer expecting the QWERTY US keymap without any change to software.
+
+I also use a custom keyboard cover for my MacBook. This has the downside of
+requiring a software change in order to use, and greatly confuses anyone who
+wants to use my laptop, but I find it very convenient both in the occasional
+glance down and in keeping the bare keyboard somewhat less weathered.
 
 # Software
 
 ## Operating Systems
 
-I run Arch Linux on my desktop and servers. I’ve been using it for the last few
+I run [Arch Linux] on my desktop and servers. I’ve been using it for the last few
 years and while it was extremely rocky at first, now that I’ve figured out what
 I’m doing it’s been very solid and a joy to use.
 
@@ -250,27 +264,32 @@ at work. It’s still a good OS; I just personally prefer Arch+KDE at the moment
 
 ## Desktop Environments
 
-KDE’s [Plasma 5][10]. I know, I know; the only way I could get more generic and
+KDE’s [Plasma 5]. I know, I know; the only way I could get more generic and
 boring is if I used GNOME. It works tremendously and I don’t use Vim either;
 I’ve resigned myself to not being “cool”. <del>Plus, KDE Connect pairing with my
-phone is very convenient.</del>
+phone is very convenient.</del> <ins>No longer true now that I have an
+iPhone.</ins>
+
+I use [i3] occasionally when I want to have no extra power taken away from
+Stellaris, but I am accustomed to neither it nor Vim and go back to my graphical
+choices soon enough.
 
 ## Editors
 
-Primarily [Visual Studio Code][11]. I know how to type in, save, AND exit Vim, so
+Primarily [Visual Studio Code]. I know how to type in, save, AND exit Vim, so
 I’ve got that going for me. I mostly use GNU Nano as my notepad when I can’t
 leave the terminal environment, though.
 
 ### IDEs
 
-I do half of my Rust work in [IntelliJ IDEA][12]. It is truly remarkable. It
-helps that I have a `.edu` email address for the forseeable future.
+I do half of my Rust work in [IntelliJ IDEA]. It is truly remarkable. It helps
+that I have a `.edu` email address for the forseeable future.
 
 ### Fonts
 
-I was introduced to the [Iosevka][13] font, and use it for all the monospaced
-text on this site, as well as in my editors. The specific variant I use (with
-numbers collapsed using `sh` syntax) is:
+I was introduced to the [Iosevka] font, and use it for all the monospaced text
+on this site, as well as in my editors. The specific variant I use (with numbers
+collapsed using `sh` syntax) is:
 
 ```sh
 sans term ss03 cv{01,{0,1}{3,7},19,2{1,3,4},3{0,1,4,7,8},4{0,2,4,6}}
@@ -282,33 +301,51 @@ these characters, in scenarios where I want fancier features such as ligatures.
 
 ## Programming Languages
 
-1. [Rust][14] is my personal language of choice. I’m slowly expanding the scope
-    of where I use it, including working on rebuilding this website to be driven
-    by it.
+1. [Rust] is my personal language of choice. I’m slowly expanding the scope of
+    where I use it, including working on rebuilding this website to be driven by
+    it.
 
-1. [Ruby][15]
+1. [Ruby]
 
     I use Ruby at work for driving the ground side of one of our missions, and
     to power this website (currently).
 
-1. [Elixir][16], in which I’m practicing for future web work.
+1. [Elixir], in which I’m practicing for future web work.
 
-1. [C][17], split evenly between [GCC][18] and [Clang][19] compilers.
+1. [C], split evenly between [GCC] and [Clang] compilers.
 
     I specialize in low-level systems languages, and Rust has not yet displaced
     this.
 
-1. [Sass][20] is still my absolute favorite CSS super-language. I use it for all
+1. [Sass] is still my absolute favorite CSS super-language. I use it for all
     my CSS projects, and cannot yet imagine going back.
 
-1. [TypeScript][21]
+1. [TypeScript]
 
     I don’t really have a firm reason I picked TypeScript as my JavaScript
     super-language, but I really enjoy working in it.
 
+## Web Development
+
+This website is my only web development project. I use the [Middleman] static
+site framework to compile it, and use Sass and TypeScript as the CSS and JS
+source languages. The text content is all written in Markdown, as is good and
+proper.
+
+I really enjoy Middleman, and have so far found it very easy to set up and
+extend. I haven’t done very much particularly complex with it, and I am missing
+several features that other frameworks provide out of the box (Jekyll has an RSS
+module for free, for instance) that I really should get in place.
+
+But it’s a great static site generator for just getting something stood up with
+little fuss, and I have no firm plans to move away just yet. I strongly
+recommend it for anyone looking to get a website of their own (although I
+recognize that Jekyll’s native support in GitHub makes it a more appealing
+choice) and will happily help anyone out with it if they want.
+
 ## System Shells
 
-[Zsh][22]. I strongly prefer it to Bash, though I am not well versed enough in
+[Zsh][zsh]. I strongly prefer it to Bash, though I am not well versed enough in
 terminal lore to clearly state why. I am looking forward to some new shells
 under development to experiment with, though as yet they don’t seem completely
 ready for full time use.
@@ -319,7 +356,7 @@ myself using personally.
 
 ## Data Synchronization
 
-I use [SyncThing][23] for decentralized data sync; all my machines shunt
+I use [SyncThing] for decentralized data sync; all my machines shunt
 my Projects and Pictures folders, among others, this way. These folders
 are *massive* and thus cannot use sync services that include cloud
 storage as a target. SyncThing is a distributed network that operates by
@@ -334,26 +371,29 @@ I also use Dropbox, OneDrive, and Google Drive as means of backing up
 and/or sharing items with specific groups of people or ecosystems. These
 are fairly mainstream and banal, so I won’t go into more detail.
 
-[1]: https://agilebits.com/
-[2]: https://enpass.io/
-[3]: http://www.coolermaster.com/case/lan-box-haf-series/haf-xb-evo
-[4]: https://www.asus.com/Motherboards/Z97A
-[5]: https://ark.intel.com/products/80807
-[6]: http://www.geforce.com/hardware/desktop-gpus/geforce-gtx-960
-[7]: https://digitalocean.com/
-[8]: https://www.apple.com/iphone-x/
-[9]: http://www.wasdkeyboards.com/
-[10]: https://www.kde.org/plasma-desktop
-[11]: https://code.visualstudio.com/
-[12]: https://www.jetbrains.com/idea
-[13]: https://be5invis.github.io/Iosevka/
-[14]: https://rust-lang.org/
-[15]: https://ruby-lang.org/
-[16]: https://elixir-lang.org/
-[17]: https://en.wikipedia.org/wiki/C_(programming_language)
-[18]: https://gcc.gnu.org/
-[19]: http://clang.llvm.org/
-[20]: https://sass-lang.com/
-[21]: https://www.typescriptlang.org/
-[22]: https://www.zsh.org/
-[23]: https://syncthing.net/
+[1Password]: //agilebits.com/
+[Arch Linux]: //archlinux.org/
+[C]: //en.wikipedia.org/wiki/C_(programming_language)
+[Clang]: //clang.llvm.org/
+[GCC]: //gcc.gnu.org/
+[Elixir]: //elixir-lang.org/
+[Enpass]: //enpass.io/
+[IntelliJ IDEA]: //www.jetbrains.com/idea
+[Iosevka]: //be5invis.github.io/Iosevka/
+[Middleman]: //middlemanapp.com/
+[Plasma 5]: //www.kde.org/plasma-desktop
+[Ruby]: //ruby-lang.org/
+[Rust]: //rust-lang.org/
+[Sass]: //sass-lang.com/
+[SyncThing]: //syncthing.net
+[TypeScript]: //www.typescriptlang.org/
+[Visual Studio Code]: //code.visualstudio.com/
+[WASD]: //www.wasdkeyboards.com/
+[case]: //www.coolermaster.com/case/lan-box-haf-series/haf-xb-evo
+[core]: //ark.intel.com/products/80807
+[do]: //digitalocean.com/
+[gpu]: //www.geforce.com/hardware/desktop-gpus/geforce-gtx-960
+[i3]: //i3wm.org/
+[iPhone X]: //www.apple.com/iphone-x/
+[mobo]: //www.asus.com/Motherboards/Z97A
+[zsh]: //www.zsh.org/

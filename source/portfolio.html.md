@@ -5,7 +5,79 @@ category: local
 
 # My Portfolio
 
-These are projects I’ve worked on either for class or my own personal pursuits.
+These are projects I’ve worked on either for my own edification or for class
+assignments.
+
+## Cosmonaut
+
+Cosmonaut is a long-term, extremely incomplete, personal project on which I’m
+working, inspired by things I encounter at my day job. It began as an
+educational project for me to learn how to write a parser, and now aims to
+provide a complement to the [COSMOS](//cosmosrb.com) project by Ball Aerospace.
+
+Currently, it can parse COSMOS definition files and create a dictionary in Rust
+whose members can be used to serialize a record into the bitstream that the
+COSMOS text defines. I wrote the `bitvec` crate specifically to address the fact
+that COSMOS definitions of wire protocols permit, and we use at work, fields
+that are a combination of:
+
+- not an even multiple of bytes in width
+- not guaranteed to start or end on a byte boundary
+- able to cross a byte boundary
+
+These constraints are impossible to cleanly service in standard Rust, and the
+other bit-vector libraries I encountered did not support such manipulation.
+*Furthermore*, because I work in esoteric hardware, the endianness of *bits in*
+*an element* matters to the network layer, so I need to bring both `bitvec` and
+`endian_trait` into play in order to match the bitstream that actually transfers
+over the wire.
+
+## `bitvec`
+
+I wrote the [`bitvec`](/bitvec) crate to satisfy a need I had in
+Cosmonaut to fill up and manage a buffer by bits instead of bytes. The other
+bit-vector crates I found were insufficient to my needs, and since this name
+wasn’t taken, I opted to write my own.
+
+The link above goes to my more detailed article about the crate, but as a brief
+summary, `bitvec` offers:
+
+- control over the element type used to hold the bits (`u8`, `u16`, `u32`,
+  `u64`)
+- extensible cursor behavior via the `Endian` trait, to define any ordering of
+  bits in an element
+- comprehensive support for Rust standard traits, operators, and type properties
+  - iteration
+  - bit arithmetic (`&`, `|`, `^`, `!`, `<<`, `>>`)
+  - numeric arithmetic (`+`, `-`)
+  - allocated type extends borrowed type, just as `Vec<T>` extends `[T]`
+  - (immutable) indexing
+
+The slice handle is two words in size and the vector handle is three words, just
+as the slice and vector types in the Rust stdlib.
+
+Due to limitations of how Rust implements indexing, mutable index cannot be
+implemented.
+
+## Lilliput
+
+The [`endian_trait`](/lilliput) crate provides a trait and a custom-derive macro
+to implement the trait that together enable complex structures to perform
+endianness-conversions of their members. This is only valid to do on aggregates
+of platform-independent primitives, so `endian_trait` only provides
+implementations on the Rust primitive types, and not on pointers or `usize` or
+`isize`. The crate also provides implementations on mutable slices over types
+that are endian-convertible, flipping them in place, and on small arrays (up to
+256), performing a large copy. Without `const` generics, Rust arrays are not
+able to be fully targeted for generic use, so large arrays must be converted by
+slice.
+
+The goals of this crate are to ease the serialization to, and deserialization
+from, the network for aggregate structs by performing the conversion before a
+serializer reads their fields. This permits decoupling of the de/serialization
+process from the byte ordering, so that order-agnostic de/serializers can work
+without issue on systems where the sender, network, and/or receiver might have
+byte-order mismatches.
 
 ## `libwyzyrdry`
 
@@ -75,12 +147,12 @@ licensing constraints. My design included features such as:
 - Five-stage pipeline with operand forwarding and stall detection
 - 32-element register file with half-cycle latency
 - ALU with replaceable arithmetic logic
-    - Ripple-carry addition at first
-    - Look-ahead-carry addition
-    - Finally, Kogge-Stone addition
+  - Ripple-carry addition at first
+  - Look-ahead-carry addition
+  - Finally, Kogge-Stone addition
 - RAM access (we also designed the RAM banks and controllers)
 - von Neumann architecture: I was able to load and execute basic MIPS object
-code with my project, and support self-modifying program execution.
+    code with my project, and support self-modifying program execution.
 - Access to peripheral devices using drivers I wrote
 
 ## Light Show

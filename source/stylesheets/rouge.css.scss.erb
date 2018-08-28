@@ -1,4 +1,4 @@
-<%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+<%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
 
 @mixin tabs($width) {
 	table pre {
@@ -8,6 +8,12 @@
 
 .highlight {
 	@include tabs(4);
+
+	//  For some reason, C is marked italic
+	&.c {
+		font-style: normal;
+	}
+
 	&.ruby {
 		@include tabs(2);
 	}

@@ -1,5 +1,6 @@
 ---
 title: Hermaeus
+category: projects
 ---
 
 # `Hermaeus`

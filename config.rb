@@ -29,18 +29,14 @@ set :markdown, {
 # General configuration
 
 # Extensions
-activate :blog do |blog|
-	blog.name = "oeuvre"
-	blog.prefix = "oeuvre"
-	blog.layout = "oeuvre"
-	blog.sources = "{title}.html"
-	blog.permalink = "{title}.html"
-end
+
+activate :pry
 
 activate :blog do |blog|
 	blog.name = "blog"
 	blog.prefix = "blog"
 	blog.layout = "blog"
+	blog.default_extension = ".md"
 	blog.sources = "{year}-{month}-{day}-{title}.html"
 	blog.permalink = "{category}/{title}.html"
 	blog.custom_collections = {
@@ -49,6 +45,15 @@ activate :blog do |blog|
 			template: "blog_category.html",
 		}
 	}
+end
+
+activate :blog do |blog|
+	blog.name = "oeuvre"
+	blog.prefix = "oeuvre"
+	blog.layout = "oeuvre"
+	blog.default_extension = ".md"
+	blog.sources = "{title}.html"
+	blog.permalink = "{title}.html"
 end
 
 activate :syntax, line_numbers: true

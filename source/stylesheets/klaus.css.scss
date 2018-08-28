@@ -106,7 +106,8 @@ $width-thick: 54.8;
 @media only screen
 and (min-width: map-get($breakpoints, 'large+'))
 and (min-height: 800px) {
-	#flex-focus {
+	body:not(.hide-panels) #flex-focus,
+	body #flex-focus {
 		height: 100%;
 	}
 	main {

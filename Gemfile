@@ -14,6 +14,7 @@ gem 'middleman-livereload'
 gem 'middleman-minify-html'
 gem 'middleman-blog'
 gem 'middleman-syntax'
+gem 'middleman-pry'
 
 # Support Gems
 gem 'builder'

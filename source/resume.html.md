@@ -5,33 +5,35 @@ category: local
 
 # Résumé
 
-## Work
+## Professional Experience
 
 **Space Dynamics Laboratory:** Logan, UT; December 2016 to present. Satellite
 software engineer.
 
 ### BioSentinel (NASA Ames Research Center)
 
-For the [BioSentinel][biosentinel] mission, I wrote a network/filesystem kernel
+For the [BioSentinel] mission, I wrote a network/filesystem kernel
 module that enabled communication between the vehicle’s primary computer and an
 array of peripheral devices. I designed, formally verified, and implemented the
-systsem in C89. I was responsible for performing software and system integration
+system in C89. I was responsible for performing software and system integration
 tests, and have assisted in the troubleshooting of electrical system faults.
 
 ### DARPA/MIT Research Mission
 
 I served as the ground support software developer and mission operator for a
 DARPA/MIT research mission for four months. I am not at liberty to disclose
-mission specifics. I built our operations platform on the [COSMOS][cosmos]
-framework, and was on the team responsible for our C♯ network processor. I also
-wrote a specialized Rust network processor for this mission.
+mission specifics. I built our operations platform on the [COSMOS] framework,
+and was on the team responsible for our C♯ network processor. I also wrote a
+specialized Rust network processor for this mission.
 
 ### EAGLE/Mycroft (Air Force Research Laboratory)
 
-I served as a ground support software developer for the [EAGLE][eagle] mission,
+I serve as a ground support software developer for the [EAGLE] mission,
 working both from our Logan office and directly onsite at Kirtland AFB. I became
-the SDL lead developer, and worked directly with the AFRL vehicle team to
-provide a well-tailored and correct operations program.
+the SDL lead developer, and work directly with the AFRL vehicle team to provide
+a well-tailored and correct operations program. The software is a web
+application written in Python 2.6, and this is my primary working experience
+with the Python language and the web2py framework.
 
 ## Formal Education
 
@@ -130,9 +132,9 @@ item to show or hide its content, or click here to expand all items.
     {:.cover}
 
     I investigated using Rust for my Senior Design project. I taught myself Rust
-    and am fluent in its core concepts. I have used it for approximately two
-    years now, and have a [published crate][2] demonstrating my knowledge of
-    various language features. I have also deployed a Rust project for data
+    and am fluent in its core concepts. I have used it for approximately three
+    years now, and have published crates demonstrating my knowledge of the
+    language and its features. I have also deployed a Rust project for data
     stream processing at work, though I am not at liberty to disclose its code.
 
 - C♯:
@@ -199,13 +201,13 @@ item to show or hide its content, or click here to expand all items.
     PowerShell at work.
 
 - Editors/IDEs
-    - Atom and Microsoft Visual Studio Code (not at all related to VS)
-    - Basic Vim usage
-    - GNU Nano
-    - Eclipse and NetBeans
-    - Microsoft Visual Studio
+  - Atom and Microsoft Visual Studio Code (not at all related to VS)
+  - Basic Vim usage
+  - GNU Nano
+  - Eclipse and NetBeans
+  - Microsoft Visual Studio
 
-## Work Experience
+## Other Work Experience
 
 ### Rota-Kiwan Scout Reservation
 
@@ -217,40 +219,29 @@ lifeguard and then aquatics director. My responsibilities included:
 - Maintaining area safety
 - Coordinating emergency response with campers, staffers, and emergency services
 - Training my staff members
-- Enforcing safety protocols for my area and
+- Enforcing safety protocols for my area in particular and the camp in general
 
 I received excellent reviews from the scouts, parents, and my management. My
-technical capabilities are largely self-evident, from projects I’ve already done
-and through any technical interviews. My abilities as an employee, team member,
-and leader are less quantifiable. I can provide references to these effects upon
-request.
-
-### Space Dynamics Laboratory
-
-I wrote middleware networking drivers for the NASA BioSentinel mission. This
-required working knowledge of POSIX I/O driver structure, VxWorks kernel use,
-and SPARCv8 performance. My code was written in ISO C99.
-
-I am currently working with Ruby to orchestrate ground operations for another
-mission, about which I know little and can disclose less.
+technical abilities as a lifeguard are, thankfully, untested by real rescue
+situations; I attribute this to my abilities as an area director and the
+proactive safety work of my team and myself.
 
 ## Professional Certifications and Associations
 
 - Professional Association of Diving Instructors
-    - Rescue Diver
-    - Advanced Open Water Diver
-    - *Enriched Air/Nitrox Diver*
-    - *Wreck Diver*
+  - Rescue Diver
+  - Advanced Open Water Diver
+  - *Enriched Air/Nitrox Diver*
+  - *Wreck Diver*
 - American Red Cross
-    - ARC Lifeguard
-    - CPR and Emergency First Aid Provider
+  - ARC Lifeguard
+  - CPR and Emergency First Aid Provider
 - Boy Scouts of America
-    - Aquatics Instructor
-    - Lifeguard Instructor
-    - BSA Lifeguard
+  - Aquatics Instructor
+  - Lifeguard Instructor
+  - BSA Lifeguard
 
 [1]: https://www.youtube.com/watch?v=K3CKSovJbJQ
-[2]: https://crates.io/crates/endian_trait
-[biosentinel]: https://www.nasa.gov/centers/ames/engineering/projects/biosentinel.html
-[cosmos]: //cosmosrb.com
-[eagle]: http://www.wpafb.af.mil/News/Article-Display/Article/1496419/successful-launch-for-afrl-eagle-spacecraft-experiment-on-afspc-11-mission/
+[BioSentinel]: https://www.nasa.gov/centers/ames/engineering/projects/biosentinel.html
+[COSMOS]: //cosmosrb.com
+[EAGLE]: //www.wpafb.af.mil/News/Article-Display/Article/1496419/successful-launch-for-afrl-eagle-spacecraft-experiment-on-afspc-11-mission/

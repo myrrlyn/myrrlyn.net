@@ -36,7 +36,7 @@ available.
 
 I would like to invite your organization, all members of your organizations, and
 recommended affiliates of your organization to contact me regarding this event.
-This joyous event is a traditional source of joy to midshipmen and I have no
+This joyous event is a traditional source of gaity to midshipmen and I have no
 doubt that this event can be employed to our mutual satisfaction.
 
 Below this letter of introduction I have attached further details about myself
