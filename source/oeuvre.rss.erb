@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<atom:link href="https://myrrlyn.net/oeuvre/feed.rss" rel="self" type="application/rss+xml" />
+		<title>oeuvre myrrlyn</title>
+		<link>https://myrrlyn.net/oeuvre/</link>
+		<description>My "Elder Scrolls" fan works</description>
+		<category>The Elder Scrolls</category>
+		<copyright>2012-present myrrlyn</copyright>
+		<generator>Middleman (Ruby)</generator>
+		<language>en-us</language>
+		<lastBuildDate><%= DateTime.now.utc.rfc822 %></lastBuildDate>
+		<% sitemap.resources.select { |r| r.is_a? Middleman::Blog::BlogArticle } %>
+		<% .select { |b| b.path.start_with? "oeuvre" } %>
+		<% .sort { |a, b| a.date <=> b.date }.reverse.each do |article| %>
+			<item>
+				<title><%= article.title %></title>
+				<link>
+					https://myrrlyn.net<%= canonicalize(article.destination_path) %>
+				</link>
+				<guid>
+					https://myrrlyn.net<%= canonicalize(article.destination_path) %>
+				</guid>
+				<% unless article.data["summary"].blank? %>
+					<description>
+						<%= article.data["summary"] %>
+					</description>
+				<% end %>
+				<author>myrrlyn@outlook.com (myrrlyn)</author>
+				<pubDate><%= article.date.utc.rfc822 %></pubDate>
+				<% article.data.tags.each do |tag| %>
+					<category><%= tag %></category>
+				<% end %>
+				<comments>https://redd.it/<%= article.data["reddit"] %></comments>
+			</item>
+		<% end %>
+	</channel>
+</rss>

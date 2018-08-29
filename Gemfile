@@ -15,6 +15,7 @@ gem 'middleman-minify-html'
 gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-pry'
+gem 'middleman-rsync'
 
 # Support Gems
 gem 'builder'

@@ -58,6 +58,14 @@ end
 
 activate :syntax, line_numbers: true
 
+activate :rsync do |rsync|
+	rsync.production_server = "myrrlyn.net"
+	rsync.staging_server = "myrrlyn.net"
+	rsync.path = "/srv/http/myrrlyn/myrrlyn.net/build"
+	rsync.user = "myrrlyn"
+	rsync.rsync_flags = "-a -i -m -z --delete-delay --progress --inplace -e 'ssh -p 42405'"
+end
+
 # Reload the browser automatically whenever files change
 configure :development do
 	activate :livereload
@@ -78,6 +86,8 @@ end
 require 'lib/helpers.rb'
 helpers Helpers
 
+require 'lib/extensions.rb'
+
 # Build-specific configuration
 configure :build do
 	config[:build] ||= true
@@ -89,8 +99,11 @@ configure :build do
 	# activate :minify_javascript
 
 	# Minify HTML on build
-	# activate :minify_html
+	activate :minify_html
 
 	# GZip built files
 	activate :gzip
+
+	# Sign files
+	activate :sign
 end

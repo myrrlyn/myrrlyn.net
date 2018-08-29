@@ -12,8 +12,8 @@ build:
 clean:
 	rm -r build/
 
-deploy: sign
-	rsync {{rsync_args}} build/ myrrlyn@{{target}}:{{dest}}
+deploy:
+	bundle exec middleman rsync production
 
 serve:
 	bundle exec middleman serve
