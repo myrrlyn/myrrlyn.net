@@ -774,6 +774,300 @@ type = [
 ]
 caption = "View from Beaver Mountain summit"
 
+# Yellowstone
+
+[[banners]]
+name = "2018-08-12T11-29-10.jpg"
+type = [
+	"hot spring",
+	"yellowstone",
+]
+caption = "A hot spring at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T11-31-30.jpg"
+type = [
+	"hot spring",
+	"yellowstone",
+]
+caption = "A hot spring at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T11-31-50.jpg"
+type = [
+	"river",
+	"geyser",
+	"yellowstone",
+]
+caption = "A river at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T11-35-22.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Lion geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T11-37-48.jpg"
+type = [
+	"river",
+	"yellowstone",
+]
+caption = "A river at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T11-51-33.jpg"
+type = [
+	"hot spring",
+	"yellowstone",
+]
+caption = "A hot spring at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-00-33.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Giant Geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-05-09.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Grotto Geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-07-25.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Grotto Geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-15-21.jpg"
+type = [
+	"hot spring",
+	"yellowstone",
+]
+caption = "Morning Glory Pool at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-26-33.jpg"
+type = [
+	"mountains",
+	"yellowstone",
+]
+caption = "Mountains at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-26-37.jpg"
+type = [
+	"mountains",
+	"yellowstone",
+]
+caption = "Mountains at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-27-44.jpg"
+type = [
+	"hot spring",
+	"yellowstone",
+]
+caption = "A hot spring at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-29-10.jpg"
+type = [
+	"river",
+	"yellowstone",
+]
+caption = "A river at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-35-28.jpg"
+type = [
+	"mountains",
+	"yellowstone",
+]
+caption = "Mountains at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-38-29.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Castle Geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T12-38-45.jpg"
+type = [
+	"geyser",
+	"yellowstone",
+]
+caption = "Castle Geyser at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T15-40-10.jpg"
+type = [
+	"buffalo",
+	"yellowstone",
+]
+caption = "Buffalo at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T15-40-17.jpg"
+type = [
+	"buffalo",
+	"yellowstone",
+]
+caption = "Buffalo at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T15-40-23.jpg"
+type = [
+	"buffalo",
+	"yellowstone",
+]
+caption = "Buffalo at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T15-41-57.jpg"
+type = [
+	"buffalo",
+	"yellowstone",
+]
+caption = "Buffalo at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T15-49-13.jpg"
+type = [
+	"buffalo",
+	"yellowstone",
+]
+caption = "Buffalo at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T16-33-55.jpg"
+type = [
+	"canyon",
+	"waterfall",
+	"yellowstone",
+]
+caption = "Yellowstone Falls at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T17-04-08.jpg"
+type = [
+	"canyon",
+	"yellowstone",
+]
+caption = "Grand Canyon of the Yellowstone at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T17-25-03.jpg"
+type = [
+	"canyon",
+	"yellowstone",
+]
+caption = "Grand Canyon of the Yellowstone at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T18-55-23.jpg"
+type = [
+	"river",
+	"yellowstone",
+]
+caption = "Madison River at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-12T18-55-29.jpg"
+type = [
+	"river",
+	"yellowstone",
+]
+caption = "Madison River at Yellowstone National Park"
+
+[[banners]]
+name = "2018-08-13T08-38-52.jpg"
+type = [
+	"river",
+]
+caption = "A river next to my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-13T11-12-19.jpg"
+type = [
+	"waterfall",
+]
+caption = "A waterfall in Island Park, ID"
+
+[[banners]]
+name = "2018-08-13T21-22-29.jpg"
+type = [
+	"sunset",
+]
+caption = "Sunset over my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-14T07-49-41.jpg"
+type = [
+	"sunrise",
+]
+caption = "Sunrise at my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-14T07-49-51.jpg"
+type = [
+	"sunrise",
+]
+caption = "Sunrise at my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-14T07-49-56.jpg"
+type = [
+	"sunrise",
+]
+caption = "Sunrise at my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-14T07-50-13.jpg"
+type = [
+	"sunrise",
+]
+caption = "Sunrise at my campsite, Island Park, ID"
+
+[[banners]]
+name = "2018-08-14T13-09-55.jpg"
+type = [
+	"mountain",
+	"grand teton",
+]
+caption = "Grand Teton"
+
+[[banners]]
+name = "2018-08-1.jpg"
+type = [
+	"grand teton",
+	"lake",
+]
+caption = "Grand Teton, as seen from a lake partway up it"
+
+[[banners]]
+name = "2018-08-15T13-18-22.jpg"
+type = [
+	"waterfall",
+]
+caption = "Mesa Falls, near Island Park, ID"
+
+# The Elder Scrolls
+
 [[banners]]
 name = "map_cyrod.jpg"
 type = [
