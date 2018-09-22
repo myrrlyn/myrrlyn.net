@@ -16,6 +16,7 @@ gem 'middleman-blog'
 gem 'middleman-syntax'
 gem 'middleman-pry'
 gem 'middleman-rsync'
+gem 'middleman-favicon-maker'
 
 # Support Gems
 gem 'builder'
