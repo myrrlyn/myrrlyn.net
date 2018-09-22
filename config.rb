@@ -41,7 +41,7 @@ activate :blog do |blog|
 	blog.permalink = "{category}/{title}.html"
 	blog.custom_collections = {
 		category: {
-			link: "category/{category}.html",
+			link: "{category}.html",
 			template: "blog_category.html",
 		}
 	}

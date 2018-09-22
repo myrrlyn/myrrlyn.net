@@ -1,17 +1,32 @@
 ---
-title: Blog
+title: Unsolicited Discourse
 layout: blog
 blog: blog
 ---
 
-Because waiting to be asked about my opinions is so passé.
-
-This will possibly get more attention when there’s more content to merit it. For
-now, here’s a simple index list of the few articles I’ve finished.
+This is a mixture of my personal diary, my idle musings, my technical notes, and
+occasionally some things actually written for an audience. I make no promises as
+to consistency of topic, relevance, theme, or sanity. I do, however, promise
+that everything published here will be interminably long and of insufferable
+grammatical construction.
 
 There is an RSS feed available, if you are interested in push notifications of
 my work! If your browser isn’t showing the feed available right now, the direct
-link is: [https://myrrlyn.net/blog/feed.rss](https://myrrlyn.net/blog/feed.rss)
+link is: [https://myrrlyn.net/blog.rss](https://myrrlyn.net/blog.rss)
+
+My articles, in increasing order of age:
+
+<!--
+### <%= link_to "Miscellaneous", canonicalize(category_path("misc")) %>
+
+<% blog_categories(blog, "misc").each do |c, as| %>
+<%   as.sort { |a, b| b.date <=> a.date }.each do |post| %>
+- <%= link_to post.title, canonicalize(post.url), class: "title" %>
+    (<%= post.date.strftime "%Y %B %d" %>)
+
+    <%= post.data["summary"] %>
+<%   end %>
+<% end %>
 
 <% blog_categories(blog, "misc", :reject).each do |c, as| %>
 
@@ -25,14 +40,27 @@ link is: [https://myrrlyn.net/blog/feed.rss](https://myrrlyn.net/blog/feed.rss)
 <%   end %>
 
 <% end %>
+-->
 
-### <%= link_to "Miscellaneous", canonicalize(category_path("misc")) %>
+<% blog.articles.sort { |a, b| b.date <=> a.date }.each do |post| %>
+## <%= link_to post.title, canonicalize(post.url), class: "title" %>
 
-<% blog_categories(blog, "misc").each do |c, as| %>
-<%   as.sort { |a, b| b.date <=> a.date }.each do |post| %>
-- <%= link_to post.title, canonicalize(post.url), class: "title" %>
-    (<%= post.date.strftime "%Y %B %d" %>)
-
-    <%= post.data["summary"] %>
-<%   end %>
+<div markdown="block" class="details">
+<% date = post.date %>
+Published on <time datetime="<%= date.iso8601 %>"><%= date.strftime "%Y %B %d" %></time>.
+<% cat = post.data["category"] %>
+<% if cat != "misc" %>
+Part of <%= link_to(cat, category_path(cat)) %>.
 <% end %>
+
+<summary markdown="block">
+<%= post.data["summary"] %>
+</summary>
+</div>
+<% end %>
+
+<style type="text/css">
+.details {
+  margin-left: 0.75em;
+}
+</style>
