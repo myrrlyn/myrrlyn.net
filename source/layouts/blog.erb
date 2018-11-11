@@ -28,7 +28,7 @@ Unsolicited Discourse
 				<h1 class="title">
 					<%= current_page.data.title %>
 				</h1>
-				<% unless current_page.data.date.nil? %>
+				<% if !current_page.data.date.nil? && current_page.data.published? %>
 					<% date = current_page.data.date %>
 					<p class="right">
 Published on

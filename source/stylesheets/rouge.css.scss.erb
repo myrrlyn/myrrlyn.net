@@ -1,20 +1,45 @@
-<%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
+@charset "utf-8";
+
+@media only print {
+	<%= Rouge::Themes::Github.render(:scope => ".highlight") %>
+}
+@media only screen {
+	<%= Rouge::Themes::ThankfulEyes.render(:scope => '.highlight') %>
+}
+
+@mixin tab-size($size) {
+	tab-size: $size;
+	-o-tab-size: $size;
+	-moz-tab-size: $size;
+}
 
 @mixin tabs($width) {
 	table pre {
-		tab-size: $width;
+		@include tab-size($width);
 	}
 }
 
 .highlight {
-	@include tabs(4);
+	@media only print {
+		@include tab-size(4);
+	}
+	@media only screen and (min-width: 1200px) {
+		@include tab-size(4);
+	}
+	@media only screen and (min-width: 800px) and (max-width: 1199px) {
+		@include tab-size(2);
+	}
+	@media only screen and (min-width: 600px) and (max-width: 799px) {
+		@include tab-size(1);
+	}
+	@media only screen and (max-width: 599px) {
+		@include tab-size(0.5);
+	}
+	//  values taken from _partials/_variables.scss. For some reason, SCSS @import
+	//  directives seem not to work here
 
 	//  For some reason, C is marked italic
 	&.c {
 		font-style: normal;
-	}
-
-	&.ruby {
-		@include tabs(2);
 	}
 }

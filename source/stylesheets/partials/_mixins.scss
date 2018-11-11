@@ -69,3 +69,10 @@
 		display: none !important;
 	}
 }
+
+//  Creates vendor-prefixed tab-size properties
+@mixin tab-size($size) {
+	tab-size: $size;
+	-o-tab-size: $size;
+	-moz-tab-size: $size;
+}

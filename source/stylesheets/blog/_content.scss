@@ -1,18 +1,32 @@
+$aside-rim-width: 0.5em;
+
 article {
 	max-width: $content-max-width;
 	margin: 0 auto;
 	aside {
-		@include sidenote-border("left", $color: nth($palette-hue-tertiary, 2), $width: 8px);
-		padding-left: 1em;
+		@include sidenote-border("left", $color: nth($palette-hue-secondary, 4), $width: 8px);
+		padding-left: $aside-rim-width;
+		aside {
+			margin-bottom: $aside-rim-width;
+		}
+		//  Trim the empty space above and below (edge) paragraphs.
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+		}
+		//  Restore empty space between interior paragraphs.
+		p + p {
+			margin-top: 1em;
+		}
 	}
 	img {
 		@extend %article-img;
 	}
 }
 
-pre.highlight {
-	overflow-x: scroll;
-}
+// pre.highlight {
+// 	overflow-x: scroll;
+// }
 
 .MathJax_SVG,
 .MathJax_SVG_Display {
@@ -20,11 +34,11 @@ pre.highlight {
 	overflow-x: auto;
 	svg {
 		max-width: 100%;
-		overflow-x: scroll;
+		// overflow-x: scroll;
 	}
 }
 
 blockquote {
 	@include sidenote-border("left", $color: nth($palette-hue-complementary, 3), $width: 10px);
-	padding-left: 0.5em;
+	padding-left: $aside-rim-width;
 }
