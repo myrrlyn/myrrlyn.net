@@ -1,0 +1,8 @@
+body.dark {
+	background-color: lighten(black, 16%);
+	color: darken(white, 10%);
+
+	a {
+		color: lighten(blue, 20%);
+	}
+}

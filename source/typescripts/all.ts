@@ -1,10 +1,14 @@
+import * as moment from "moment";
+
 $(document).ready(function() {
 	setPanels();
+	setTheme();
 	$("#cookie-display").click(cookieDisplay);
 	$("#cookie-wipe").click(cookieWipe);
 	$("#sig-pgp").click(() => showSig("pgp"));
 	$("#sig-keybase").click(() => showSig("keybase"));
 	$("#decorator-toggle").click(togglePanels);
+	$("#theme-toggle").click(toggleTheme);
 });
 
 /**
@@ -94,7 +98,7 @@ function showSig(sig: string) {
  * Sets display properties on <body> to manage rendering of the side panels.
  */
 function setPanels() {
-	let vis = new Cookie("panel-vis").update({path: "/"});
+	let vis = new Cookie("panel-vis").update({ path: "/", expires: moment().utc().add(1, "month").toString() });
 	//  If the cookie doesn't exist, use visible as the default.
 	let state = vis.read() || "shown";
 	if (state == "hidden") {
@@ -105,7 +109,7 @@ function setPanels() {
 }
 
 function togglePanels() {
-	let vis = new Cookie("panel-vis").update({path: "/"});
+	let vis = new Cookie("panel-vis").update({ path: "/", expires: moment().utc().add(1, "month").toString() });
 	let state = vis.read() || "shown";
 	if (state == "shown") {
 		state = "hidden";
@@ -126,4 +130,36 @@ function setPanelButton(state: string) {
 	else if (state == "shown") {
 		$("#decorator-toggle").text("Hide the outer panels");
 	}
+}
+
+function setTheme() {
+	let store = new Cookie("theme").update({ path: "/", expires: moment().utc().add(1, "month").toString() });
+	var theme = store.read() || "";
+
+	if (theme.trim() != "") {
+		$("body").addClass(theme);
+	}
+
+	let btn_text;
+	switch (theme) {
+		case "dark": btn_text = "light"; break;
+		default: btn_text = "dark"; break;
+	}
+	$("#theme-toggle").text(`Set ${btn_text} style`);
+}
+
+function toggleTheme() {
+	let store = new Cookie("theme").update({ path: "/", expires: moment().utc().add(1, "month").toString() });
+	let theme = store.read();
+
+	if (theme.trim() != "") {
+		$("body").removeClass(theme);
+	}
+
+	switch (store.read()) {
+		case "dark": theme = ""; break;
+		default: theme = "dark"; break;
+	}
+	store.create(theme);
+	setTheme();
 }
