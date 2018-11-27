@@ -59,8 +59,8 @@ end
 activate :syntax, line_numbers: true
 
 activate :rsync do |rsync|
-	rsync.production_server = "myrrlyn.net"
-	rsync.staging_server = "myrrlyn.net"
+	rsync.production_server = "do.myrrlyn.net"
+	rsync.staging_server = "ald.myrrlyn.net"
 	rsync.path = "/srv/http/myrrlyn/myrrlyn.net/build"
 	rsync.user = "myrrlyn"
 	rsync.rsync_flags = "-a -i -m -z --delete-delay --progress --inplace -e 'ssh -p 42405'"
