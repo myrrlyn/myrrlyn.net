@@ -13,8 +13,18 @@ About the Text
 	</h2>
 	<% if current_page.data.reddit %>
 		<p>
+			<% if current_page.data.reddit.is_a? String %>
 Published to <a href="//redd.it/<%= current_page.data.reddit %>">/r/teslore</a>
 on <%= current_page.data.date.strftime("%B %-d, %Y") %>.
+			<% elsif current_page.data.reddit.is_a? Array %>
+Published to /r/teslore, beginning on
+<%= current_page.data.date.strftime("%B %-d, %Y") %>.
+				<ul>
+					<% current_page.data.reddit.each_with_index do |id, idx| %>
+<li><a href="//redd.it/<%= id %>">Part <%= idx + 1 %></a></li>
+					<% end %>
+				</ul>
+			<% end %>
 		</p>
 	<% end %>
 	<div id="about-text-anchor">

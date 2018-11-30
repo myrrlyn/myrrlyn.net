@@ -19,6 +19,7 @@ WEBSITE: thats too hard. heres some people i think are good. Do you like this
 - [Arshia Mufti](//arshiamufti.com)
 - [David Barsky](//davidbarsky.com)
 - [Eliza Weisman](//elizas.website)
+- [J Haigh](//optimistictypes.com)
 - [Harrison Goscenski](//hgoscenski.com)
 - [Manish Goregaokar](//manishearth.github.io)
 - [Michael Gattozzi](//mgattozzi.com)

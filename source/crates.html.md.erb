@@ -1,0 +1,62 @@
+---
+title: Rust Crates
+category: projects
+published: true
+---
+
+# My Rust Crates
+
+I maintain a few Rust libraries available for use.
+
+## [Lilliput]
+
+This is two crates, `endian_trait` and `endian_trait_derive`, that teach structs
+how to flip the endian order of the byte representation of their fields. This
+allows aggregate structures whose elements are all safe to transfer between
+machines (so, essentially only the numeric types and composites of them) to
+change the endian ordering of all their elements in one method call.
+
+Unless your project involves writing to I/O devices, this is almost certainly
+not interesting to you.
+
+## [BitVec]
+
+This is a crate that provides `BitSlice`, a type capable of representing a
+sequence of individual bits, and `BitVec`, a type capable of dynamically
+changing such sequences. These types are essentially the correctly compacted
+implementations of `&[bool]` and `Vec<bool>`.
+
+It uses lessons learned from `Lilliput` about endian ordering, and general
+experience with Rust over the past years.
+
+## [Tap]
+
+I maintain [a fork][tap_me] of the [`tap` crate][tap_crate], and maintain it
+slightly more actively than the source. `Tap` is a trait that allows wrapping
+methods that don’t chain in a chain link. The `tap` methods are `self -> Self`,
+so they take and return by value, and apply a borrowing function to the value
+while holding it. The function signature patterns are:
+
+```rust
+fn tap(self, op: impl FnOnce(&Self) -> _) -> Self {
+  op(&self); self
+}
+fn tap_mut(mut self, op: impl FnOnce(&mut Self) -> _) -> Self {
+  op(&mut self); self
+}
+```
+
+I also have [an article][tap_article] about how the crate can be used to empower
+greater flexibility in any Rust code.
+
+## Cosmonaut
+
+Cosmonaut is my eternal long-running, background, project. I’ll talk more about
+it as it grows.
+
+[BitVec]: <%= canonicalize "/crates/bitvec" %>
+[Lilliput]: <%= canonicalize "/crates/lilliput" %>
+[Tap]: <%= canonicalize "/crates/tap" %>
+[tap_me]: //git.myrrlyn.net/myrrlyn/tap
+[tap_crate]: //crates.io/crates/tap
+[tap_article]: <%= canonicalize "/blog/misc/rust-flow-part-two" %>
