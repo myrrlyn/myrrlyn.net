@@ -29,6 +29,15 @@ implementations of `&[bool]` and `Vec<bool>`.
 It uses lessons learned from `Lilliput` about endian ordering, and general
 experience with Rust over the past years.
 
+## [Conv]
+
+This is a single-purpose crate. It provides a partner trait to `From` that is
+similar to `Into`, except that it specifies the destination type in the method
+name rather than the trait name.
+
+It is only useful for converting types in the middle of expressions, where
+`.into()` cannot be used due to limitations of the type solver.
+
 ## [Tap]
 
 I maintain [a fork][tap_me] of the [`tap` crate][tap_crate], and maintain it
@@ -55,6 +64,7 @@ Cosmonaut is my eternal long-running, background, project. I’ll talk more abou
 it as it grows.
 
 [BitVec]: <%= canonicalize "/crates/bitvec" %>
+[Conv]: <%= canonicalize "/crates/conv" %>
 [Lilliput]: <%= canonicalize "/crates/lilliput" %>
 [Tap]: <%= canonicalize "/crates/tap" %>
 [tap_me]: //git.myrrlyn.net/myrrlyn/tap

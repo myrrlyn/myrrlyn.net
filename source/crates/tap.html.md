@@ -3,7 +3,7 @@ title: Tap
 category: projects
 ---
 
-# Tap
+# `Tap` — In-Place Value Inspection
 {:.text-center}
 
 - [Source Code][git]
