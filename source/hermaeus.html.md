@@ -81,16 +81,16 @@ after each bulk call to stay under the reddit rate limiter.
 ## Extra Features
 
 - Hermaeus peforms HTML entity replacement on the text it fetches, so that posts
-with HTML entity references (`&rsquo;`, for instance) will have the actual
-character inserted instead. All documents are stored in UTF-8 encoding.
+  with HTML entity references (`&rsquo;`, for instance) will have the actual
+  character inserted instead. All documents are stored in UTF-8 encoding.
 
 - Extensibility: `Hermaeus.seek` yields each post it collects, allowing easy
-connection to user-provided code for post handling. The default action in `mora`
-is to simply pass the post data to the `Hermaeus::Archivist` back-end and
-print the name and author of the post to standard output. The yielded data is a
-Ruby Hash that holds the post source Markdown, HTML as compiled by reddit, and
-metadata attributes. The `Hermaeus::Apocryphon` class wraps this data and
-provides some helper methods for it.
+  connection to user-provided code for post handling. The default action in
+  `mora` is to simply pass the post data to the `Hermaeus::Archivist` back-end
+  and print the name and author of the post to standard output. The yielded data
+  is a Ruby Hash that holds the post source Markdown, HTML as compiled by
+  reddit, and metadata attributes. The `Hermaeus::Apocryphon` class wraps this
+  data and provides some helper methods for it.
 
 ## Feature Requests
 

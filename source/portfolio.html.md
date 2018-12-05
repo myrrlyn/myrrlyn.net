@@ -34,7 +34,7 @@ over the wire.
 
 ## `bitvec`
 
-I wrote the [`bitvec`](/bitvec) crate to satisfy a need I had in
+I wrote the [`bitvec`](/crates/bitvec) crate to satisfy a need I had in
 Cosmonaut to fill up and manage a buffer by bits instead of bytes. The other
 bit-vector crates I found were insufficient to my needs, and since this name
 wasn’t taken, I opted to write my own.
@@ -61,16 +61,16 @@ implemented.
 
 ## Lilliput
 
-The [`endian_trait`](/lilliput) crate provides a trait and a custom-derive macro
-to implement the trait that together enable complex structures to perform
-endianness-conversions of their members. This is only valid to do on aggregates
-of platform-independent primitives, so `endian_trait` only provides
-implementations on the Rust primitive types, and not on pointers or `usize` or
-`isize`. The crate also provides implementations on mutable slices over types
-that are endian-convertible, flipping them in place, and on small arrays (up to
-256), performing a large copy. Without `const` generics, Rust arrays are not
-able to be fully targeted for generic use, so large arrays must be converted by
-slice.
+The [`endian_trait`](/crates/lilliput) crate provides a trait and a
+custom-derive macro to implement the trait that together enable complex
+structures to perform endianness-conversions of their members. This is only
+valid to do on aggregates of platform-independent primitives, so `endian_trait`
+only provides implementations on the Rust primitive types, and not on pointers
+or `usize` or `isize`. The crate also provides implementations on mutable slices
+over types that are endian-convertible, flipping them in place, and on small
+arrays (up to 256), performing a large copy. Without `const` generics, Rust
+arrays are not able to be fully targeted for generic use, so large arrays must
+be converted by slice.
 
 The goals of this crate are to ease the serialization to, and deserialization
 from, the network for aggregate structs by performing the conversion before a
