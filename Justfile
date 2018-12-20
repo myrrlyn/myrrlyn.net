@@ -3,19 +3,24 @@ rsync_args = "-a -i -m -z --delete-delay --progress --inplace -e ssh"
 target = "droplet"
 
 # Build strips all non-tracked files in build/, such as signature files
-build:
+build: install
 	tsc
-	gsed -i 's:^import .*$::' source/javascripts/*.js
-	gsed -i 's:^ *export ::' source/javascripts/*.js
+	sed -i.bk 's:^import .*$::' source/javascripts/*.js
+	sed -i.bk 's:^ *export ::' source/javascripts/*.js
+	rm source/javascripts/*.bk
 	bundle exec middleman build
 
 clean:
 	rm -r build/
 
-deploy:
-	bundle exec middleman rsync production
+deploy: install
+	# yes | bundle exec middleman rsync staging
+	yes | bundle exec middleman rsync --no-build production
 
-serve:
+install:
+	bundle install
+
+serve: install
 	bundle exec middleman serve
 
 sign: build
@@ -23,3 +28,4 @@ sign: build
 
 update:
 	bundle update
+	npm update

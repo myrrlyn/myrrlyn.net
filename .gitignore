@@ -4,6 +4,9 @@
 # Ignore the build directory
 /build
 
+# Ignore local dependencies
+node_modules/
+
 # Ignore cache
 /.sass-cache
 /.cache
