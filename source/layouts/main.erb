@@ -11,25 +11,156 @@
 myrrlyn/<%= current_page.data.title.downcase %>
 			<% end %>
 		</title>
-		<link rel="alternate"
-		      type="application/rss+xml"
-		      href="//myrrlyn.net/feed.rss"
-		      title="Unsolicited Discourse" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			href="//myrrlyn.net/feed.rss"
+			title="Unsolicited Discourse"
+			/>
 		<%= partial "layouts/head" %>
 		<%= stylesheet_link_tag :main %>
 		<%= javascript_include_tag :main %>
 	</head>
-	<body class="<%= page_classes %>">
+	<body
+		class="<%= page_classes %>"
+		>
 		<%= partial "layouts/header" %>
-		<div id="flex-focus"
-		     class="flex-wrapper flex-cols hide-scroll">
-			<main class="flex-item"
-			      role="main">
+		<div
+			id="flex-focus"
+			class="flex-wrapper flex-cols hide-scroll"
+			>
+			<main
+				class="flex-item"
+				role="main"
+				>
+				<nav
+					class="navbar navbar-expand-md navbar-dark bg-dark"
+					>
+					<a
+						class="navbar-brand"
+						href="/"
+						>
+						<img
+							alt="Home"
+							title="Home"
+							src="/favicon.png"
+							height="40"
+							width="40"
+							class="unset"
+							/>
+					</a>
+					<span style="color: white;">Pages</span>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-target="#navbarNavDropdown"
+						data-toggle="collapse"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+						>
+						<span
+							class="navbar-toggler-icon"
+							>
+						</span>
+					</button>
+					<div
+						class="collapse navbar-collapse"
+						id="navbarNavDropdown"
+						>
+						<ul
+							class="navbar-nav"
+							>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog" %>"
+									>
+									Blog
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/crates" %>"
+									>
+									Rust Crates
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/oeuvre" %>"
+									>
+									<i>Elder Scrolls</i> oeuvre
+								</a>
+							</li>
+							<li
+								class="nav-item dropdown"
+								>
+								<a
+									class="nav-link dropdown-toggle"
+									href="#"
+									id="navbarDropdownLocalMenu"
+									role="button"
+									data-toggle="dropdown"
+									aria-haspopup="true"
+									aria-expanded="false"
+									>
+									Local Pages
+								</a>
+								<div
+									class="dropdown-menu navbar-dark bg-dark"
+									aria-labelledby="navbarDropdownLocalMenu"
+									>
+									<a
+										class="nav-item nav-link"
+										href="<%= canonicalize "/resume" %>"
+										>
+										Résumé
+									</a>
+									<a
+										class="nav-item nav-link"
+										href="<%= canonicalize "/profile" %>"
+										>
+										Profile
+									</a>
+									<a
+										class="nav-item nav-link"
+										href="<%= canonicalize "/portfolio" %>"
+										>
+										Portfolio
+									</a>
+									<a
+										class="nav-item nav-link"
+										href="<%= canonicalize "/workbench" %>"
+										>
+										Workbench
+									</a>
+									<a
+										class="nav-item nav-link"
+										href="<%= canonicalize "/webring" %>"
+										>
+										WebRing
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</nav>
 				<%= partial "layouts/style-buttons" %>
 				<article>
 					<%= yield %>
 				</article>
-				<div id="anchor-wrap">
+				<div
+					id="anchor-wrap"
+					>
 					<hr />
 					<%= partial "layouts/cookie-anchor" %>
 					<%= partial "layouts/signature-anchor" %>

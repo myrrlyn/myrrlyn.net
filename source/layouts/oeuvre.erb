@@ -11,21 +11,31 @@
 oeuvre myrrlyn
 			<% end %>
 		</title>
-		<link rel="alternate"
-		      type="application/rss+xml"
-		      href="//myrrlyn.net/oeuvre.rss"
-		      title="oeuvre myrrlyn" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			href="//myrrlyn.net/oeuvre.rss"
+			title="oeuvre myrrlyn"
+			/>
 		<%= partial "layouts/head" %>
 		<%= stylesheet_link_tag :oeuvre %>
 		<%= javascript_include_tag :oeuvre %>
 	</head>
-	<body class="<%= page_classes %> flex-wrapper flex-rows">
+	<body
+		class="<%= page_classes %> flex-wrapper flex-rows"
+		>
 		<%= partial "layouts/header" %>
-		<div id="flex-focus"
-		     class="flex-wrapper flex-cols">
-			<main class="flex-item">
+		<div
+			id="flex-focus"
+			class="flex-wrapper flex-cols"
+			>
+			<main
+				class="flex-item"
+				>
 				<%= partial "layouts/style-buttons" %>
-				<h1 class="title">
+				<h1
+					class="title"
+					>
 					<%= current_page.data.title %>
 				</h1>
 				<article>

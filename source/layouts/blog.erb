@@ -11,19 +11,128 @@ Unsolicited Discourse
 <%= current_page.data.title %>
 			<% end %>
 		</title>
-		<link rel="alternate"
-		      type="application/rss+xml"
-		      href="//myrrlyn.net/blog.rss"
-		      title="Unsolicited Discourse" />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			href="//myrrlyn.net/blog.rss"
+			title="Unsolicited Discourse"
+			/>
 		<%= partial "layouts/head" %>
 		<%= stylesheet_link_tag :blog %>
 		<%= javascript_include_tag :blog %>
 	</head>
-	<body class="<%= page_classes %> flex-wrapper flex-rows">
+	<body
+		class="<%= page_classes %> flex-wrapper flex-rows"
+		>
 		<%= partial "layouts/header" %>
-		<div id="flex-focus"
-		     class="flex-wrapper flex-cols">
-			<main class="flex-item">
+		<div
+			id="flex-focus"
+			class="flex-wrapper flex-cols"
+			>
+			<main
+				class="flex-item"
+				>
+				<nav
+					class="navbar navbar-expand-md navbar-dark bg-dark"
+					>
+					<a
+						class="navbar-brand"
+						href="/"
+						>
+						<img
+							alt="Home"
+							title="Home"
+							src="/favicon.png"
+							height="40"
+							width="40"
+							class="unset"
+							/>
+					</a>
+					<span style="color: white;">Categories</span>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-target="#navbarNavDropdown"
+						data-toggle="collapse"
+						aria-controls="navbarNavDropdown"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+						>
+						<span
+							class="navbar-toggler-icon"
+							>
+						</span>
+					</button>
+					<div
+						class="collapse navbar-collapse"
+						id="navbarNavDropdown"
+						>
+						<ul
+							class="navbar-nav"
+							>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog" %>"
+									>
+									All
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog/how-computers-work" %>"
+									>
+									How Computers Work
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog/rfcs" %>"
+									>
+									Rust RFCs
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog/talks" %>"
+									>
+									Talks
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog/type-theory" %>"
+									>
+									Type Theory
+								</a>
+							</li>
+							<li
+								class="nav-item"
+								>
+								<a
+									class="nav-link"
+									href="<%= canonicalize "/blog/misc" %>"
+									>
+									Other
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
 				<%= partial "layouts/style-buttons" %>
 				<h1 class="title">
 					<%= current_page.data.title %>
@@ -31,7 +140,9 @@ Unsolicited Discourse
 				<article>
 					<% if !current_page.data.date.nil? %>
 						<% date = current_page.data.date %>
-						<p class="right">
+						<p
+							class="right"
+							>
 							Published on
 							<time datetime="<%= date %>">
 								<% suf = {                                      %>
