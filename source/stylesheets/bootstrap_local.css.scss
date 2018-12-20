@@ -5,6 +5,10 @@
 //
 //  Unused sections are also disabled, for code size.
 
+//  IMPORTANT NOTE: DO NOT @import THIS FILE.
+//
+//  Use a Sass driver to compile it here, and <link> it from layouts.
+
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
